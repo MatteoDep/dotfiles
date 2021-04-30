@@ -123,16 +123,13 @@ command! diff vim -d %f %F
 command! zip zip -r %a.zip %f
 command! unzip unzip %f
 command! untar tar -xvzf %f
-command! run !! ./%f
-command! make !! make %a
+command! run !!./%f
+command! make !!make %a
 command! mkcd :mkdir %a | cd %a
 command! vgrep vim "+grep %a"
 command! reload :write | restart
 command! setwall !setwall %c
-command! gdotadd ! /usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME add %f
-command! gdotcommit !! /usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME commit -m "%a"
-command! gdotpush !! /usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME push
-command! gdotstatus !! /usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME status
+command! dotadd !dotadd %f
 
 " }}}
 

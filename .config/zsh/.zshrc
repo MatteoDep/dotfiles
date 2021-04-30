@@ -4,11 +4,11 @@
 #  / /_ ___) |  _  |  _ <| |___
 # /____|____/|_| |_|_| \_\\____|
 
-# proxyman writes in ~/.zshrc
-[ -e ~/.zshrc ] && source ~/.zshrc
-
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
+
+# proxy configuration
+# source "${ZDOTDIR}/proxy_conf"
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.cache/zsh/histfile
@@ -22,9 +22,6 @@ unsetopt beep   # no annoying sounds
 
 # Enable vim key bindings
 source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-# bindkey -v
-# bindkey -v '^?' backward-delete-char
-# export KEYTIMEOUT=1
 
 # Autocompletion
 autoload -Uz compinit
@@ -83,7 +80,6 @@ alias ll='lsd -alF --group-dirs first'
 alias la='lsd -A --group-dirs first'
 alias p='sudo pacman'
 alias cat='bat'
-alias gdot='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias vifm='vifmrun'
 
 #############

@@ -14,15 +14,16 @@ export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | grep -v '\.git' | paste 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
-export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
-export IPYTHONDIR="${XDG_CONFIG_HOME:-$HOME/.config}/ipython"
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
 export LESSHISTFILE=-
-export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/npm/npmrc"
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
 
-# common paths
-export MYVIMRC=~/.config/nvim/init.vim
-export MYVIFMMRC=~/.config/vifm/vifmrc
+# personal paths
+export MYVIMRC="$XDG_CONFIG_HOME/nvim/init.vim"
+export MYVIFMMRC="$XDG_CONFIG_HOME/vifm/vifmrc"
+export DOTFILES_DIR="$HOME/.dotfiles"
 
 # fzf configs
 export FZF_DEFAULT_COMMAND="fd -HL"
