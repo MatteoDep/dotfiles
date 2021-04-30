@@ -1,0 +1,7 @@
+[user]
+	email = matteo.dep97@gmail.com
+	name = MatteoDep
+[pull]
+	rebase = false
+[credential]
+	helper = store

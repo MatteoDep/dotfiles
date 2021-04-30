@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# set keyboard layout
+setxkbmap us &
+
+# composite manager (e.g allows transparency)
+xcompmgr &
+
+# set wallpaper
+xwallpaper --zoom "$XDG_DATA_HOME/wallpaper.jpg" &
+
+# access backlight
+sudo chmod a+rw /sys/class/backlight/intel_backlight/brightness &
+
+# notifications
+dunst &
+
+# clipboard menu
+clipmenud &
+
+# status bar
+dwmblocks &
