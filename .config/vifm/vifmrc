@@ -95,7 +95,7 @@ mark h ~/
 mark d ~/downloads/
 mark D ~/documents/
 mark u ~/documents/tudelft/
-mark w ~/work/adi/
+mark w ~/documents/adi/
 mark p ~/documents/personal/
 mark p ~/documents/latex/
 mark m /mnt/share
@@ -138,7 +138,7 @@ command! dotadd !dotadd %f
 " file types
 set classify=' :dir:/, :exe:, :reg:, :link:'
 " various file names
-set classify+=' ::../::, ::/^copying|license$/::, ::.git/,,*.git/::, ::*.epub,,*.fb2,,*.djvu::, ::*.pdf::, ::*.htm,,*.html,,**.[sx]html,,*.xml::, ::*.csv::'
+set classify+=' ::../::, ::/^copying|license$/::, ::.git/,,*.git/::, ::*.epub,,*.fb2,,*.djvu::, ::*.pdf::, ::*.htm,,*.html,,**.[sx]html,,*.xml::, ::*.csv::, ::*.xopp::'
 " code
 set classify+=' ::*.sh::, ::*.h,,*.hpp::, ::*.c::, ::*.cpp::, ::*.py::, ::*.md,,README,,readme::'
 " archives
@@ -380,7 +380,7 @@ nnoremap yd :!echo -n %d | xclip -sel clip %i<cr>
 " Yank current file path into the clipboard
 nnoremap yf :!echo -n %c:p | xclip -sel clip %i<cr>
 " duplicate current dir in the other pane
-nnoremap <s-tab> <tab>:cd %D<cr>
+nnoremap gd :cd %D<cr>
 
 " Mappings for faster renaming
 nnoremap I cw<c-a>

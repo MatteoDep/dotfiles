@@ -7,7 +7,7 @@ setxkbmap us &
 xcompmgr &
 
 # set wallpaper
-xwallpaper --zoom "$XDG_DATA_HOME/wallpaper.jpg" &
+setwall --refresh &
 
 # access backlight
 sudo chmod a+rw /sys/class/backlight/intel_backlight/brightness &
