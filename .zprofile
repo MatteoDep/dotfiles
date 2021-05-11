@@ -1,4 +1,5 @@
 #!/bin/zsh
+
 # Default programs:
 export EDITOR="nvim"
 export TERMINAL="st"
@@ -19,11 +20,17 @@ export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
 export LESSHISTFILE=-
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
+export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
 
 # personal paths
 export MYVIMRC="$XDG_CONFIG_HOME/nvim/init.vim"
 export MYVIFMMRC="$XDG_CONFIG_HOME/vifm/vifmrc"
 export DOTFILES_DIR="$HOME/.dotfiles"
+
+# clipmenu
+export CM_SELECTIONS="clipboard"
+export CM_MAX_CLIPS=10
 
 # fzf configs
 export FZF_DEFAULT_COMMAND="fd -HL"

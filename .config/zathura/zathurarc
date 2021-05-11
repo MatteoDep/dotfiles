@@ -114,6 +114,8 @@ set recolor true
 
 # mappings {{{
 map i recolor
+map [presentation] i recolor
+map [fullscreen] i recolor
 map p print
 map <C-g> feedkeys :info<Return>
 map F10 toggle_statusbar

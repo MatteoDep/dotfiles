@@ -6,6 +6,9 @@ setxkbmap us &
 # composite manager (e.g allows transparency)
 xcompmgr &
 
+# read Xresources
+xrdb ~/.config/Xresources &
+
 # set wallpaper
 setwall --refresh &
 
