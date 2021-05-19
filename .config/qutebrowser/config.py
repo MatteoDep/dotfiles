@@ -35,16 +35,18 @@ config.bind('tt', 'config-cycle -t -p content.proxy socks://localhost:9050/ syst
 config.bind(',c', 'config-edit')
 config.bind(',s', 'config-source')
 config.bind('ci', 'config-cycle -p colors.webpage.darkmode.enabled false true ;; restart')
-# config.bind('ci', 'set colors.webpage.darkmode.enabled false true ;; restart')
-config.bind('i', 'hint inputs')
+config.bind(';v', 'hint links spawn mpv {hint-url}')
+config.bind(',ym', 'yank inline [{title}]({url:pretty})')
 
 # SETTINGS
+c.content.blocking.method = 'both'
+c.content.geolocation = False
 c.url.searchengines = {
     'DEFAULT': 'http://duckduckgo.com/?q={}',
     'ddgt': 'https://3g2upl4pq6kufc4m.onion/?q={}',
     'aw': 'https://wiki.archlinux.org/?search={}',
     'wp': 'https://en.wikipedia.org/w/index.php?search={}',
-    'gh': 'github https://github.com/search?q={}'
+    'gh': 'https://github.com/search?q={}'
 }
 c.editor.command = ['st', '-e', 'nvim', '{file}']
 c.downloads.location.directory = '~/downloads'
@@ -145,4 +147,3 @@ c.colors.tabs.selected.even.bg = xresources['*.background']
 c.colors.tabs.selected.even.fg = xresources['*.color7']
 c.colors.tabs.selected.odd.bg = xresources['*.background']
 c.colors.tabs.selected.odd.fg = xresources['*.color7']
-c.colors.webpage.bg = xresources['*.background']

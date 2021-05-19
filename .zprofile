@@ -3,7 +3,7 @@
 # Default programs:
 export EDITOR="nvim"
 export TERMINAL="st"
-export BROWSER="brave"
+export BROWSER="qutebrowser"
 export EXPLORER="vifmrun"
 export READER="zathura"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
@@ -22,6 +22,9 @@ export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
 export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
+
+# proxy configuration
+source "$ZDOTDIR/proxy_conf.zsh"
 
 # personal paths
 export MYVIMRC="$XDG_CONFIG_HOME/nvim/init.vim"

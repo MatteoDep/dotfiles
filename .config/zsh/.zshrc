@@ -7,14 +7,10 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-# proxy configuration
-# source "${ZDOTDIR}/proxy_conf"
-
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.cache/zsh/histfile
 HISTSIZE=100000
 SAVEHIST=100000
-setopt autocd   # navigate just typing the dir name
 setopt extendedglob
 setopt nomatch
 setopt notify
@@ -123,6 +119,17 @@ fzf-locate-widget() {
   zle redisplay
 }
 zle -N fzf-locate-widget
+
+# proxy on/off
+proxy_on(){
+    source "$ZDOTDIR/proxy_conf.zsh"
+}
+proxy_off(){
+    for var in $(env | grep -i 'proxy' | cut -d '=' -f 1); do
+        unset $var
+    done
+}
+
 
 # KEY BINDINGS
 bindkey -s '^[e' 'vifm\n'

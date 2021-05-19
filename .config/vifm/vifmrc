@@ -138,7 +138,7 @@ command! dotadd !dotadd %f
 " file types
 set classify=' :dir:/, :exe:, :reg:, :link:'
 " various file names
-set classify+=' ::../::, ::/^copying|license$/::, ::.git/,,*.git/::, ::*.epub,,*.fb2,,*.djvu::, ::*.pdf::, ::*.htm,,*.html,,**.[sx]html,,*.xml::, ::*.csv::, ::*.xopp::'
+set classify+=' ::../::, ::/^copying|license$/::, ::.git/,,*.git/::, ::*.epub,,*.fb2,,*.djvu::, ::*.pdf::, ::*.htm,,*.html,,**.[sx]html,,*.xml::, ::*.csv::, ::*.xopp::'
 " code
 set classify+=' ::*.sh::, ::*.h,,*.hpp::, ::*.c::, ::*.cpp::, ::*.py::, ::*.md,,README,,readme::'
 " archives
@@ -357,7 +357,7 @@ set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
 command! FZF : set noquickview
             \| let $FZF_PICK = term('locate / | fzf --height 10 2>/dev/tty')
             \| execute term('[ -f "$FZF_PICK" ] && echo goto || echo cd') fnameescape($FZF_PICK)
-nnoremap <a-f> :FZF<cr>
+nnoremap <a-g> :FZF<cr>
 
 " Start shell in current directory
 nnoremap s :shell<cr>
