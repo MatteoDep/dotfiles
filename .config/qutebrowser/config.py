@@ -31,7 +31,7 @@ config.set('content.javascript.enabled', True, 'chrome://*/*')
 config.set('content.javascript.enabled', True, 'qute://*/*')
 
 # BINDINGS
-config.bind('tt', 'config-cycle -t -p content.proxy socks://localhost:9050/ system none ;; reload')
+config.bind('tt', 'config-cycle -t -p content.proxy socks://localhost:9050/ http://proxy.uni-luebeck.de:3128/ system none ;; reload')
 config.bind(',c', 'config-edit')
 config.bind(',s', 'config-source')
 config.bind('ci', 'config-cycle -p colors.webpage.darkmode.enabled false true ;; restart')
@@ -90,8 +90,10 @@ c.colors.completion.scrollbar.fg = xresources['*.color7']
 c.colors.downloads.bar.bg = xresources['*.background']
 c.colors.downloads.error.bg = xresources['*.color9']
 c.colors.downloads.error.fg = xresources['*.color7']
-c.colors.downloads.stop.bg = xresources['*.color13']
-c.colors.downloads.system.bg = 'none'
+c.colors.downloads.start.bg = xresources['*.color4']
+c.colors.downloads.stop.bg = xresources['*.color2']
+c.colors.downloads.system.bg = 'hsv'
+c.colors.downloads.system.fg = 'none'
 c.colors.hints.bg = xresources['*.color11']
 c.colors.hints.fg = xresources['*.background']
 c.colors.hints.match.fg = xresources['*.color4']
@@ -101,12 +103,12 @@ c.colors.keyhint.suffix.fg = xresources['*.color11']
 c.colors.messages.error.bg = xresources['*.color9']
 c.colors.messages.error.border = xresources['*.color9']
 c.colors.messages.error.fg = xresources['*.color7']
-c.colors.messages.info.bg = xresources['*.color6']
-c.colors.messages.info.border = xresources['*.color6']
+c.colors.messages.info.bg = xresources['*.color4']
+c.colors.messages.info.border = xresources['*.color4']
 c.colors.messages.info.fg = xresources['*.color7']
 c.colors.messages.warning.bg = xresources['*.color11']
 c.colors.messages.warning.border = xresources['*.color11']
-c.colors.messages.warning.fg = xresources['*.color7']
+c.colors.messages.warning.fg = xresources['*.color0']
 c.colors.prompts.bg = xresources['*.color0']
 c.colors.prompts.border = '1px solid ' + xresources['*.background']
 c.colors.prompts.fg = xresources['*.color7']
@@ -140,7 +142,7 @@ c.colors.tabs.even.fg = xresources['*.color7']
 c.colors.tabs.indicator.error = xresources['*.color9']
 c.colors.tabs.indicator.start = xresources['*.color13']
 c.colors.tabs.indicator.stop = xresources['*.color11']
-c.colors.tabs.indicator.system = 'none'
+c.colors.tabs.indicator.system = 'hsv'
 c.colors.tabs.odd.bg = xresources['*fadeColor']
 c.colors.tabs.odd.fg = xresources['*.color7']
 c.colors.tabs.selected.even.bg = xresources['*.background']

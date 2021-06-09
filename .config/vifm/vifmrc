@@ -97,9 +97,10 @@ mark D ~/documents/
 mark u ~/documents/tudelft/
 mark w ~/documents/adi/
 mark p ~/documents/personal/
-mark p ~/documents/latex/
+mark l ~/documents/latex/
 mark m /mnt/share
 mark M ~/media/
+mark s ~/media/screenshots/
 mark t ~/.local/share/trash/
 
 " }}}

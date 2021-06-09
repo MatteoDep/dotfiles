@@ -24,7 +24,7 @@ export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
 
 # proxy configuration
-source "$ZDOTDIR/proxy_conf.zsh"
+# source "$ZDOTDIR/proxy_conf.zsh"
 
 # personal paths
 export MYVIMRC="$XDG_CONFIG_HOME/nvim/init.vim"
@@ -45,6 +45,9 @@ export D_XTERM_PROG="st -e"
 
 # bat
 export BAT_THEME="Nord"
+
+# qt theme
+export QT_QPA_PLATFORMTHEME="gtk2"
 
 # Start graphical server on tty1 if not already running.
 [ "$(tty)" = "/dev/tty1" ] && ! pidof Xorg >/dev/null 2>&1  && exec startx -- vt1 &> /dev/null
