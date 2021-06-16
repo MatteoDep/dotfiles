@@ -35,10 +35,12 @@ config.bind('tt', 'config-cycle -t -p content.proxy socks://localhost:9050/ http
 config.bind(',c', 'config-edit')
 config.bind(',s', 'config-source')
 config.bind('ci', 'config-cycle -p colors.webpage.darkmode.enabled false true ;; restart')
+config.bind('cs', 'config-cycle -p content.user_stylesheets ~/.config/qutebrowser/css/nord-inverse-dark-all-sites.css ~/.config/qutebrowser/css/nord-dark-all-sites.css \'\' ;; reload')
 config.bind(';v', 'hint links spawn mpv {hint-url}')
 config.bind(',ym', 'yank inline [{title}]({url:pretty})')
 
 # SETTINGS
+c.content.blocking.enabled = True
 c.content.blocking.method = 'both'
 c.content.geolocation = False
 c.url.searchengines = {

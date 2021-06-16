@@ -102,6 +102,7 @@ mark m /mnt/share
 mark M ~/media/
 mark s ~/media/screenshots/
 mark t ~/.local/share/trash/
+mark c ~/.config/
 
 " }}}
 
