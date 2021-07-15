@@ -3,8 +3,11 @@
 # set keyboard layout
 setxkbmap us &
 
+# set x cursor
+xsetroot -cursor_name left_ptr &
+
 # composite manager (e.g allows transparency)
-xcompmgr &
+picom &
 
 # read Xresources
 xrdb ~/.config/Xresources &
@@ -20,6 +23,12 @@ dunst &
 
 # clipboard menu
 clipmenud &
+
+# calendar
+calcurse --daemon &
+
+# keyboard shortcut deamon
+# sxhkd &
 
 # status bar
 dwmblocks &

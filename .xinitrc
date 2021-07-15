@@ -5,4 +5,5 @@
 . ~/.xprofile
 
 # exec WM or DE
+# exec xmonad
 exec dwm

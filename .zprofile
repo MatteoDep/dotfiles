@@ -1,6 +1,7 @@
 #!/bin/zsh
 
 # Default programs:
+export MONITOR=":0"
 export EDITOR="nvim"
 export TERMINAL="alacritty"
 export BROWSER="qutebrowser"
@@ -50,4 +51,4 @@ export BAT_THEME="Nord"
 export QT_QPA_PLATFORMTHEME="gtk2"
 
 # Start graphical server on tty1 if not already running.
-[ "$(tty)" = "/dev/tty1" ] && ! pidof Xorg >/dev/null 2>&1  && exec startx -- vt1 &> /dev/null
+[ "$(tty)" = "/dev/tty1" ] && ! pidof Xorg >/dev/null 2>&1  && exec sx > /dev/null

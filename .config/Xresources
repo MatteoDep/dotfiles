@@ -45,5 +45,4 @@ Xft.dpi: 96
 *.color14: nord7
 *.color15: nord6
 
-*.alpha: 0.9
-st.alphaUnfocused: 0.6
+wm.highlight: nord9

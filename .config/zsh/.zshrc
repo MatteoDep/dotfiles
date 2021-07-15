@@ -52,12 +52,14 @@ precmd() { vcs_info }
 read pcomm < /proc/$PPID/comm
 [ "$pcomm" = "login" ]  && {
     zstyle ':vcs_info:git:*' formats '%F{white}(%b)%f'
-    PS1="%(?..%F{#ff0000}!%?)%B%F{white}[%f%F{green}%n%f%F{red}@%f%F{yellow}%m%f%F{white}]%f %F{blue} %~%f%b \$vcs_info_msg_0_
-%F{red}%(!.#.>)%f "
+    # PS1="%(?..%F{#ff0000}!%?)%B%F{white}[%f%F{green}%n%f%F{red}@%f%F{yellow}%m%f%F{white}]%f %F{blue} %~%f%b\$vcs_info_msg_0_
+# %F{red}%(!.#.>)%f "
+    PS1="%(?..%F{#ff0000}!%?)%F{blue} %1~%f%b \$vcs_info_msg_0_ %F{red}%(!.#.>)%f "
 } || {
-    zstyle ':vcs_info:git:*' formats '%F{white} %b%f'
-    PS1="%(?..%F{#ff0000}%?)%B%F{white}[%f%F{green}%n%f%F{red}@%f%F{yellow}%m%f%F{white}]%f %F{blue} %~%f%b \$vcs_info_msg_0_
-%F{red}%(!.#.)%f "
+    zstyle ':vcs_info:git:*' formats ' %F{white} %b%f'
+    # PS1="%(?..%F{#ff0000}%?)%B%F{white}[%f%F{green}%n%f%F{red}@%f%F{yellow}%m%f%F{white}]%f %F{blue} %1~%f%b\$vcs_info_msg_0_
+# %F{red}%(!.#.)%f "
+    PS1="%(?..%F{#ff0000}%?)%F{blue} %1~%f%b\$vcs_info_msg_0_ %F{red}%(!.#.)%f "
 }
 
 ###########
@@ -77,6 +79,7 @@ alias la='lsd -A --group-dirs first'
 alias p='sudo pacman'
 alias cat='bat'
 alias vifm='vifmrun'
+alias d='devour'
 
 #############
 # functions #

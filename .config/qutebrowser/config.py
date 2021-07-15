@@ -12,6 +12,10 @@ Documentation:
 """
 
 import subprocess
+import os
+
+# get environment variables
+TERMINAL = os.environ['TERMINAL']
 
 # Change the argument to True to still load settings configured via autoconfig.yml
 config.load_autoconfig(True)
@@ -38,19 +42,29 @@ config.bind('ci', 'config-cycle -p colors.webpage.darkmode.enabled false true ;;
 config.bind('cs', 'config-cycle -p content.user_stylesheets ~/.config/qutebrowser/css/nord-inverse-dark-all-sites.css ~/.config/qutebrowser/css/nord-dark-all-sites.css \'\' ;; reload')
 config.bind(';v', 'hint links spawn mpv {hint-url}')
 config.bind(',ym', 'yank inline [{title}]({url:pretty})')
+config.bind('gT', 'set-cmd-text :tab-take ')
+config.bind('I', 'mode-enter passthrough')
+config.bind('<Ctrl-v>', 'mode-enter insert ;; insert-text -- {clipboard}')
 
 # SETTINGS
 c.content.blocking.enabled = True
 c.content.blocking.method = 'both'
 c.content.geolocation = False
 c.url.searchengines = {
-    'DEFAULT': 'http://duckduckgo.com/?q={}',
+    'DEFAULT': 'https://search.brave.com/search?q={}',
+    'ddg': 'https://duckduckgo.com/?q={}',
     'ddgt': 'https://3g2upl4pq6kufc4m.onion/?q={}',
     'aw': 'https://wiki.archlinux.org/?search={}',
     'wp': 'https://en.wikipedia.org/w/index.php?search={}',
-    'gh': 'https://github.com/search?q={}'
+    'wb': 'https://en.wikibooks.org/w/index.php?search={}',
+    'gh': 'https://github.com/search?q={}',
+    'wr': 'https://www.wordreference.com/definition/{}',
+    'gt': 'https://translate.google.com/?sl=auto&tl=en&text={}&op=translate',
+    'hl': 'https://hoogle.haskell.org/?hoogle={}'
 }
-c.editor.command = ['st', '-e', 'nvim', '{file}']
+c.url.default_page = "https://search.brave.com"
+c.url.start_pages = [c.url.default_page]
+c.editor.command = [TERMINAL, '-e', 'nvim', '{file}']
 c.downloads.location.directory = '~/downloads'
 c.downloads.location.prompt = False
 c.downloads.remove_finished = 3000
