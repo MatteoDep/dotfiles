@@ -8,24 +8,26 @@ export BROWSER="qutebrowser"
 export EXPLORER="vifmrun"
 export READER="zathura"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export STATUSBAR="statusblocks"
 
 # Adds `~/.local/bin` to $PATH
 export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | grep -v '\.git' | paste -sd ':')"
 
 # xdg specifications
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_CACHE_HOME="$HOME/.cache"
-export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
+export XDG_CONFIG_HOME="$HOME"/.config
+export XDG_DATA_HOME="$HOME"/.local/share
+export XDG_CACHE_HOME="$HOME"/.cache
+export ZDOTDIR="$XDG_CONFIG_HOME"/zsh
+export IPYTHONDIR="$XDG_CONFIG_HOME"/ipython
+export JUPITER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
+export PYTHONSTARTUP="XDG_CONFIG_HOME"/python/python_startup.py
 export LESSHISTFILE=-
-export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
-export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
-export GNUPGHOME="$XDG_CONFIG_HOME/gnupg"
-export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
-
-# proxy configuration
-# source "$ZDOTDIR/proxy_conf.zsh"
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
+export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
+export GNUPGHOME="$XDG_CONFIG_HOME"/gnupg
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/password-store
+export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
+export GTK_RC_FILES="$XDG_CONFIG_HOME"/gtk-1.0/gtkrc
 
 # personal paths
 export MYVIMRC="$XDG_CONFIG_HOME/nvim/init.vim"

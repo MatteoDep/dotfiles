@@ -132,6 +132,7 @@ command! vgrep vim "+grep %a"
 command! reload :write | restart
 command! setwall !setwall %c
 command! dotadd !dotadd %f
+command! dotrm !dotrm %f
 
 " }}}
 

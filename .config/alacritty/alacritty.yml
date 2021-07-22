@@ -6,7 +6,7 @@
 #                                      |___/
 
 env:
-  TERM: alacritty
+  TERM: xterm-256color
 
 window:
   # Window dimensions (changes require restart)
@@ -20,11 +20,11 @@ window:
   #   y: 0
 
   # Window padding (changes require restart)
-    x: 2
+  padding:
+    x: 8
     y: 2
-
-  # Spread additional padding evenly around the terminal content.
-  dynamic_padding: true
+    # Spread additional padding evenly around the terminal content.
+    dynamic_padding: false
 
   # Window decorations
   decorations: none
@@ -118,7 +118,7 @@ selection:
 cursor:
   # Cursor style
   style:
-    shape: Block
+    shape: Beam
     blinking: Off
 
   # Vi mode cursor style

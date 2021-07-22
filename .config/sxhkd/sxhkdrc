@@ -1,0 +1,88 @@
+# bspwm
+# quit/restart bspwm
+super + shift + {q,r}
+	pkill -x panel; bspc {quit,wm -r}
+# close and kill
+super + {_,ctrl + }q
+	bspc node -{c,k}
+# alternate between the tiled and monocle layout
+super + m
+	bspc desktop -l next
+# swap the current node and the biggest window
+super + shift + =
+	bspc node -s biggest.window
+# state/flags
+# set the window state
+super + {t,f}
+	bspc node -t {tiled,fullscreen}
+# focus the next/previous window in the current desktop
+super + {j,k}
+	bspc node -f {next,prev}.local.!hidden.window
+# swap the next/previous window in the current desktop
+super + {bracketright,bracketleft}
+	bspc node -s {next,prev}.local.!hidden.window
+# focus the last node/desktop
+super + {grave,Tab}
+	bspc {node,desktop} -f last
+# focus or send to the given desktop
+super + {_,shift + }{1-9}
+	bspc {desktop -f,node -d} '^{1-9}'
+# resize a window
+super + shift + {h,j,k,l}
+    {bspc node -z left -20 0; bspc node -z right -20 0\
+    ,bspc node -z bottom 0 20; bspc node -z top 0 20\
+    ,bspc node -z bottom 0 -20; bspc node -z top 0 -20\
+    ,bspc node -z left 20 0; bspc node -z right 20 0}
+# swap the current node and the biggest window
+super + shift + equal
+	bspc node -s biggest.local.!hidden.window
+
+# volume
+XF86Audio{LowerVolume,RaiseVolume}
+    pamixer --allow-boost -{d,i} 10; pkill -RTMIN+10 statusblocks
+XF86AudioMute
+    pamixer -t; pkill -RTMIN+10 statusblocks
+
+# brightness
+XF86MonBrightness{Down,Up}
+    backlight -{d,i} 2
+
+# programs
+super + w
+    $BROWSER
+super + Return
+    $TERMINAL
+super + e
+    $TERMINAL -e vifmrun
+super + shift + s
+    $TERMINAL -e sudo connmanctl
+super + n
+    $TERMINAL -e newsboat; pkill -RTMIN+6 statusblocks
+
+# scratchpads
+super + shift + Return
+    tdrop -am -n spterm -f '--class floatterm -t spterm' -y 20 -h 80% "$TERMINAL"
+super + shift + e
+    tdrop -am -n spfm -f '--class floatterm -t spfm -e vifmrun' -y 20 -h 80% "$TERMINAL"
+super + c
+    tdrop -am -n spcal -f '--class floatterm -t spcal -e calcurse' -y 20 -h 80% "$TERMINAL"
+
+# menus
+super + r
+    dmenu_run
+super + p
+    clipctl disable && passmenu; clipctl enable
+super + y
+    clipmenu
+super + u
+    dm-unicode
+super + shift + b
+    dm-bluetooth
+super + x
+    dm-shutdown
+
+# quick actions
+super + s
+    capture
+super + shift + s
+    capture -s

@@ -1,0 +1,10 @@
+# blocks configuration file
+# define format string:
+# F "string for formatting"
+# define block
+# B block-script interval signal
+
+F "%{l}"
+B "bspwm-desktops" 0 1
+F "%{c}"
+

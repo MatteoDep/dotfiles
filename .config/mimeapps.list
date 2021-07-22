@@ -1,0 +1,5 @@
+[Default Applications]
+x-scheme-handler/webcal=qutebrowser.desktop
+text/html=qutebrowser.desktop
+
+[Added Associations]
