@@ -1,0 +1,16 @@
+# define blocks
+"%{l}"
+0 1 sb-bspwm
+0 1 sb-windowtitle
+"%{c}"
+0 2 sb-clock
+"%{r}"
+0 6 sb-news
+" "
+0 13 sb-crypto
+" "
+0 10 sb-volume
+" "
+5 3 sb-battery
+" "
+5 4 sb-internet

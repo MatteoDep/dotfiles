@@ -54,10 +54,12 @@ super + Return
     $TERMINAL
 super + e
     $TERMINAL -e vifmrun
-super + shift + s
-    $TERMINAL -e sudo connmanctl
+super + shift + w
+    $TERMINAL --class floatterm -e sudo connmanctl
+    pkill -RTMIN+4 statusblocks
 super + n
-    $TERMINAL -e newsboat; pkill -RTMIN+6 statusblocks
+    $TERMINAL -e newsboat
+    pkill -RTMIN+6 statusblocks
 
 # scratchpads
 super + shift + Return
@@ -71,7 +73,8 @@ super + c
 super + r
     dmenu_run
 super + p
-    clipctl disable && passmenu; clipctl enable
+    clipctl disable && passmenu
+    clipctl enable
 super + y
     clipmenu
 super + u
@@ -85,4 +88,4 @@ super + x
 super + s
     capture
 super + shift + s
-    capture -s
+    capture -sf

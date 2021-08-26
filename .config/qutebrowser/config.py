@@ -45,8 +45,8 @@ config.bind(',ym', 'yank inline [{title}]({url:pretty})')
 config.bind('gT', 'set-cmd-text :tab-take ')
 config.bind('I', 'mode-enter passthrough')
 config.bind('<Ctrl-v>', 'mode-enter insert ;; insert-text -- {clipboard} ;; mode-leave')
-config.bind('<Space>', 'yank selection ;; set-cmd-text :open -t  {clipboard} ;; rl-beginning-of-line ;; rl-forward-word ;; rl-forward-word ;; rl-forward-char ;; rl-forward-char')
-# SETTINGS
+config.bind('<Space>l', 'yank selection ;; set-cmd-text :open -t  {clipboard} ;; rl-beginning-of-line ;; rl-forward-word ;; rl-forward-word ;; rl-forward-char ;; rl-forward-char')
+config.bind('<Space>', 'mode-enter insert ;; insert-text -- ' '} ;; mode-leave')
 c.content.blocking.enabled = True
 c.content.blocking.method = 'both'
 c.content.geolocation = False

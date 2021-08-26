@@ -1,8 +1,6 @@
-#!/bin/sh
-
 # mandatory variables
 PANEL_FIFO="/tmp/panel-fifo"
-PANEL_WM_NAME="statusblocks_panel"
+PANEL_WM_NAME="statusblocks_lemonbar"
 PANEL_FIFO_SIGNALS="1"
 WM_WM_CLASS="Bspwm"
 WM_WM_NAME="root"

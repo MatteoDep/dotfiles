@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# read Xresources
+xrdb ~/.config/Xresources &
+
 # set keyboard layout
 setxkbmap -option compose:ralt us &
 
@@ -8,9 +11,6 @@ xsetroot -cursor_name left_ptr &
 
 # composite manager (e.g allows transparency)
 picom &
-
-# read Xresources
-xrdb ~/.config/Xresources &
 
 # set wallpaper
 setwall --refresh &
