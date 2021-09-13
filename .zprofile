@@ -11,7 +11,7 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export STATUSBAR="statusblocks"
 
 # Adds `~/.local/bin` to $PATH
-export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | grep -v '\.git' | paste -sd ':')"
+export PATH="$PATH:$HOME/.local/bin:$HOME/.local/bin/scripts:$HOME/.local/bin/scripts/statusbar/"
 
 # xdg specifications
 export XDG_CONFIG_HOME="$HOME"/.config
