@@ -77,6 +77,7 @@ alias cat='bat'
 alias vifm='vifmrun'
 alias d='devour'
 alias sudo='doas'
+alias sudoedit='doasedit'
 
 #############
 # functions #

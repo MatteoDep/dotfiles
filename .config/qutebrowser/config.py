@@ -16,6 +16,7 @@ import os
 
 # get environment variables
 TERMINAL = os.environ['TERMINAL']
+EDITOR = os.environ['EDITOR']
 
 # Change the argument to True to still load settings configured via autoconfig.yml
 config.load_autoconfig(True)
@@ -64,7 +65,7 @@ c.url.searchengines = {
 }
 c.url.default_page = "https://search.brave.com"
 c.url.start_pages = [c.url.default_page]
-c.editor.command = [TERMINAL, '-e', 'nvim', '{file}']
+c.editor.command = [TERMINAL, '--class', 'floatterm', '-e', EDITOR, '{file}']
 c.downloads.location.directory = '~/downloads'
 c.downloads.location.prompt = False
 c.downloads.remove_finished = 3000

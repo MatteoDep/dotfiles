@@ -1,7 +1,7 @@
 # define blocks
 "%{l}"
 0 1 sb-bspwm
-0 1 sb-windowtitle
+0 1 sb-wtitle
 "%{c}"
 2 2 sb-clock
 "%{r}"

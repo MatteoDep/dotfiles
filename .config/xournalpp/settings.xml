@@ -12,12 +12,12 @@
   <property name="zoomStep" value="10.00000000"/>
   <property name="zoomStepScroll" value="2.00000000"/>
   <property name="displayDpi" value="72"/>
-  <property name="mainWndWidth" value="1370"/>
-  <property name="mainWndHeight" value="753"/>
+  <property name="mainWndWidth" value="1366"/>
+  <property name="mainWndHeight" value="748"/>
   <property name="maximized" value="false"/>
   <property name="showToolbar" value="true"/>
   <property name="showSidebar" value="false"/>
-  <property name="sidebarWidth" value="149"/>
+  <property name="sidebarWidth" value="50"/>
   <property name="sidebarOnRight" value="false"/>
   <property name="scrollbarOnLeft" value="false"/>
   <property name="menubarVisible" value="true"/>
@@ -36,10 +36,10 @@
   <property name="presentationHideElements" value="mainMenubar,sidebarContents"/>
   <!--The cursor icon used with a stylus, allowed values are "none", "dot", "big"-->
   <property name="stylusCursorType" value="dot"/>
-  <property name="highlightPosition" value="false"/>
-  <property name="cursorHighlightColor" value="2164260608"/>
-  <property name="cursorHighlightBorderColor" value="2147483903"/>
-  <property name="cursorHighlightRadius" value="30.00000000"/>
+  <property name="highlightPosition" value="true"/>
+  <property name="cursorHighlightColor" value="2684354560"/>
+  <property name="cursorHighlightBorderColor" value="4278190335"/>
+  <property name="cursorHighlightRadius" value="2.00000000"/>
   <property name="cursorHighlightBorderWidth" value="0.00000000"/>
   <property name="darkTheme" value="true"/>
   <property name="useStockIcons" value="false"/>
@@ -94,7 +94,7 @@
   <property name="snapRecognizedShapesEnabled" value="false"/>
   <property name="restoreLineWidthEnabled" value="false"/>
   <property name="numIgnoredStylusEvents" value="0"/>
-  <property name="inputSystemTPCButton" value="false"/>
+  <property name="inputSystemTPCButton" value="true"/>
   <property name="inputSystemDrawOutsideWindow" value="true"/>
   <property name="preferredLocale" value=""/>
   <property name="stabilizerAveragingMethod" value="0"/>
@@ -157,7 +157,15 @@
       <attribute name="deviceClass" type="int" value="1"/>
       <attribute name="deviceSource" type="int" value="6"/>
     </data>
+    <data name="Wacom BambooPT 2FG 4x5 Finger touch">
+      <attribute name="deviceClass" type="int" value="1"/>
+      <attribute name="deviceSource" type="int" value="6"/>
+    </data>
     <data name="Wacom BambooPT 2FG 4x5 Pad">
+      <attribute name="deviceClass" type="int" value="0"/>
+      <attribute name="deviceSource" type="int" value="8"/>
+    </data>
+    <data name="Wacom BambooPT 2FG 4x5 Pad pad">
       <attribute name="deviceClass" type="int" value="0"/>
       <attribute name="deviceSource" type="int" value="8"/>
     </data>
@@ -169,6 +177,14 @@
       <attribute name="deviceClass" type="int" value="2"/>
       <attribute name="deviceSource" type="int" value="1"/>
     </data>
+    <data name="Wacom BambooPT 2FG 4x5 Pen eraser">
+      <attribute name="deviceClass" type="int" value="3"/>
+      <attribute name="deviceSource" type="int" value="2"/>
+    </data>
+    <data name="Wacom BambooPT 2FG 4x5 Pen stylus">
+      <attribute name="deviceClass" type="int" value="2"/>
+      <attribute name="deviceSource" type="int" value="1"/>
+    </data>
   </data>
   <data name="lastUsedPageBgColor"/>
   <data name="tools">
@@ -176,17 +192,18 @@
     <data name="drawArrow">
       <attribute name="drawingType" type="string" value="default"/>
     </data>
-    <data name="drawCircle">
-      <attribute name="drawingType" type="string" value="default"/>
-    </data>
     <data name="drawCoordinateSystem">
       <attribute name="drawingType" type="string" value="default"/>
     </data>
-    <data name="drawEllipse"/>
+    <data name="drawEllipse">
+      <attribute name="drawingType" type="string" value="default"/>
+    </data>
     <data name="drawRect">
       <attribute name="drawingType" type="string" value="default"/>
     </data>
-    <data name="drawSpline"/>
+    <data name="drawSpline">
+      <attribute name="drawingType" type="string" value="default"/>
+    </data>
     <data name="eraser">
       <attribute name="drawingType" type="string" value="default"/>
       <attribute name="size" type="string" value="THIN"/>
@@ -195,20 +212,19 @@
     <data name="hand">
       <attribute name="drawingType" type="string" value="default"/>
     </data>
-    <data name="highlighter"/>
-    <data name="hilighter">
-      <attribute name="color" type="hex" value="3333cc"/>
-      <attribute name="drawingType" type="string" value="line"/>
-      <attribute name="fill" type="int" value="1"/>
-      <attribute name="fillAlpha" type="int" value="127"/>
+    <data name="highlighter">
+      <attribute name="color" type="hex" value="ffff00"/>
+      <attribute name="drawingType" type="string" value="default"/>
+      <attribute name="fill" type="int" value="0"/>
+      <attribute name="fillAlpha" type="int" value="128"/>
       <attribute name="size" type="string" value="MEDIUM"/>
     </data>
     <data name="image">
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="pen">
-      <attribute name="color" type="hex" value="ff000000"/>
-      <attribute name="drawingType" type="string" value="default"/>
+      <attribute name="color" type="hex" value="000000"/>
+      <attribute name="drawingType" type="string" value="strokeRecognizer"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="255"/>
       <attribute name="size" type="string" value="MEDIUM"/>

@@ -1,9 +1,27 @@
 !!
-Xft.hinting: 1
-Xft.hintstyle: hintslight
-Xft.antialias: 1
-Xft.rgba: rgb
+
 Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: true
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcdfilter
+XTerm.vt100.saveLines: 4096
+XTerm.vt100.selectToClipboard: true
+XTerm.vt100.translations: #override \n\
+    Alt <Key>c: copy-selection(CLIPBOARD) \n\
+    Alt <Key>v: insert-selection(CLIPBOARD) \n\
+    Alt <Key>j: scroll-forw(1 line) \n\
+    Alt <Key>k: scroll-back(1 line) \n\
+    Alt <Key>minus: smaller-vt-font() \n\
+    Alt <Key>plus: larger-vt-font() \n\
+    Alt <Key>equal: larger-vt-font()
+XTerm*renderFont: true
+XTerm*faceName: monospace
+XTerm*faceSize: 11
+XTerm.vt100.locale: false
+XTerm.vt100.utf8: true
 
 #define nord0 #2E3440
 #define nord1 #3B4252

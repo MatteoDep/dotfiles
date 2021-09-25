@@ -61,7 +61,7 @@ super + Return
 super + e
     $TERMINAL -e vifmrun
 super + shift + w
-    $TERMINAL --class floatterm -e sudo connmanctl; \
+    $TERMINAL --class floatterm -e connmanctl; \
     pkill -RTMIN+4 statusblocks
 super + n
     $TERMINAL --class floatterm -e newsboat; \
@@ -79,7 +79,7 @@ super + shift + e
 super + r
     dmenu_run
 super + p
-    clipctl disable && passmenu \
+    clipctl disable && passmenu; \
     clipctl enable
 super + y
     clipmenu

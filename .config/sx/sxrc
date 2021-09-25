@@ -15,9 +15,6 @@ picom &
 # set wallpaper
 setwall --refresh &
 
-# access backlight
-sudo chmod a+rw /sys/class/backlight/intel_backlight/brightness &
-
 # notifications
 dunst &
 
@@ -31,7 +28,6 @@ calcurse --daemon &
 sxhkd &
 
 # exec WM or DE
-# exec dbus-launch leftwm
 exec bspwm
 
 # kill pulseaudio (prevents loading it 2 times)
