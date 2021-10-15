@@ -12,8 +12,8 @@
   <property name="zoomStep" value="10.00000000"/>
   <property name="zoomStepScroll" value="2.00000000"/>
   <property name="displayDpi" value="72"/>
-  <property name="mainWndWidth" value="1366"/>
-  <property name="mainWndHeight" value="748"/>
+  <property name="mainWndWidth" value="538"/>
+  <property name="mainWndHeight" value="370"/>
   <property name="maximized" value="false"/>
   <property name="showToolbar" value="true"/>
   <property name="showSidebar" value="false"/>
@@ -60,7 +60,7 @@
   <property name="snapRotation" value="true"/>
   <property name="snapRotationTolerance" value="0.20000000"/>
   <property name="snapGrid" value="false"/>
-  <property name="snapGridTolerance" value="0.25000000"/>
+  <property name="snapGridTolerance" value="0.10000000"/>
   <property name="snapGridSize" value="14.17000000"/>
   <property name="touchDrawing" value="false"/>
   <property name="pressureGuessing" value="false"/>
@@ -91,8 +91,8 @@
   <property name="strokeFilterEnabled" value="false"/>
   <property name="doActionOnStrokeFiltered" value="false"/>
   <property name="trySelectOnStrokeFiltered" value="false"/>
-  <property name="snapRecognizedShapesEnabled" value="false"/>
-  <property name="restoreLineWidthEnabled" value="false"/>
+  <property name="snapRecognizedShapesEnabled" value="true"/>
+  <property name="restoreLineWidthEnabled" value="true"/>
   <property name="numIgnoredStylusEvents" value="0"/>
   <property name="inputSystemTPCButton" value="true"/>
   <property name="inputSystemDrawOutsideWindow" value="true"/>

@@ -2,11 +2,12 @@
 
 # Configuration section
 
-from os.path import getsize
-import sys
+import os
 import atexit
 import rlcompleter
 import readline
+import numpy as np
+from matplotlib import pyplot as plt
 
 max_size_bytes = 1000000
 max_size_lines = 10000
@@ -38,7 +39,7 @@ def reset_file(size, max_size, reason):
 
 def safe_getsize(hist_file):
     try:
-        size = getsize(hist_file)
+        size = os.path.getsize(hist_file)
     except OSError:
         size = 0
     return size
@@ -56,19 +57,19 @@ else:
         if lines > max_size_lines:
             try:
                 readline.clear_history()
-            except NameError, e:
-                print "readline.clear_history() not supported (%s), please delete history file %s by hand.\n" % (e, hist_file,)
+            except NameError as e:
+                print("readline.clear_history() not supported (%s), please delete history file %s by hand.\n" % (e, hist_file,))
             reset_file(lines, max_size_lines, "lines")
     except IOError:
         try:
             f = open(hist_file, 'a')
             f.close()
         except IOError:
-            print "The file %s can't be created, check your hist_file variable.\n" % hist_file
+            print("The file %s can't be created, check your hist_file variable.\n" % hist_file)
 
 size = safe_getsize(hist_file)
 
-print "Current history file (%s) size: %s bytes, %s lines.\n" % (hist_file, size, readline.get_current_history_length(),)
+print("Current history file (%s) size: %s bytes, %s lines.\n" % (hist_file, size, readline.get_current_history_length(),))
 
 readline.parse_and_bind("tab: complete")
 

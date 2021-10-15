@@ -5,7 +5,7 @@ unbind-key H
 unbind-key L
 unbind-key c
 unbind-key ,
-browser "$BROWSER %u"
+browser "setsid -f $BROWSER %u"
 
 # Feed settings
 prepopulate-query-feeds yes

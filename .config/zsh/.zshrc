@@ -138,5 +138,5 @@ bindkey '^[i' fzf-locate-widget
 bindkey -s '^[d' 'fzf-cd\n'
 bindkey -s '^[f' 'fzf-open\n'
 bindkey -s '^[g' 'fzf-goto\n'
+bindkey -s '^[p' 'ipython\n'
 bindkey '^[h' fzf-history-widget
-bindkey -s '^[o' 'ipython --pylab --debug\n'

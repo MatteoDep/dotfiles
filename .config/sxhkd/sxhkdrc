@@ -29,7 +29,7 @@ super + {grave,Tab}
 	bspc {node,desktop} -f last
 # focus or send to the given desktop
 super + {_,shift + }{1-9}
-	bspc {desktop -f,node -d} '^{1-9}'
+	bspc {desktop -f,node -d} '{1-9}'
 # resize a window
 super + shift + {h,j,k,l}
     {bspc node -z right -20 0 || bspc node -z left -20 0 \
@@ -71,9 +71,11 @@ super + c
 
 # scratchpads
 super + shift + Return
-    tdrop -am -n spterm -f '--class floatterm -t spterm' -y 20 -h 80% "$TERMINAL"
+    tdrop -Aam -n spterm -x 0 -y 20 -w 100% -h 80% \
+    "$TERMINAL" --class floatterm -t spterm
 super + shift + e
-    tdrop -am -n spfm -f '--class floatterm -t spfm -e vifmrun' -y 20 -h 80% "$TERMINAL"
+    tdrop -Aam -n spfm -x 0 -y 20 -w 100% -h 80% \
+    "$TERMINAL" --class floatterm -t spfm -e vifmrun
 
 # menus
 super + r
