@@ -1,0 +1,24 @@
+#! /bin/sh
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+monitorconfig laptop-only
+
+bspc config border_width         0
+bspc config window_gap          12
+
+bspc config automatic_scheme longest_side
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc pointer_modifier mod4
+bspc pointer_action1 move
+bspc pointer_action2 resize_side
+bspc pointer_action3 resize_corner
+
+bspc desktop '^1' -l monocle
+
+bspc rule -a 'Gimp' state=floating follow=on
+bspc rule -a '*:floatterm' state=floating
+bspc rule -a 'qutebrowser' desktop='^1'
