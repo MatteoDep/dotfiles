@@ -43,12 +43,10 @@ config.bind('ci', 'config-cycle -p colors.webpage.darkmode.enabled false true ;;
 stylesheets=" ".join(os.listdir(os.path.expanduser('~/.config/qutebrowser/css')))
 config.bind('cs', 'config-cycle -p content.user_stylesheets ' + stylesheets + ' \'\' ;; reload')
 config.bind(';v', 'hint links spawn mpv {hint-url}')
-config.bind(',ym', 'yank inline [{title}]({url:pretty})')
+config.bind('ym', 'yank inline [{title}]({url:pretty})')
 config.bind('gT', 'set-cmd-text :tab-take ')
 config.bind('I', 'mode-enter passthrough')
 config.bind('<Ctrl-v>', 'mode-enter insert ;; insert-text -- {clipboard} ')
-config.bind('<Space>l', 'yank selection ;; set-cmd-text :open -t  {clipboard} ;; rl-beginning-of-line ;; rl-forward-word ;; rl-forward-word ;; rl-forward-char ;; rl-forward-char')
-config.bind('<Space>', 'mode-enter insert ;; insert-text -- ' '} ;; mode-leave')
 c.content.blocking.enabled = True
 c.content.blocking.method = 'both'
 c.content.geolocation = False
@@ -64,6 +62,7 @@ c.url.searchengines = {
     'gt': 'https://translate.google.com/?sl=auto&tl=en&text={}&op=translate',
     'hl': 'https://hoogle.haskell.org/?hoogle={}'
 }
+config.bind('h', 'set-cmd-text :open -t  {primary} ;; rl-beginning-of-line ;; rl-forward-word ;; rl-forward-word ;; rl-forward-char ;; rl-forward-char')
 c.url.default_page = "https://search.brave.com"
 c.url.start_pages = [c.url.default_page]
 c.editor.command = [TERMINAL, '--class', 'floatterm', '-e', EDITOR, '{file}']
