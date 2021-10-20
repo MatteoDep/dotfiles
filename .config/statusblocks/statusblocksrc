@@ -11,11 +11,14 @@ COLOR_DEFAULT_BG=$(xrdb -query | awk '/background/ {print $2}')
 GEOMETRY="x20"
 FONT_A="RobotoMono Nerd Font:pixelsize=12:antialias=true"
 FONT_B="CryptoIcons:size=10:antialias=true:autohint=true"
+FONT_C="Noto Color Emoji:size=10:antialias=true:autohint=true"
 
 # mandatory arguments
 panel_command(){
     # bar command (e.g. lemonbar, dzen2, xmobar, ...)
-    lemonbar -a 32 -n "$PANEL_WM_NAME" -g "$GEOMETRY" -f "$FONT_A" -f "$FONT_B" -F "$COLOR_DEFAULT_FG" -B "$COLOR_DEFAULT_BG" | sh
+    lemonbar -a 32 -n "$PANEL_WM_NAME" -g "$GEOMETRY" \
+    -f "$FONT_A" -f "$FONT_B" -f "$FONT_C" \
+    -F "$COLOR_DEFAULT_FG" -B "$COLOR_DEFAULT_BG" | sh
 }
 feed_fifo(){
     # something in the format:
