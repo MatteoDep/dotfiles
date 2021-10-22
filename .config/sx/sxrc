@@ -6,13 +6,12 @@ xrdb ~/.config/Xresources &
 # X11 settings
 setxkbmap -option compose:ralt us &
 xsetroot -cursor_name left_ptr &
-xinput set-prop 12 300 1
 
 # composite manager (e.g allows transparency)
 picom &
 
 # set wallpaper
-setwall --refresh &
+setwall --restore &
 
 # notifications
 dunst &

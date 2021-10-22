@@ -91,6 +91,8 @@ super + shift + b
     dm-bluetooth
 super + x
     dm-shutdown
+super + shift + m
+    monitorconfig
 
 # quick actions
 super + s

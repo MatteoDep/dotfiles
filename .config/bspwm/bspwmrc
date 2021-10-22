@@ -21,8 +21,8 @@ bspc pointer_action1 move
 bspc pointer_action2 resize_side
 bspc pointer_action3 resize_corner
 
-bspc desktop '^1' -l monocle
+bspc desktop '1' -l monocle
 
 bspc rule -a 'Gimp' state=floating follow=on
 bspc rule -a '*:floatterm' state=floating
-bspc rule -a 'qutebrowser' desktop='^1'
+bspc rule -a 'qutebrowser' desktop='1'
