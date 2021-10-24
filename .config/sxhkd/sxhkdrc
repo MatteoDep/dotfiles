@@ -92,7 +92,7 @@ super + shift + b
 super + x
     dm-shutdown
 super + shift + m
-    monitorconfig
+    xrandrmenu
 
 # quick actions
 super + s

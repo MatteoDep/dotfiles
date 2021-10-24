@@ -3,8 +3,24 @@
 # start keyboard deamon
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-# configure monitor, set wallpaper and start statusbar
-monitorconfig laptop-only
+# feed fifo file to inform statusbar of wm changes
+PANEL_FIFO=/tmp/panel-fifo
+[ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
+mkfifo "$PANEL_FIFO"
+bspc subscribe report > "$PANEL_FIFO" &
+
+# restore previous monitor onfiguration
+xrandrmenu --restore
+
+# reset wallpaper
+setwall --restore &
+
+# launch statusbar
+pkill -x launchbar > /dev/null
+launchbar bar1 &
+
+# configure desktops
+bspwm-set-desktops
 
 # configs
 bspc config border_width         0
