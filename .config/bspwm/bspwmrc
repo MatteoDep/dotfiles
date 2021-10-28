@@ -17,7 +17,10 @@ setwall --restore &
 
 # launch statusbar
 pkill -x launchbar > /dev/null
-launchbar bar1 &
+monitors=$(xrandr --listactivemonitors | awk '/^\s*[0-9]+:/ {print $4}')
+for m in $monitors; do
+    launchbar bar1,"$m" &
+done
 
 # configure desktops
 bspwm-set-desktops
