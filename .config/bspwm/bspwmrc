@@ -23,16 +23,20 @@ for m in $monitors; do
 done
 
 # configure desktops
-bspwm-set-desktops
+bspwm-tool auto-set-desktops
 
 # configs
-bspc config border_width         0
-bspc config window_gap          12
+# for some reason all the 3 below are needed
+bspc config remove_unplugged_monitors true
+bspc config remove_disabled_monitors true
+bspc config merge_overlapping_monitors true
+bspc config border_width 0
+bspc config window_gap 12
 
 bspc config automatic_scheme longest_side
-bspc config split_ratio          0.52
-bspc config borderless_monocle   true
-bspc config gapless_monocle      true
+bspc config split_ratio 0.52
+bspc config borderless_monocle true
+bspc config gapless_monocle true
 
 bspc config pointer_follows_monitor true
 bspc pointer_modifier mod4

@@ -50,8 +50,8 @@ config.bind('<Ctrl-v>', 'mode-enter insert ;; insert-text -- {clipboard} ')
 c.content.blocking.enabled = True
 c.content.blocking.method = 'both'
 c.content.geolocation = False
-c.url.searchengines = {
-    'DEFAULT': 'https://search.brave.com/search?q={}',
+searchengines = {
+    'bs': 'https://search.brave.com/search?q={}',
     'ddg': 'https://duckduckgo.com/?q={}',
     'ddgt': 'https://3g2upl4pq6kufc4m.onion/?q={}',
     'aw': 'https://wiki.archlinux.org/?search={}',
@@ -59,9 +59,12 @@ c.url.searchengines = {
     'wb': 'https://en.wikibooks.org/w/index.php?search={}',
     'gh': 'https://github.com/search?q={}',
     'wr': 'https://www.wordreference.com/definition/{}',
-    'gt': 'https://translate.google.com/?sl=auto&tl=en&text={}&op=translate',
+    'gt': 'https://translate.google.com/?text={}',
+    'gs': 'https://scholar.google.com/scholar?q={}',
     'hl': 'https://hoogle.haskell.org/?hoogle={}'
 }
+searchengines['DEFAULT'] = searchengines['bs']
+c.url.searchengines = searchengines
 config.bind('h', 'set-cmd-text :open -t  {primary} ;; rl-beginning-of-line ;; rl-forward-word ;; rl-forward-word ;; rl-forward-char ;; rl-forward-char')
 c.url.default_page = "https://search.brave.com"
 c.url.start_pages = [c.url.default_page]

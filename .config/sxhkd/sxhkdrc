@@ -13,20 +13,20 @@ super + shift + =
 	bspc node -s biggest.window
 # state/flags
 # set the window state
-super + {t,f,space}
-	bspc node -t {tiled,fullscreen,floating}
+super + {f,space}
+	bspwm-tool toggle-{fullscreen,floating}
 # focus the next/previous window in the current desktop
 super + {j,k}
-	bspc node -f {next,prev}.local.!hidden.window
+	bspc node -f {next,prev}.local
 # swap the next/previous window in the current desktop
 super + {bracketright,bracketleft}
-	bspc node -s {next,prev}.local.!hidden.window
+	bspc node -s {next,prev}.local
 # rotate tree
 super + shift + {bracketright,bracketleft}
 	bspc node @parent -R {90,270}
 # focus the last node/desktop
 super + {grave,Tab}
-	bspc {node,desktop} -f last
+	bspc {monitor,desktop} -f last
 # focus or send to the given desktop
 super + {_,shift + }{1-9}
 	bspc {desktop -f,node -d} '^{1-9}'
