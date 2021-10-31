@@ -45,7 +45,7 @@ set vimhelp
 set norunexec
 
 " Selected color scheme
-colorscheme Nord
+colorscheme custom
 
 " Format for displaying time in file list. For example:
 " TIME_STAMP_FORMAT=%m/%d-%H:%M
@@ -209,178 +209,23 @@ set classify+=' ::*.xopp::'
 
 " }}}
 
-" OPEN/PREVIEW {{{
+" OPEN {{{
 
-" The file type is for the default programs to be used with
-" a file extension.
-" :filetype pattern1,pattern2 defaultprogram,program2
-" :fileviewer pattern1,pattern2 consoleviewer
-" The other programs for the file type can be accessed with the :file command
-" The command macros %f, %F, %d, %F may be used in the commands.
-" The %a macro is ignored.  To use a % you must put %%.
+filetype * open
+filetype .* open
 
-" Pdf
-filextype *.pdf
-        \ zathura %c %i &
-fileviewer *.pdf
-        \ pdftotext -nopgbrk %c -
+" }}}
 
-" PostScript
-filextype *.ps,*.eps,*.ps.gz
-        \ zathura %f,
+" PREVIEWS {{{
 
-" Djvu
-filextype *.djvu
-        \ zathura %f,
-
-" Audio
-filetype *.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape,*.ac3,*.og[agx],*.spx,*.opus, *.mov
-        \ mpv %f &,
-fileviewer *.mp3 mp3info
-fileviewer *.flac soxi
-
-" Video
-filextype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
-        \*.fl[icv],*.m2v,*.mov,*.webm,*.ts,*.mts,*.m4v,*.r[am],*.qt,*.divx,
-        \*.as[fx]
-        \ mpv %f &,
-fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
-        \*.fl[icv],*.m2v,*.mov,*.webm,*.ts,*.mts,*.m4v,*.r[am],*.qt,*.divx,
-        \*.as[fx]
-        \ ffprobe -pretty %c 2>&1
-
-" Web
-filextype *.html,*.htm
-        \ brave --new-window %f &,
-" filetype *.html,*.htm links, lynx
-
-" Object
-filetype *.o nm %f | less
-
-" Man page
-filetype *.[1-8] man ./%c
-fileviewer *.[1-8] man ./%c | col -b
-
-" Images
-filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
-        \ sxiv %f &,
-fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
-        \ vifmimg draw %px %py %pw %ph %c
-        \ %pc
-        \ vifmimg clear,
-        \ identify %c
-
-" Mindmap
-filextype *.vym
-        \ {Open with VYM}
-        \ vym %f &,
-
-" MD5
-filetype *.md5
-       \ {Check MD5 hash sum}
-       \ md5sum -c %f %S,
-
-" SHA1
-filetype *.sha1
-       \ {Check SHA1 hash sum}
-       \ sha1sum -c %f %S,
-
-" SHA256
-filetype *.sha256
-       \ {Check SHA256 hash sum}
-       \ sha256sum -c %f %S,
-
-" SHA512
-filetype *.sha512
-       \ {Check SHA512 hash sum}
-       \ sha512sum -c %f %S,
-
-" GPG signature
-filetype *.asc
-       \ {Check signature}
-       \ !!gpg --verify %c,
-
-" Torrent
-filetype *.torrent ktorrent %f &
-fileviewer *.torrent dumptorrent -v %c
-
-" FuseZipMount
-filetype *.zip,*.jar,*.war,*.ear,*.oxt,*.apkg
-       \ {Mount with fuse-zip}
-       \ FUSE_MOUNT|fuse-zip %SOURCE_FILE %DESTINATION_DIR,
-       \ {View contents}
-       \ zip -sf %c | less,
-       \ {Extract here}
-       \ tar -xf %c,
-fileviewer *.zip,*.jar,*.war,*.ear,*.oxt zip -sf %c
-
-" ArchiveMount
-filetype *.tar,*.tar.bz2,*.tbz2,*.tgz,*.tar.gz,*.tar.xz,*.txz
-       \ {Mount with archivemount}
-       \ FUSE_MOUNT|archivemount %SOURCE_FILE %DESTINATION_DIR,
-fileviewer *.tgz,*.tar.gz tar -tzf %c
-fileviewer *.tar.bz2,*.tbz2 tar -tjf %c
-fileviewer *.tar.txz,*.txz xz --list %c
-fileviewer *.tar tar -tf %c
-
-" Rar2FsMount and rar archives
-filetype *.rar
-       \ {Mount with rar2fs}
-       \ FUSE_MOUNT|rar2fs %SOURCE_FILE %DESTINATION_DIR,
-fileviewer *.rar unrar v %c
-
-" IsoMount
-filetype *.iso
-       \ {Mount with fuseiso}
-       \ FUSE_MOUNT|fuseiso %SOURCE_FILE %DESTINATION_DIR,
-
-" SshMount
-filetype *.ssh
-       \ {Mount with sshfs}
-       \ FUSE_MOUNT2|sshfs %PARAM %DESTINATION_DIR %FOREGROUND,
-
-" FtpMount
-filetype *.ftp
-       \ {Mount with curlftpfs}
-       \ FUSE_MOUNT2|curlftpfs -o ftp_port=-,,disable_eprt %PARAM %DESTINATION_DIR %FOREGROUND,
-
-" Fuse7z and 7z archives
-filetype *.7z
-       \ {Mount with fuse-7z}
-       \ FUSE_MOUNT|fuse-7z %SOURCE_FILE %DESTINATION_DIR,
-fileviewer *.7z 7z l %c
-
-" Office files
-filextype *.odt,*.doc,*.docx,*.xls,*.xlsx,*.odp,*.pptx libreoffice %f &
-fileviewer *.doc catdoc %c
-fileviewer *.docx docx2txt.pl %f -
-
-" Xournal files
-filetype *.xopp xournalpp %f 2>/dev/null &
-
-" TuDu files
-filetype *.tudu tudu -f %c
-
-" Qt projects
-filextype *.pro qtcreator %f &
-
-" Directories
-filextype */
-        \ {View in thunar}
-        \ Thunar %f &,
-
-" Syntax highlighting in preview
-fileviewer * previewer
+fileviewer *
+     \ preview -g %pwx%ph+%px+%py %c
+     \ %pc
+     \ preview -c
 fileviewer .* previewer
-
-
-" Open all other files with default system programs (you can also remove all
-" :file[x]type commands above to ensure they don't interfere with system-wide
-" settings).  By default all unknown files are opened with 'vi[x]cmd'
-" uncommenting one of lines below will result in ignoring 'vi[x]cmd' option
-" for unknown file types.
-" For *nix:
-" filetype * xdg-open
+     \ preview -g %pwx%ph+%px+%py %c
+     \ %pc
+     \ preview -c
 
 " }}}
 

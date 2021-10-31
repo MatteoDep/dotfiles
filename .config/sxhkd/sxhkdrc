@@ -17,10 +17,10 @@ super + {f,space}
 	bspwm-tool toggle-{fullscreen,floating}
 # focus the next/previous window in the current desktop
 super + {j,k}
-	bspc node -f {next,prev}.local
+	bspc node -f {next,prev}.local.!hidden.window
 # swap the next/previous window in the current desktop
 super + {bracketright,bracketleft}
-	bspc node -s {next,prev}.local
+	bspc node -s {next,prev}.local.!hidden.window
 # rotate tree
 super + shift + {bracketright,bracketleft}
 	bspc node @parent -R {90,270}

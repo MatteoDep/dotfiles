@@ -28,6 +28,7 @@ export GNUPGHOME="$XDG_CONFIG_HOME"/gnupg
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/password-store
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export GTK_RC_FILES="$XDG_CONFIG_HOME"/gtk-1.0/gtkrc
+export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 
 # personal paths
 export MYVIMRC="$XDG_CONFIG_HOME/nvim/init.vim"
