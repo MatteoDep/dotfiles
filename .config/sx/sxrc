@@ -1,31 +1,7 @@
 #!/bin/sh
 
-# read Xresources
-xrdb ~/.config/Xresources &
+[ -f ~/.xprofile ] && . ~/.xprofile
 
-# X11 settings
-setxkbmap -option compose:ralt us &
-xsetroot -cursor_name left_ptr &
-
-# composite manager (e.g allows transparency)
-picom &
-
-# set wallpaper
-setwall --restore &
-
-# notifications
-dunst &
-
-# clipboard menu
-clipmenud &
-
-# calendar
-calcurse --daemon &
-
-# keyboard shortcut deamon
-sxhkd &
-
-# exec WM or DE
 exec bspwm
 
 # kill pulseaudio (prevents loading it 2 times)

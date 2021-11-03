@@ -9,7 +9,7 @@ super + {_,ctrl + }q
 super + m
 	bspc desktop -l next
 # swap the current node and the biggest window
-super + shift + =
+super + shift + equal
 	bspc node -s biggest.window
 # state/flags
 # set the window state

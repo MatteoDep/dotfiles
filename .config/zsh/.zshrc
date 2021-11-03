@@ -76,8 +76,8 @@ alias p='sudo pacman'
 alias cat='bat'
 alias vifm='vifmrun'
 alias d='devour'
-alias sudo='doas'
 alias sudoedit='doasedit'
+alias monerod='monerod --data-dir "$XDG_DATA_HOME"/bitmonero'
 
 #############
 # functions #

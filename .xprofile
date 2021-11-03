@@ -1,0 +1,17 @@
+# read Xresources
+xrdb ~/.config/Xresources &
+
+# X11 settings
+setxkbmap -option compose:ralt us &
+xsetroot -cursor_name left_ptr &
+
+# compositor
+picom &
+
+# clipboard menu
+clipmenud &
+
+# calendar
+calcurse --daemon &
+
+while pgrep xrdb; do sleep 1s; done

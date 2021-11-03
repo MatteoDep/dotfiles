@@ -12,7 +12,7 @@
   <property name="zoomStep" value="10.00000000"/>
   <property name="zoomStepScroll" value="2.00000000"/>
   <property name="displayDpi" value="72"/>
-  <property name="mainWndWidth" value="638"/>
+  <property name="mainWndWidth" value="1342"/>
   <property name="mainWndHeight" value="724"/>
   <property name="maximized" value="false"/>
   <property name="showToolbar" value="true"/>
@@ -113,7 +113,7 @@
   <data name="buttonConfig">
     <data name="default">
       <attribute name="color" type="hex" value="ff000000"/>
-      <attribute name="drawingType" type="string" value="default"/>
+      <attribute name="drawingType" type="string" value="strokeRecognizer"/>
       <attribute name="size" type="string" value="medium"/>
       <attribute name="tool" type="string" value="pen"/>
     </data>
@@ -154,11 +154,11 @@
       <attribute name="deviceSource" type="int" value="6"/>
     </data>
     <data name="Wacom BambooPT 2FG 4x5 Finger">
-      <attribute name="deviceClass" type="int" value="1"/>
+      <attribute name="deviceClass" type="int" value="0"/>
       <attribute name="deviceSource" type="int" value="6"/>
     </data>
     <data name="Wacom BambooPT 2FG 4x5 Finger touch">
-      <attribute name="deviceClass" type="int" value="1"/>
+      <attribute name="deviceClass" type="int" value="0"/>
       <attribute name="deviceSource" type="int" value="6"/>
     </data>
     <data name="Wacom BambooPT 2FG 4x5 Pad">
@@ -188,7 +188,7 @@
   </data>
   <data name="lastUsedPageBgColor"/>
   <data name="tools">
-    <attribute name="current" type="string" value="pen"/>
+    <attribute name="current" type="string" value="selectRect"/>
     <data name="drawArrow">
       <attribute name="drawingType" type="string" value="default"/>
     </data>
