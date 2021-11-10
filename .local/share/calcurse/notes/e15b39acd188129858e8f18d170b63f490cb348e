@@ -1,0 +1,9 @@
++ handle jira tasks
++ Move open issue to jira (week 11)
++ Improve chrysanthemum detection:
+    - Add test/validation set
+    - Better head detection [Matteo]
+    - Better stage differentiator
+    - No detection on borders
+    - bud/flower detection
++ Delete old chrysanthemum repos

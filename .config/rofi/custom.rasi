@@ -1,0 +1,86 @@
+@import "colors"
+
+* {
+  spacing: 0;
+  font: "monospace 12";
+  text-color: @fg;
+  background-color: transparent;
+}
+
+window {
+  transparency: "real";
+  fullscreen: true;
+  background-color: @bg;
+}
+
+mainbox {
+  padding: 20% 20%;
+}
+
+inputbar {
+    spacing: 8px;
+    padding: 8px;
+    background-color: @fade;
+}
+
+prompt, entry, element-icon, element-text {
+    vertical-align: 0.5;
+}
+
+prompt {
+    text-color: @hl;
+}
+
+textbox {
+    padding: 8px;
+}
+
+listview {
+    padding: 4px 0;
+    lines: 8;
+    columns: 1;
+    fixed-height: false;
+}
+
+element {
+    padding: 8px;
+    spacing: 8px;
+}
+
+element normal urgent {
+    background-color: @urgent;
+}
+
+element normal active {
+    text-color: @hl;
+}
+
+element selected {
+    text-color: @bg;
+}
+
+element selected normal, element selected active {
+    background-color: @hl;
+}
+
+element selected urgent {
+    background-color: @urgent;
+}
+
+element-text {
+    text-color: inherit;
+}
+
+message {
+  padding: 5px;
+  border-radius: 3px;
+  background-color: @fade;
+  border: 1px;
+  border-color: @hl;
+}
+
+button selected {
+  padding: 5px;
+  border-radius: 3px;
+  background-color: @hl;
+}

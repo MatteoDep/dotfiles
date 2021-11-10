@@ -39,6 +39,9 @@ export MYVIMRC="$XDG_CONFIG_HOME/nvim/init.vim"
 export MYVIFMMRC="$XDG_CONFIG_HOME/vifm/vifmrc"
 export DOTFILES_DIR="$HOME/.dotfiles"
 
+# sudo askpass
+export SUDO_ASKPASS="/usr/bin/qt4-ssh-askpass"
+
 # clipmenu
 export CM_SELECTIONS="clipboard"
 export CM_MAX_CLIPS=10
@@ -52,10 +55,7 @@ export D_XTERM_CLASS="st256-color"
 export D_XTERM_PROG="st -e"
 
 # bat
-export BAT_THEME="Nord"
+export BAT_THEME="ansi"
 
 # qt theme
 export QT_QPA_PLATFORMTHEME="gtk2"
-
-# Start graphical server on tty1 if not already running.
-# [ "$(tty)" = "/dev/tty1" ] && ! pidof Xorg >/dev/null 2>&1  && exec sx > /dev/null

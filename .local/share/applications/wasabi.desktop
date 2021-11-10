@@ -1,0 +1,14 @@
+[Desktop Entry]
+Comment=Bitcoin Client
+Exec=sh -c "$HOME/.local/src/wasabi/wassabee"
+GenericName[en_US]=Bitcoin Wallet
+GenericName=Bitcoin Wallet
+Icon=wasabi
+Name[en_US]=Wasabi Bitcoin Wallet
+Name=Wasabi Bitcoin Wallet
+Categories=Finance;Network;
+StartupNotify=true
+StartupWMClass=wasabi
+Terminal=false
+Type=Application
+MimeType=x-scheme-handler/bitcoin;

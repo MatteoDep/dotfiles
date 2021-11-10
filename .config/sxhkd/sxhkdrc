@@ -35,76 +35,80 @@ super + {_,shift + }F{1-9}
 	bspc {monitor -f,node -m} '^{1-9}'
 # resize a window
 super + shift + {h,j,k,l}
-    {bspc node -z right -20 0 || bspc node -z left -20 0 \
-    ,bspc node -z bottom 0 20 || bspc node -z top 0 20 \
-    ,bspc node -z bottom 0 -20 || bspc node -z top 0 -20 \
-    ,bspc node -z right 20 0 || bspc node -z left 20 0}
+	{bspc node -z right -20 0 || bspc node -z left -20 0 \
+	,bspc node -z bottom 0 20 || bspc node -z top 0 20 \
+	,bspc node -z bottom 0 -20 || bspc node -z top 0 -20 \
+	,bspc node -z right 20 0 || bspc node -z left 20 0}
 # balance sizes
 super + equal
-    bspc node @parent -B
+	bspc node @parent -B
 # swap the current node and the biggest window
 super + shift + equal
 	bspc node -s biggest.local.!hidden.window
 
 # volume
 XF86Audio{LowerVolume,RaiseVolume}
-    pamixer --allow-boost -{d,i} 10; pkill -RTMIN+10 statusblocks
+	pamixer --allow-boost -{d,i} 10; pkill -RTMIN+10 statusblocks
 XF86AudioMute
-    pamixer -t; pkill -RTMIN+10 statusblocks
+	pamixer -t; pkill -RTMIN+10 statusblocks
 
 # brightness
 XF86MonBrightness{Down,Up}
-    backlight -{d,i} 2
+	backlight -{d,i} 2
 
 # programs
 super + w
-    $BROWSER
+	$BROWSER
 super + Return
-    $TERMINAL
+	$TERMINAL
 super + e
-    $TERMINAL -e vifmrun
+	$TERMINAL -e vifmrun
 super + shift + w
-    $TERMINAL --class floatterm -e connmanctl; \
-    pkill -RTMIN+4 statusblocks
+	$TERMINAL --class floatterm -e connmanctl; \
+	pkill -RTMIN+4 statusblocks
 super + n
-    $TERMINAL --class floatterm -e newsboat; \
-    pkill -RTMIN+6 statusblocks
+	$TERMINAL --class floatterm -e newsboat; \
+	pkill -RTMIN+6 statusblocks
 super + c
-    $TERMINAL --class floatterm -e calcurse
+	$TERMINAL --class floatterm -e calcurse
 
 # scratchpads
 super + shift + Return
-    tdrop -Aam -n spterm -x 0 -y 20 -w 100% -h 80% \
-    "$TERMINAL" --class floatterm -t spterm
+	tdrop -Aam -n spterm -x 0 -y 20 -w 100% -h 80% \
+	"$TERMINAL" --class floatterm -t spterm
 super + shift + e
-    tdrop -Aam -n spfm -x 0 -y 20 -w 100% -h 80% \
-    "$TERMINAL" --class floatterm -t spfm -e vifmrun
+	tdrop -Aam -n spfm -x 0 -y 20 -w 100% -h 80% \
+	"$TERMINAL" --class floatterm -t spfm -e vifmrun
 
 # menus
 super + r
-    dmenu_run
+	rofi -show run
+super + d
+	rofi -show combi -combi-modi "window,drun" -modi combi
 super + p
-    clipctl disable && passmenu; \
-    clipctl enable
+	clipctl disable && rofi-pass; \
+	clipctl enable
 super + y
-    clipmenu
+	clipmenu
 super + u
-    dm-unicode
-super + shift + b
-    dm-bluetooth
-super + x
-    dm-shutdown
+	iconmenu
+super + b
+	btmenu
 super + shift + m
-    xrandrmenu
+    mountmenu
+super + shift + x
+	xrandrmenu
+super + x
+	shutmenu
 
 # quick actions
 super + s
-    capture
+	capture
 super + shift + s
-    capture -sf
+	capture -sf
 
 # dunst
 ctrl {_,+ shift}+ space
-    dunstctl close{_,-all}
+	dunstctl close{_,-all}
 ctrl + shift + h
-    dunstctl history-pop
+	dunstctl history-pop

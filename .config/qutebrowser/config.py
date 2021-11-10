@@ -65,7 +65,7 @@ searchengines = {
 }
 searchengines['DEFAULT'] = searchengines['bs']
 c.url.searchengines = searchengines
-config.bind('h', 'set-cmd-text :open -t  {primary} ;; rl-beginning-of-line ;; rl-forward-word ;; rl-forward-word ;; rl-forward-char ;; rl-forward-char')
+config.bind(' s', 'set-cmd-text :open -t  {primary} ;; rl-beginning-of-line ;; rl-forward-word ;; rl-forward-word ;; rl-forward-char ;; rl-forward-char')
 c.url.default_page = "https://search.brave.com"
 c.url.start_pages = [c.url.default_page]
 c.editor.command = [TERMINAL, '--class', 'floatterm', '-e', EDITOR, '{file}']

@@ -99,7 +99,7 @@ draw_bold_text_with_bright_colors: false
 
 # Colors
 import:
-  - ~/.config/alacritty/nord.yml
+  - ~/.config/alacritty/chpal.yml
 
 # Bell
 bell:
