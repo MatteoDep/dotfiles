@@ -40,7 +40,7 @@ export MYVIFMMRC="$XDG_CONFIG_HOME/vifm/vifmrc"
 export DOTFILES_DIR="$HOME/.dotfiles"
 
 # sudo askpass
-export SUDO_ASKPASS="/usr/bin/qt4-ssh-askpass"
+export SUDO_ASKPASS="/usr/bin/lxqt-openssh-askpass"
 
 # clipmenu
 export CM_SELECTIONS="clipboard"

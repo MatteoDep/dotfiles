@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/sh
 
 # start keyboard deamon
 killall sxhkd > /dev/null
@@ -49,5 +49,6 @@ bspc desktop '1' -l monocle
 
 bspc rule -a 'Gimp' state=floating follow=on
 bspc rule -a '*:floatterm' state=floating
-# bspc rule -a 'Matplotlib' state=floating
+bspc rule -a 'Matplotlib' state=floating
+bspc rule -a 'lxqt-openssh-askpass' state=floating
 bspc rule -a 'qutebrowser' desktop='1'
