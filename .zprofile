@@ -39,8 +39,9 @@ export MYVIMRC="$XDG_CONFIG_HOME/nvim/init.vim"
 export MYVIFMMRC="$XDG_CONFIG_HOME/vifm/vifmrc"
 export DOTFILES_DIR="$HOME/.dotfiles"
 
-# sudo askpass
-export SUDO_ASKPASS="/usr/bin/lxqt-openssh-askpass"
+# askpass program
+export SSH_ASKPASS="/usr/bin/xaskpass"
+export SUDO_ASKPASS="/usr/bin/xaskpass"
 
 # clipmenu
 export CM_SELECTIONS="clipboard"

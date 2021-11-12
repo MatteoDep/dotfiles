@@ -13,5 +13,3 @@ clipmenud &
 
 # calendar
 calcurse --daemon &
-
-while pgrep xrdb; do sleep 1s; done
