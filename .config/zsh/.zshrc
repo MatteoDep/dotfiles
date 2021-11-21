@@ -52,10 +52,10 @@ precmd() { vcs_info }
 read pcomm < /proc/$PPID/comm
 [ "$pcomm" = "login" ]  && {
     zstyle ':vcs_info:git:*' formats '%F{white}(%b)%f'
-    PS1="%(?..%F{#ff0000}!%? )%F{blue}%1~%f%b \$vcs_info_msg_0_ %F{red}%(!.#.>)%f "
+    PS1="%(?..%F{#ff0000}!%? )%F{cyan}%1~%f%b \$vcs_info_msg_0_ %F{red}%(!.#.>)%f "
 } || {
     zstyle ':vcs_info:git:*' formats ' %F{white} %b%f'
-    PS1="%(?..%F{#ff0000}%? )%F{blue}%1~%f%b\$vcs_info_msg_0_ %F{red}%(!.#.)%f "
+    PS1="%(?..%F{#ff0000}%? )%F{cyan}%1~%f%b\$vcs_info_msg_0_ %F{red}%(!.#.)%f "
 }
 
 ###########

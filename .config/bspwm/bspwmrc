@@ -16,12 +16,12 @@ xrandrmenu --restore
 # reset wallpaper
 wallmenu --restore &
 
-# launch statusbar
-[ "$(xrdb -query)" ] || xrdb ~/.config/Xresources
-killall launchbar > /dev/null
+# launch statusbar and make sure it launches after reboot
+[ "$(xrdb -query)" ] || xrdb ~/.config/X11/Xresources
+killall launchbar > /dev/null || sleep 1
 monitors=$(xrandr --listactivemonitors | awk '/^\s*[0-9]+:/ {print $4}')
 for m in $monitors; do
-    launchbar bar1,"$m" &
+    launchbar "bar1,$m" &
 done
 
 # configure desktops
@@ -51,5 +51,4 @@ bspc desktop '1' -l monocle
 bspc rule -a 'Gimp' state=floating follow=on
 bspc rule -a '*:floatterm' state=floating
 bspc rule -a 'Matplotlib' state=floating
-# bspc rule -a 'ssh-askpass-fullscreen' state=floating
 bspc rule -a 'qutebrowser' desktop='1'

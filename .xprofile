@@ -1,5 +1,5 @@
 # read Xresources
-xrdb ~/.config/Xresources &
+xrdb ~/.config/X11/Xresources &
 
 # X11 settings
 setxkbmap -option compose:ralt us &

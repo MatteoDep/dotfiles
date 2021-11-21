@@ -312,3 +312,7 @@ x-scheme-handler/vnd.sun.star.webdavs=libreoffice-startcenter.desktop;
 x-scheme-handler/zoommtg=Zoom.desktop;
 x-scheme-handler/zoomphonecall=Zoom.desktop;
 x-scheme-handler/zoomus=Zoom.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-NR10C1.desktop
+
+[Added Associations]
+x-scheme-handler/tg=userapp-Telegram Desktop-NR10C1.desktop;
