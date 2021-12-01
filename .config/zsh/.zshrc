@@ -19,6 +19,15 @@ unsetopt beep   # no annoying sounds
 # Enable vim key bindings
 source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
+# enable sintax highlighting
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# enable autosuggestions
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# ls colors
+[ -r "$XDG_CONFIG_HOME/zsh/dir_colors" ] && eval $(dircolors "$XDG_CONFIG_HOME/zsh/dir_colors")
+
 # Autocompletion
 autoload -Uz compinit
 zstyle ':completion:*' menu select  # enable menu selction
@@ -33,12 +42,6 @@ zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey "^[[A" history-beginning-search-backward-end
 bindkey "^[[B" history-beginning-search-forward-end
-
-# enable sintax highlighting
-source ${ZDOTDIR}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
-
-# ls colors nord theme
-[ -r "$XDG_CONFIG_HOME/dir_colors" ] && eval $(dircolors "$XDG_CONFIG_HOME/dir_colors")
 
 ########################
 # Prompt customization #

@@ -28,25 +28,25 @@ Xft.hintstyle: hintfull
 Xft.lcdfilter: lcdfilter
 
 ! Start flavours
-! Base16 Gruvbox dark, hard
-! Scheme: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
+! Base16 Nord
+! Scheme: arcticicestudio
 
-#define base00 #1d2021
-#define base01 #3c3836
-#define base02 #504945
-#define base03 #665c54
-#define base04 #bdae93
-#define base05 #d5c4a1
-#define base06 #ebdbb2
-#define base07 #fbf1c7
-#define base08 #fb4934
-#define base09 #fe8019
-#define base0A #fabd2f
-#define base0B #b8bb26
-#define base0C #8ec07c
-#define base0D #83a598
-#define base0E #d3869b
-#define base0F #d65d0e
+#define base00 #2E3440
+#define base01 #3B4252
+#define base02 #434C5E
+#define base03 #4C566A
+#define base04 #D8DEE9
+#define base05 #E5E9F0
+#define base06 #ECEFF4
+#define base07 #8FBCBB
+#define base08 #BF616A
+#define base09 #D08770
+#define base0A #EBCB8B
+#define base0B #A3BE8C
+#define base0C #88C0D0
+#define base0D #81A1C1
+#define base0E #B48EAD
+#define base0F #5E81AC
 
 *foreground:   base05
 #ifdef background_opacity

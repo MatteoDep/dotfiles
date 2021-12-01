@@ -1,0 +1,15 @@
+/**
+ * Base16 Nord ROFI Color theme
+ *
+ * Authors
+ *  Scheme: arcticicestudio
+ *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
+ */
+
+* {
+    bg: #2E3440;
+    fg: #E5E9F0;
+    fade: #434C5E;
+    urgent: #BF616A;
+    hl: #88C0D0;
+}

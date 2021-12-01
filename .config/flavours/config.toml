@@ -1,0 +1,79 @@
+# Explanation and default values for keys:
+
+# # Through which shell command hooks will run. The command will be replaced in '{}'
+shell = "sh -c '{}'"
+
+# [[items]]
+# # File to inject to, supports tilde and env var expansion. required
+# file = "~/.config/example"
+# # Template to use. required
+# template = "example"
+# # Subtemplate to use
+# subtemplate = "default"
+# # If not rewriting, on which line (usually a comment) to start replacing
+# start = "# Start flavours"
+# # If not rewriting, on which line (usually a comment) to stop replacing
+# end = "# End flavours"
+# # Should we rewrite the entire file, instead of using the above delimiters?
+# rewrite = false
+# # Command to execute after injecting (goes through shell)
+# hook = ""
+# # Whether this hook should be executed when flavours is ran with lightweight flag
+# light = true
+
+[[items]]
+file = "~/.config/alacritty/colors.yml"
+template = "alacritty"
+subtemplate = "default-256"
+rewrite = true
+
+[[items]]
+file = "~/.config/nvim/colors/custom.vim"
+template = "vim"
+rewrite = true
+
+[[items]]
+file = "~/.config/nvim/autoload/airline/themes/custom.vim"
+template = "vim-airline-themes"
+subtemplate = "custom"
+rewrite = true
+
+[[items]]
+file = "~/.config/X11/Xresources"
+template = "xresources"
+subtemplate = "custom"
+hook = "xrdb ~/.config/X11/Xresources && bspc wm -r"
+start = "! Start flavours"
+end = "! End flavours"
+
+[[items]]
+file = "~/.config/qutebrowser/config.py"
+template = "qutebrowser"
+subtemplate = "minimal"
+hook = "pgrep qutebrowser && qutebrowser :config-source"
+
+[[items]]
+file = "~/.config/gtkreate/gtkreaterc"
+template = "gtkreate"
+hook = "gtkreate"
+
+[[items]]
+file = "~/.config/dunst/dunstrc"
+template = "dunst"
+hook = "killall dunst"
+
+[[items]]
+file = "~/.config/xaskpass/xaskpass.toml"
+template = "xaskpass"
+rewrite = true
+
+[[items]]
+file = "~/.config/rofi/colors.rasi"
+template = "rofi"
+subtemplate = "custom"
+rewrite = true
+
+[[items]]
+file = "~/.config/zathura/zathurarc"
+template = "zathura"
+subtemplate = "recolor"

@@ -6,7 +6,7 @@
   <property name="pressureMultiplier" value="1.00000000"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="custom Copy"/>
-  <property name="lastSavePath" value="/home/matteo/documents/tudelft/computational-s&amp;e"/>
+  <property name="lastSavePath" value=""/>
   <property name="lastOpenPath" value="/home/matteo/documents/tudelft/solid-state/presentation1/references"/>
   <property name="lastImagePath" value="file:///home/matteo/documents/tudelft/environmental/hw3"/>
   <property name="zoomStep" value="10.00000000"/>
@@ -59,7 +59,7 @@
   <property name="drawDirModsRadius" value="50"/>
   <property name="snapRotation" value="true"/>
   <property name="snapRotationTolerance" value="0.20000000"/>
-  <property name="snapGrid" value="false"/>
+  <property name="snapGrid" value="true"/>
   <property name="snapGridTolerance" value="0.10000000"/>
   <property name="snapGridSize" value="14.17000000"/>
   <property name="touchDrawing" value="false"/>
