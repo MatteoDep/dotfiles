@@ -20,7 +20,7 @@ recurse() {
                 recurse "$1/$f" "$2/$f" "$(( $3 + 1 ))"
             else
                 echo "linking $2/$f"
-                ln -sf "$1/$f" "$2/$f"
+                ln -srf "$1/$f" "$2/$f"
             fi
         }
     done
