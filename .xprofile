@@ -13,3 +13,6 @@ clipmenud &
 
 # calendar
 calcurse --daemon &
+
+# lock daemon
+xss-lock lock &

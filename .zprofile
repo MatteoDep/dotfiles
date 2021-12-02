@@ -11,7 +11,7 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export STATUSBAR="statusblocks"
 
 # Adds `~/.local/bin` to $PATH
-export PATH="$PATH:$HOME/.local/bin:$HOME/.local/bin/scripts:$HOME/.local/bin/scripts/statusbar/"
+export PATH="$HOME/.local/bin:$PATH"
 
 # xdg specifications
 export XDG_CONFIG_HOME="$HOME"/.config
@@ -59,4 +59,4 @@ export D_XTERM_PROG="st -e"
 export BAT_THEME="ansi"
 
 # qt theme
-export QT_QPA_PLATFORMTHEME="gtk2"
+export QT_QPA_PLATFORMTHEME="qt5ct"

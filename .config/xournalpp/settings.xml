@@ -6,14 +6,14 @@
   <property name="pressureMultiplier" value="1.00000000"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="custom Copy"/>
-  <property name="lastSavePath" value="/home/matteo/downloads"/>
+  <property name="lastSavePath" value=""/>
   <property name="lastOpenPath" value="/home/matteo/documents/tudelft/solid-state/presentation1/references"/>
   <property name="lastImagePath" value="/home/matteo/downloads"/>
   <property name="zoomStep" value="10.00000000"/>
   <property name="zoomStepScroll" value="2.00000000"/>
   <property name="displayDpi" value="72"/>
-  <property name="mainWndWidth" value="692"/>
-  <property name="mainWndHeight" value="724"/>
+  <property name="mainWndWidth" value="1896"/>
+  <property name="mainWndHeight" value="1036"/>
   <property name="maximized" value="false"/>
   <property name="showToolbar" value="true"/>
   <property name="showSidebar" value="false"/>
@@ -153,6 +153,10 @@
       <attribute name="deviceClass" type="int" value="1"/>
       <attribute name="deviceSource" type="int" value="6"/>
     </data>
+    <data name="UNIW0001:00 093A:0255 Touchpad">
+      <attribute name="deviceClass" type="int" value="1"/>
+      <attribute name="deviceSource" type="int" value="6"/>
+    </data>
     <data name="Wacom BambooPT 2FG 4x5 Finger">
       <attribute name="deviceClass" type="int" value="0"/>
       <attribute name="deviceSource" type="int" value="6"/>
@@ -188,7 +192,7 @@
   </data>
   <data name="lastUsedPageBgColor"/>
   <data name="tools">
-    <attribute name="current" type="string" value="selectRect"/>
+    <attribute name="current" type="string" value="pen"/>
     <data name="drawArrow">
       <attribute name="drawingType" type="string" value="default"/>
     </data>

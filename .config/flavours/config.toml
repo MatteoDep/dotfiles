@@ -35,7 +35,7 @@ rewrite = true
 [[items]]
 file = "~/.config/nvim/autoload/airline/themes/custom.vim"
 template = "vim-airline-themes"
-subtemplate = "custom"
+# subtemplate = "custom"
 rewrite = true
 
 [[items]]

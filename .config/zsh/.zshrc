@@ -8,6 +8,7 @@
 [ -z "$PS1" ] && return
 
 # Lines configured by zsh-newuser-install
+mkdir -p ~/.cache/zsh
 HISTFILE=~/.cache/zsh/histfile
 HISTSIZE=100000
 SAVEHIST=100000

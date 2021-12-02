@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # FIFO to read from (default=/tmp/panel-fifo)
 # this is useful to get informations from your window manager.
 # For example in bspwm put this in your bspwmrc:
@@ -17,7 +19,6 @@ COLOR_DEFAULT_FG=$(xrdb -query | awk '/foreground/ {print $2}')
 COLOR_DEFAULT_BG=$(xrdb -query | awk '/background/ {print $2}')
 BAR_HEIGHT="20"
 FONT_A="monospace:size=10:antialias=true:autohint=true"
-# FONT_A="RobotoMono Nerd Font:size=10:antialias=true:autohint=true"
 FONT_B="CryptoIcons:size=10:antialias=true:autohint=true"
 FONT_C="Noto Color Emoji:size=10:antialias=true:autohint=true"
 

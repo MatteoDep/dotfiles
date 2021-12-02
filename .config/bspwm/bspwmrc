@@ -17,7 +17,9 @@ xrandrmenu --restore
 wallmenu --restore &
 
 # launch statusbar and make sure it launches after reboot
-[ "$(xrdb -query)" ] || xrdb ~/.config/X11/Xresources
+xrdb ~/.config/X11/Xresources
+background=$(xrdb -query | awk '/.*background:/ {print $2}')
+highlight=$(xrdb -query | awk '/.*color6:/ {print $2}')
 killall launchbar > /dev/null || sleep 3
 monitors=$(xrandr --listactivemonitors | awk '/^\s*[0-9]+:/ {print $4}')
 for m in $monitors; do
@@ -32,7 +34,9 @@ bspwm-tool auto-set-desktops
 bspc config remove_unplugged_monitors true
 bspc config remove_disabled_monitors true
 bspc config merge_overlapping_monitors true
-bspc config border_width 0
+bspc config border_width 2
+bspc config normal_border_color "$background"
+bspc config focused_border_color "$highlight"
 bspc config window_gap 12
 
 bspc config automatic_scheme longest_side
