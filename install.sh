@@ -27,3 +27,10 @@ recurse() {
 }
 
 recurse "$PWD" "$HOME" 0
+
+gpghome="$HOME/.config/gnupg"
+if [ -d "$gpghome" ]; then
+    sudo chown matteo "$gpghome"
+    sudo chmod 600 "$gpghome"/*
+    sudo chmod 700 "$gpghome"
+fi

@@ -28,25 +28,25 @@ Xft.hintstyle: hintfull
 Xft.lcdfilter: lcdfilter
 
 ! Start flavours
-! Base16 Nord
-! Scheme: arcticicestudio
+! Base16 OneDark
+! Scheme: Lalit Magant (http://github.com/tilal6991)
 
-#define base00 #2E3440
-#define base01 #3B4252
-#define base02 #434C5E
-#define base03 #4C566A
-#define base04 #D8DEE9
-#define base05 #E5E9F0
-#define base06 #ECEFF4
-#define base07 #8FBCBB
-#define base08 #BF616A
-#define base09 #D08770
-#define base0A #EBCB8B
-#define base0B #A3BE8C
-#define base0C #88C0D0
-#define base0D #81A1C1
-#define base0E #B48EAD
-#define base0F #5E81AC
+#define base00 #282c34
+#define base01 #353b45
+#define base02 #3e4451
+#define base03 #545862
+#define base04 #565c64
+#define base05 #abb2bf
+#define base06 #b6bdca
+#define base07 #c8ccd4
+#define base08 #e06c75
+#define base09 #d19a66
+#define base0A #e5c07b
+#define base0B #98c379
+#define base0C #56b6c2
+#define base0D #61afef
+#define base0E #c678dd
+#define base0F #be5046
 
 *foreground:   base05
 #ifdef background_opacity

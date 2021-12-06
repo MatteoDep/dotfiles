@@ -35,7 +35,7 @@ rewrite = true
 [[items]]
 file = "~/.config/nvim/autoload/airline/themes/custom.vim"
 template = "vim-airline-themes"
-# subtemplate = "custom"
+subtemplate = "custom"
 rewrite = true
 
 [[items]]
@@ -49,7 +49,7 @@ end = "! End flavours"
 [[items]]
 file = "~/.config/qutebrowser/config.py"
 template = "qutebrowser"
-subtemplate = "minimal"
+subtemplate = "custom"
 hook = "pgrep qutebrowser && qutebrowser :config-source"
 
 [[items]]

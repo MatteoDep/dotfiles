@@ -1,5 +1,5 @@
-# Base16 Nord - xaskpass color config
-# arcticicestudio
+# Base16 OneDark - xaskpass color config
+# Lalit Magant (http://github.com/tilal6991)
 
 # Default configuration imitating the look of gtk Arc theme.
 # By default sizes are pixels when screen height <= 1080. Otherwise they are 1/1080 of the
@@ -14,9 +14,9 @@ resizable = false
 depth = 32
 
 [dialog]
-foreground = '#E5E9F0'
-background = '#2E3440'
-indicator_label_foreground = '#E5E9F0'
+foreground = '#abb2bf'
+background = '#282c34'
+indicator_label_foreground = '#abb2bf'
 # set to 'none' to use pango default font and size. Use mono to keep ssh
 # fingerprint formatting.
 font = 'mono 11'
@@ -47,13 +47,13 @@ vertical_spacing = 'none'
 text_width = 'none'
 
 [dialog.ok_button]
-foreground = '#E5E9F0'
-border_color = '#3B4252'
-border_color_pressed = '#3B4252'
-background = '#434C5E'
+foreground = '#abb2bf'
+border_color = '#353b45'
+border_color_pressed = '#353b45'
+background = '#3e4451'
 # set to a color for a linear gradient
-background_pressed = '#4C566A'
-background_hover = '#4C566A'
+background_pressed = '#545862'
+background_hover = '#545862'
 label = 'OK'
 horizontal_spacing = 'none'
 vertical_spacing = 'none'
@@ -69,12 +69,12 @@ background_pressed_stop = 'none'
 background_hover_stop = 'none'
 
 [dialog.cancel_button]
-foreground = '#E5E9F0'
-border_color = '#3B4252'
-border_color_pressed = '#3B4252'
-background = '#434C5E'
-background_pressed = '#4C566A'
-background_hover = '#4C566A'
+foreground = '#abb2bf'
+border_color = '#353b45'
+border_color_pressed = '#353b45'
+background = '#3e4451'
+background_pressed = '#545862'
+background_hover = '#545862'
 label = 'Cancel'
 horizontal_spacing = 'none'
 vertical_spacing = 'none'
@@ -90,12 +90,12 @@ background_pressed_stop = 'none'
 background_hover_stop = 'none'
 
 [dialog.clipboard_button]
-foreground = '#E5E9F0'
-border_color = '#3B4252'
-border_color_pressed = '#3B4252'
-background = '#434C5E'
-background_pressed = '#4C566A'
-background_hover = '#4C566A'
+foreground = '#abb2bf'
+border_color = '#353b45'
+border_color_pressed = '#353b45'
+background = '#3e4451'
+background_pressed = '#545862'
+background_hover = '#545862'
 horizontal_spacing = 'none'
 vertical_spacing = 'none'
 border_width = 1.0
@@ -125,11 +125,11 @@ background_pressed_stop = 'none'
 background_hover_stop = 'none'
 
 [dialog.indicator]
-foreground = '#E5E9F0'
-background = '#4C566A'
-border_color = '#3B4252'
-border_color_focused = '#88C0D0'
-indicator_color = '#4C566A'
+foreground = '#abb2bf'
+background = '#545862'
+border_color = '#353b45'
+border_color_focused = '#56b6c2'
+indicator_color = '#545862'
 border_width = 1.0
 background_stop = 'none'
 indicator_color_stop = 'none'
@@ -150,7 +150,7 @@ element_height = 'none'
 element_width = 'none'
 
 [dialog.indicator.circle]
-lock_color = '#4C566A'
+lock_color = '#545862'
 # 'none' to derive from text width
 diameter = 'none'
 light_up = true

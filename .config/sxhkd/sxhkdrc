@@ -74,10 +74,10 @@ super + c
 
 # scratchpads
 super + shift + Return
-	tdrop -Aam -n spterm -x 0 -y 20 -w 100% -h 80% \
+	tdrop -Aam -n spterm -x 5% -y 20 -w 90% -h 80% \
 	"$TERMINAL" --class floatterm -t spterm
 super + shift + e
-	tdrop -Aam -n spfm -x 0 -y 20 -w 100% -h 80% \
+	tdrop -Aam -n spfm -x 5% -y 20 -w 90% -h 80% \
 	"$TERMINAL" --class floatterm -t spfm -e vifmrun
 
 # menus

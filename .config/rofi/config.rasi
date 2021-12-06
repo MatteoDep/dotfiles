@@ -144,4 +144,4 @@ configuration {
       sorting-method:    "name";
   }
 }
-@theme "custom"
+@theme "~/.config/rofi/custom.rasi"

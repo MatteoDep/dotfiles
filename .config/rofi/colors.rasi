@@ -1,15 +1,15 @@
 /**
- * Base16 Nord ROFI Color theme
+ * Base16 OneDark ROFI Color theme
  *
  * Authors
- *  Scheme: arcticicestudio
+ *  Scheme: Lalit Magant (http://github.com/tilal6991)
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
-    bg: #2E3440;
-    fg: #E5E9F0;
-    fade: #434C5E;
-    urgent: #BF616A;
-    hl: #88C0D0;
+    bg: #282c34;
+    fg: #abb2bf;
+    fade: #3e4451;
+    urgent: #e06c75;
+    hl: #56b6c2;
 }

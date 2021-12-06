@@ -1,4 +1,4 @@
-@import "colors"
+@import "~/.config/rofi/colors.rasi"
 
 * {
   spacing: 0;
