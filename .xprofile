@@ -1,3 +1,6 @@
+# start x session
+lxsession &
+
 # read Xresources
 xrdb ~/.config/X11/Xresources &
 

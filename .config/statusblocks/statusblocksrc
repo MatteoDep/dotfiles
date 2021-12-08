@@ -35,7 +35,11 @@ panel_command(){
                 -f "$FONT_A" -f "$FONT_B" -f "$FONT_C" \
                 -F "$COLOR_DEFAULT_FG" -B "$COLOR_DEFAULT_BG" | sh
             ;;
-
+        bar2)
+            lemonbar -a 32 -n "$1-$2" -g "$geometry" \
+                -f "$FONT_A" -f "$FONT_B" -f "$FONT_C" \
+                -F "$COLOR_DEFAULT_FG" -B "$COLOR_DEFAULT_BG" | sh
+            ;;
         *)
             notify-send -u 'critical' "statusblocks" "unknown bar $1"
             ;;

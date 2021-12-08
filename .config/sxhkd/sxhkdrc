@@ -64,7 +64,7 @@ super + Return
 super + e
 	$TERMINAL -e vifmrun
 super + shift + w
-	$TERMINAL --class floatterm -e connmanctl; \
+	$TERMINAL --class floatterm -e nmtui; \
 	pkill -RTMIN+4 statusblocks
 super + n
 	$TERMINAL --class floatterm -e newsboat; \

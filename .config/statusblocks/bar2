@@ -12,4 +12,5 @@
 0 10 sb-volume
 " "
 2 3 sb-battery
-"       "
+" "
+2 4 sb-internet

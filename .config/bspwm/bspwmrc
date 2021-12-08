@@ -22,8 +22,13 @@ background=$(xrdb -query | awk '/.*background:/ {print $2}')
 highlight=$(xrdb -query | awk '/.*color6:/ {print $2}')
 killall launchbar > /dev/null || sleep 3
 monitors=$(xrandr --listactivemonitors | awk '/^\s*[0-9]+:/ {print $4}')
+primary=$(xrandr -q | awk '/primary/ {print $1}')
 for m in $monitors; do
-    launchbar "bar1,$m" &
+    if [ "$m" = "$primary" ]; then
+        launchbar "bar1,$m" &
+    else
+        launchbar "bar2,$m" &
+    fi
 done
 
 # configure desktops
@@ -56,3 +61,9 @@ bspc rule -a 'Gimp' state=floating follow=on
 bspc rule -a '*:floatterm' state=floating
 bspc rule -a 'Matplotlib' state=floating
 bspc rule -a 'qutebrowser' desktop='1'
+
+killall trayer
+while ! pgrep lemonbar; do
+    sleep 1
+done
+trayer --edge top --align right --expand true --widthtype pixel --widthtype request --height 19 --margin 5 --iconspacing 10 --monitor primary &
