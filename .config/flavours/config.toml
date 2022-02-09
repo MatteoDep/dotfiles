@@ -22,6 +22,14 @@ shell = "sh -c '{}'"
 # light = true
 
 [[items]]
+file = "~/.config/X11/Xresources"
+template = "xresources"
+subtemplate = "custom"
+hook = "xrdb ~/.config/X11/Xresources"
+start = "! Start flavours"
+end = "! End flavours"
+
+[[items]]
 file = "~/.config/alacritty/colors.yml"
 template = "alacritty"
 subtemplate = "default-256"
@@ -37,14 +45,6 @@ file = "~/.config/nvim/autoload/airline/themes/custom.vim"
 template = "vim-airline-themes"
 subtemplate = "custom"
 rewrite = true
-
-[[items]]
-file = "~/.config/X11/Xresources"
-template = "xresources"
-subtemplate = "custom"
-hook = "xrdb ~/.config/X11/Xresources && bspc wm -r"
-start = "! Start flavours"
-end = "! End flavours"
 
 [[items]]
 file = "~/.config/qutebrowser/config.py"
@@ -76,4 +76,4 @@ rewrite = true
 [[items]]
 file = "~/.config/zathura/zathurarc"
 template = "zathura"
-subtemplate = "recolor"
+subtemplate = "custom"

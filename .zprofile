@@ -4,7 +4,7 @@
 export MONITOR=":0"
 export EDITOR="nvim"
 export TERMINAL="alacritty"
-export BROWSER="qutebrowser"
+export BROWSER="brave"
 export EXPLORER="vifmrun"
 export READER="zathura"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
@@ -59,4 +59,4 @@ export D_XTERM_PROG="st -e"
 export BAT_THEME="ansi"
 
 # qt theme
-export QT_QPA_PLATFORMTHEME="gtk2"
+export QT_QPA_PLATFORMTHEME="qt5ct"

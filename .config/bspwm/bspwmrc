@@ -61,9 +61,10 @@ bspc rule -a 'Gimp' state=floating follow=on
 bspc rule -a '*:floatterm' state=floating
 bspc rule -a 'Matplotlib' state=floating
 bspc rule -a 'qutebrowser' desktop='1'
+bspc rule -a 'Brave-browser' desktop='1'
+bspc rule -a 'Thunderbird' desktop='9'
+bspc rule -a 'Signal' desktop='8'
+bspc rule -a 'Ferdi' desktop='8'
 
 killall trayer
-while ! pgrep lemonbar; do
-    sleep 1
-done
-trayer --edge top --align right --expand true --widthtype pixel --widthtype request --height 19 --margin 5 --iconspacing 10 --monitor primary &
+trayer --edge top --align right --expand true --widthtype request --height 19 --margin 6 --iconspacing 6 --monitor primary --transparent true --alpha 0 --tint "0x${background#\#}" &

@@ -136,7 +136,7 @@
       <attribute name="tool" type="string" value="eraser"/>
     </data>
     <data name="stylus2">
-      <attribute name="tool" type="string" value="hand"/>
+      <attribute name="tool" type="string" value="selectRect"/>
     </data>
     <data name="touch">
       <attribute name="device" type="string" value=""/>
@@ -152,6 +152,10 @@
     <data name="SynPS/2 Synaptics TouchPad">
       <attribute name="deviceClass" type="int" value="1"/>
       <attribute name="deviceSource" type="int" value="6"/>
+    </data>
+    <data name="UNIW0001:00 093A:0255 Mouse">
+      <attribute name="deviceClass" type="int" value="1"/>
+      <attribute name="deviceSource" type="int" value="0"/>
     </data>
     <data name="UNIW0001:00 093A:0255 Touchpad">
       <attribute name="deviceClass" type="int" value="1"/>
@@ -230,7 +234,7 @@
       <attribute name="color" type="hex" value="ff000000"/>
       <attribute name="drawingType" type="string" value="strokeRecognizer"/>
       <attribute name="fill" type="int" value="0"/>
-      <attribute name="fillAlpha" type="int" value="255"/>
+      <attribute name="fillAlpha" type="int" value="141"/>
       <attribute name="size" type="string" value="MEDIUM"/>
       <attribute name="style" type="string" value="plain"/>
     </data>

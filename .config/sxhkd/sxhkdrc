@@ -54,7 +54,7 @@ XF86AudioMute
 
 # brightness
 XF86MonBrightness{Down,Up}
-	backlight -{d,i} 2
+	xbacklight -{dec,inc} 5
 
 # programs
 super + w
@@ -79,6 +79,9 @@ super + shift + Return
 super + shift + e
 	tdrop -Aam -n spfm -x 5% -y 20 -w 90% -h 80% \
 	"$TERMINAL" --class floatterm -t spfm -e vifmrun
+super + shift + c
+	tdrop -Aam -n spcalc -x 5% -y 20 -w 90% -h 80% \
+	"$TERMINAL" --class floatterm -t spcalc -e python
 
 # menus
 super + r
@@ -94,6 +97,8 @@ super + u
 	iconmenu
 super + b
 	btmenu
+super + shift + c
+    bcmenu
 super + shift + m
     mountmenu
 super + shift + x
@@ -105,7 +110,7 @@ super + x
 super + s
 	capture
 super + shift + s
-	capture -sf
+	capture -s
 
 # dunst
 ctrl {_,+ shift}+ space

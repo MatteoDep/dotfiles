@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Nuclear
+Comment=Streaming music player that finds music sources automatically.
+Comment[es]=Reproductor que retransmite música desde fuentes encontradas automáticamente.
+Exec=sh -c "$HOME/.local/src/nuclear-v0.6.17.AppImage"
+Terminal=false
+Type=Application
+Icon=nuclear
+Categories=Audio;AudioVideo;Network;Player;Music;
+MimeType=x-scheme-handler/discord-668477264995811338;

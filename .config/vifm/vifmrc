@@ -95,9 +95,8 @@ mark h ~/
 mark d ~/downloads/
 mark D ~/documents/
 mark u ~/documents/tudelft/
-mark w ~/documents/adi/
 mark p ~/documents/personal/
-mark l ~/documents/latex/
+mark l ~/.local/share/
 mark m /mnt/share
 mark M ~/media/
 mark s ~/media/screenshots/
@@ -131,8 +130,8 @@ command! mkcd :mkdir %a | cd %a
 command! vgrep vim "+grep %a"
 command! reload :write | restart
 command! setwall !setwall %c
-command! dotadd !dotadd %f
-command! dotrm !dotrm %f
+command! dotadd !dotctl add %f
+command! dotrm !dotctl remove %f
 
 " }}}
 

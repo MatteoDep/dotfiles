@@ -6,6 +6,7 @@ set selection-clipboard clipboard
 # show scrollbar
 set guioptions 'sv'
 # recolor options
+set recolor true
 set recolor-keephue true
 set recolor-reverse-video false
 # adust on width
@@ -14,41 +15,48 @@ set adjust-open width
 
 # theme {{{
 # Start flavours
-# Base16 OneDark
-# Author: Lalit Magant (http://github.com/tilal6991)
+# Base16 Harmonic16 Dark
+# Author: Jannik Siebert (https://github.com/janniks)
 
-set default-bg                  "#282c34"
-set default-fg                  "#353b45"
+set default-bg                  "#0b1c2c"
+set default-fg                  "#cbd6e2"
 
-set statusbar-fg                "#565c64"
-set statusbar-bg                "#3e4451"
+set statusbar-bg                "#405c79"
+set statusbar-fg                "#cbd6e2"
 
-set inputbar-bg                 "#282c34"
-set inputbar-fg                 "#c8ccd4"
+set inputbar-bg                 "#0b1c2c"
+set inputbar-fg                 "#f7f9fb"
 
-set notification-bg             "#282c34"
-set notification-fg             "#c8ccd4"
+set notification-bg             "#0b1c2c"
+set notification-fg             "#f7f9fb"
 
-set notification-error-bg       "#282c34"
-set notification-error-fg       "#e06c75"
+set notification-error-bg       "#0b1c2c"
+set notification-error-fg       "#bf8b56"
 
-set notification-warning-bg     "#282c34"
-set notification-warning-fg     "#e06c75"
+set notification-warning-bg     "#0b1c2c"
+set notification-warning-fg     "#bf8b56"
 
-set highlight-color             "#e5c07b"
-set highlight-active-color      "#61afef"
+set highlight-color             "#568bbf"
+set highlight-active-color      "#56bf8b"
 
-set completion-bg               "#353b45"
-set completion-fg               "#61afef"
+set completion-bg               "#223b54"
+set completion-fg               "#568bbf"
 
-set completion-highlight-fg     "#c8ccd4"
-set completion-highlight-bg     "#61afef"
+set completion-highlight-fg     "#0b1c2c"
+set completion-highlight-bg     "#568bbf"
 
-set recolor-lightcolor          "#282c34"
-set recolor-darkcolor           "#b6bdca"
+set recolor-lightcolor          "#0b1c2c"
+set recolor-darkcolor           "#cbd6e2"
+
+set recolor-loading-bg          "#0b1c2c"
+set recolor-loading-fg          "#cbd6e2"
+
+set index-bg                    "#405c79"
+set index-fg                    "#cbd6e2"
+
+set index-active-bg             "#568bbf"
+set index-active-fg             "#0b1c2c"
 # End flavours
-set recolor                     true
-set recolor-keephue             true
 # }}}
 
 # mappings {{{

@@ -16,11 +16,11 @@ PANEL_FIFO_SIGNAL=1
 
 # other variables
 COLOR_DEFAULT_FG=$(xrdb -query | awk '/foreground/ {print $2}')
-COLOR_DEFAULT_BG=$(xrdb -query | awk '/background/ {print $2}')
+COLOR_DEFAULT_BG="$(xrdb -query | awk '/background/ {print $2}')"
 BAR_HEIGHT="20"
-FONT_A="monospace:size=10:antialias=true:autohint=true"
-FONT_B="CryptoIcons:size=10:antialias=true:autohint=true"
-FONT_C="Noto Color Emoji:size=10:antialias=true:autohint=true"
+FONT_A="monospace:size=11:antialias=true:autohint=true"
+FONT_B="CryptoIcons:size=11:antialias=true:autohint=true"
+FONT_C="Noto Color Emoji:size=11:antialias=true:autohint=true"
 
 # define panel command
 panel_command(){

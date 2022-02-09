@@ -81,6 +81,8 @@ alias cat='bat'
 alias vifm='vifmrun'
 alias d='devour'
 alias monerod='monerod --data-dir "$XDG_DATA_HOME"/bitmonero'
+alias yt='ytfzf -tfl'
+alias ytm='ytfzf -tml'
 
 #############
 # functions #
@@ -88,20 +90,20 @@ alias monerod='monerod --data-dir "$XDG_DATA_HOME"/bitmonero'
 
 # cd recursively, press Esc when you are done
 fzf-cd(){
-    while choice=$({echo '..'; fd -HI -t d -d=1} | fzf --preview "previewer {}"); do
+    while choice=$({echo '..'; fd -HI -t d -d=1} | fzf --preview "preview {}"); do
         cd "$choice"
     done
 }
 
 # cd recursively, press Esc when you are done
 fzf-goto(){
-    choice=$(locate / | fzf --preview "previewer {}")
+    choice=$(locate / | fzf --preview "preview {}")
     cd "$([ -d "$choice" ] && echo "$choice" || echo "${choice%/*}")"
 }
 
 # select multiple files to edit
 fzf-open(){
-    choices=$(fd -HL -t f | fzf -m --prompt "choose files: " --preview "previewer {}") &&
+    choices=$(fd -HL -t f | fzf -m --prompt "choose files: " --preview "preview {}") &&
         echo $choices | xargs ${EDITOR:-vim}
 }
 

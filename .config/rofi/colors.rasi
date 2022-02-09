@@ -1,15 +1,15 @@
 /**
- * Base16 OneDark ROFI Color theme
+ * Base16 Harmonic16 Dark ROFI Color theme
  *
  * Authors
- *  Scheme: Lalit Magant (http://github.com/tilal6991)
+ *  Scheme: Jannik Siebert (https://github.com/janniks)
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
-    bg: #282c34;
-    fg: #abb2bf;
-    fade: #3e4451;
-    urgent: #e06c75;
-    hl: #56b6c2;
+    bg: #0b1c2c;
+    fg: #cbd6e2;
+    fade: #405c79;
+    urgent: #bf8b56;
+    hl: #568bbf;
 }

@@ -60,11 +60,12 @@ searchengines = {
     'wr': 'https://www.wordreference.com/definition/{}',
     'gt': 'https://translate.google.com/?text={}',
     'gs': 'https://scholar.google.com/scholar?q={}',
-    'hl': 'https://hoogle.haskell.org/?hoogle={}'
+    'hl': 'https://hoogle.haskell.org/?hoogle={}',
+    'aur': 'https://aur.archlinux.org/packages/?O=0&K={}'
 }
 searchengines['DEFAULT'] = searchengines['bs']
 c.url.searchengines = searchengines
-config.bind(' s', 'set-cmd-text :open -t  {primary} ;; rl-beginning-of-line ;; rl-forward-word ;; rl-forward-word ;; rl-forward-char ;; rl-forward-char')
+config.bind('<Ctrl-o>', 'set-cmd-text :open -t  {primary} ;; rl-beginning-of-line ;; rl-forward-word ;; rl-forward-word ;; rl-forward-char ;; rl-forward-char')
 c.url.default_page = "https://search.brave.com"
 c.url.start_pages = [c.url.default_page]
 c.editor.command = [TERMINAL, '--class', 'floatterm', '-e', EDITOR, '{file}']
@@ -80,24 +81,24 @@ c.colors.webpage.preferred_color_scheme = "dark"
 # Start flavours
 # base16-qutebrowser (https://github.com/theova/base16-qutebrowser)
 # Base16 qutebrowser template by theova and Daniel Mulford
-# OneDark scheme by Lalit Magant (http://github.com/tilal6991)
+# Harmonic16 Dark scheme by Jannik Siebert (https://github.com/janniks)
 
-base00 = "#282c34"
-base01 = "#353b45"
-base02 = "#3e4451"
-base03 = "#545862"
-base04 = "#565c64"
-base05 = "#abb2bf"
-base06 = "#b6bdca"
-base07 = "#c8ccd4"
-base08 = "#e06c75"
-base09 = "#d19a66"
-base0A = "#e5c07b"
-base0B = "#98c379"
-base0C = "#56b6c2"
-base0D = "#61afef"
-base0E = "#c678dd"
-base0F = "#be5046"
+base00 = "#0b1c2c"
+base01 = "#223b54"
+base02 = "#405c79"
+base03 = "#627e99"
+base04 = "#aabcce"
+base05 = "#cbd6e2"
+base06 = "#e5ebf1"
+base07 = "#f7f9fb"
+base08 = "#bf8b56"
+base09 = "#bfbf56"
+base0A = "#8bbf56"
+base0B = "#56bf8b"
+base0C = "#568bbf"
+base0D = "#8b56bf"
+base0E = "#bf568b"
+base0F = "#bf5656"
 
 # set qutebrowser colors
 
