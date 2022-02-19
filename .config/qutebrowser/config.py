@@ -81,24 +81,24 @@ c.colors.webpage.preferred_color_scheme = "dark"
 # Start flavours
 # base16-qutebrowser (https://github.com/theova/base16-qutebrowser)
 # Base16 qutebrowser template by theova and Daniel Mulford
-# Dracula scheme by Mike Barkmin (http://github.com/mikebarkmin) based on Dracula Theme (http://github.com/dracula)
+# Solarized Light scheme by Ethan Schoonover (modified by aramisgithub)
 
-base00 = "#282936"
-base01 = "#3a3c4e"
-base02 = "#4d4f68"
-base03 = "#626483"
-base04 = "#62d6e8"
-base05 = "#e9e9f4"
-base06 = "#f1f2f8"
-base07 = "#f7f7fb"
-base08 = "#ea51b2"
-base09 = "#b45bcf"
-base0A = "#00f769"
-base0B = "#ebff87"
-base0C = "#a1efe4"
-base0D = "#62d6e8"
-base0E = "#b45bcf"
-base0F = "#00f769"
+base00 = "#fdf6e3"
+base01 = "#eee8d5"
+base02 = "#93a1a1"
+base03 = "#839496"
+base04 = "#657b83"
+base05 = "#586e75"
+base06 = "#073642"
+base07 = "#002b36"
+base08 = "#dc322f"
+base09 = "#cb4b16"
+base0A = "#b58900"
+base0B = "#859900"
+base0C = "#2aa198"
+base0D = "#268bd2"
+base0E = "#6c71c4"
+base0F = "#d33682"
 
 # set qutebrowser colors
 
