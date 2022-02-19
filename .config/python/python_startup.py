@@ -7,7 +7,13 @@ import atexit
 import rlcompleter
 import readline
 import numpy as np
+import pandas as pd
 from matplotlib import pyplot as plt
+from uncertainties import ufloat, unumpy as unp
+from pint import UnitRegistry
+
+ur = UnitRegistry()
+ur.setup_matplotlib()
 
 max_size_bytes = 1000000
 max_size_lines = 10000

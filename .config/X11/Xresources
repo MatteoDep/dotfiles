@@ -28,25 +28,25 @@ Xft.hintstyle: hintfull
 Xft.lcdfilter: lcdfilter
 
 ! Start flavours
-! Base16 Harmonic16 Dark
-! Scheme: Jannik Siebert (https://github.com/janniks)
+! Base16 Dracula
+! Scheme: Mike Barkmin (http://github.com/mikebarkmin) based on Dracula Theme (http://github.com/dracula)
 
-#define base00 #0b1c2c
-#define base01 #223b54
-#define base02 #405c79
-#define base03 #627e99
-#define base04 #aabcce
-#define base05 #cbd6e2
-#define base06 #e5ebf1
-#define base07 #f7f9fb
-#define base08 #bf8b56
-#define base09 #bfbf56
-#define base0A #8bbf56
-#define base0B #56bf8b
-#define base0C #568bbf
-#define base0D #8b56bf
-#define base0E #bf568b
-#define base0F #bf5656
+#define base00 #282936
+#define base01 #3a3c4e
+#define base02 #4d4f68
+#define base03 #626483
+#define base04 #62d6e8
+#define base05 #e9e9f4
+#define base06 #f1f2f8
+#define base07 #f7f7fb
+#define base08 #ea51b2
+#define base09 #b45bcf
+#define base0A #00f769
+#define base0B #ebff87
+#define base0C #a1efe4
+#define base0D #62d6e8
+#define base0E #b45bcf
+#define base0F #00f769
 
 *foreground:   base05
 #ifdef background_opacity

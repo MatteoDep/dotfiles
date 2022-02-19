@@ -81,6 +81,7 @@ alias cat='bat'
 alias vifm='vifmrun'
 alias d='devour'
 alias monerod='monerod --data-dir "$XDG_DATA_HOME"/bitmonero'
+alias monero-cli='monero-wallet-cli --wallet-file "$XDG_DATA_HOME"/bitmonero/wallet0 --log-file "$XDG_DATA_HOME"/bitmonero/monero-wallet-cli.log'
 alias yt='ytfzf -tfl'
 alias ytm='ytfzf -tml'
 

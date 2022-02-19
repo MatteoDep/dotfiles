@@ -2,7 +2,7 @@
 
 # start keyboard deamon
 killall sxhkd > /dev/null
-sxhkd &
+setsid -f sxhkd
 
 # feed fifo file to inform statusbar of wm changes
 PANEL_FIFO=/tmp/panel-fifo
@@ -14,7 +14,7 @@ bspc subscribe report > "$PANEL_FIFO" &
 xrandrmenu --restore
 
 # reset wallpaper
-wallmenu --restore &
+wallmenu --restore
 
 # launch statusbar and make sure it launches after reboot
 xrdb ~/.config/X11/Xresources
@@ -25,9 +25,9 @@ monitors=$(xrandr --listactivemonitors | awk '/^\s*[0-9]+:/ {print $4}')
 primary=$(xrandr -q | awk '/primary/ {print $1}')
 for m in $monitors; do
     if [ "$m" = "$primary" ]; then
-        launchbar "bar1,$m" &
+        setsid -f launchbar "bar1,$m"
     else
-        launchbar "bar2,$m" &
+        setsid -f launchbar "bar2,$m"
     fi
 done
 
@@ -56,6 +56,7 @@ bspc pointer_action2 resize_side
 bspc pointer_action3 resize_corner
 
 bspc desktop '1' -l monocle
+bspc desktop '8' -l monocle
 
 bspc rule -a 'Gimp' state=floating follow=on
 bspc rule -a '*:floatterm' state=floating
@@ -67,4 +68,4 @@ bspc rule -a 'Signal' desktop='8'
 bspc rule -a 'Ferdi' desktop='8'
 
 killall trayer
-trayer --edge top --align right --expand true --widthtype request --height 19 --margin 6 --iconspacing 6 --monitor primary --transparent true --alpha 0 --tint "0x${background#\#}" &
+setsid -f trayer --edge top --align right --expand true --widthtype request --height 20 --margin 6 --iconspacing 6 --monitor primary --transparent true --alpha 0 --tint "0x${background#\#}"

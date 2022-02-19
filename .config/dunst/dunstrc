@@ -273,23 +273,23 @@
     mouse_right_click = close_all
 
 # Start flavours
-frame_color = "#cbd6e2"
-separator_color = "#cbd6e2"
+frame_color = "#e9e9f4"
+separator_color = "#e9e9f4"
 
 [base16_low]
     msg_urgency = low
-    background = "#223b54"
-    foreground = "#627e99"
+    background = "#3a3c4e"
+    foreground = "#626483"
 
 [base16_normal]
     msg_urgency = normal
-    background = "#405c79"
-    foreground = "#cbd6e2"
+    background = "#4d4f68"
+    foreground = "#e9e9f4"
 
 [base16_critical]
     msg_urgency = critical
-    background = "#bf8b56"
-    foreground = "#e5ebf1"
+    background = "#ea51b2"
+    foreground = "#f1f2f8"
 # End flavours
 
 # Experimental features that may or may not work correctly. Do not expect them

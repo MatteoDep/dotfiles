@@ -1,42 +1,42 @@
-# Base16 Harmonic16 Dark 256 - alacritty color config
-# Jannik Siebert (https://github.com/janniks)
+# Base16 Dracula 256 - alacritty color config
+# Mike Barkmin (http://github.com/mikebarkmin) based on Dracula Theme (http://github.com/dracula)
 colors:
   # Default colors
   primary:
-    background: '0x0b1c2c'
-    foreground: '0xcbd6e2'
+    background: '0x282936'
+    foreground: '0xe9e9f4'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: '0x0b1c2c'
-    cursor: '0xcbd6e2'
+    text: '0x282936'
+    cursor: '0xe9e9f4'
 
   # Normal colors
   normal:
-    black:   '0x0b1c2c'
-    red:     '0xbf8b56'
-    green:   '0x56bf8b'
-    yellow:  '0x8bbf56'
-    blue:    '0x8b56bf'
-    magenta: '0xbf568b'
-    cyan:    '0x568bbf'
-    white:   '0xcbd6e2'
+    black:   '0x282936'
+    red:     '0xea51b2'
+    green:   '0xebff87'
+    yellow:  '0x00f769'
+    blue:    '0x62d6e8'
+    magenta: '0xb45bcf'
+    cyan:    '0xa1efe4'
+    white:   '0xe9e9f4'
 
   # Bright colors
   bright:
-    black:   '0x627e99'
-    red:     '0xbf8b56'
-    green:   '0x56bf8b'
-    yellow:  '0x8bbf56'
-    blue:    '0x8b56bf'
-    magenta: '0xbf568b'
-    cyan:    '0x568bbf'
-    white:   '0xf7f9fb'
+    black:   '0x626483'
+    red:     '0xea51b2'
+    green:   '0xebff87'
+    yellow:  '0x00f769'
+    blue:    '0x62d6e8'
+    magenta: '0xb45bcf'
+    cyan:    '0xa1efe4'
+    white:   '0xf7f7fb'
 
   indexed_colors:
-    - { index: 16, color: '0xbfbf56' }
-    - { index: 17, color: '0xbf5656' }
-    - { index: 18, color: '0x223b54' }
-    - { index: 19, color: '0x405c79' }
-    - { index: 20, color: '0xaabcce' }
-    - { index: 21, color: '0xe5ebf1' }
+    - { index: 16, color: '0xb45bcf' }
+    - { index: 17, color: '0x00f769' }
+    - { index: 18, color: '0x3a3c4e' }
+    - { index: 19, color: '0x4d4f68' }
+    - { index: 20, color: '0x62d6e8' }
+    - { index: 21, color: '0xf1f2f8' }
