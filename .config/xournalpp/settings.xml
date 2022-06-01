@@ -8,7 +8,9 @@
   <property name="selectedToolbar" value="custom Copy"/>
   <property name="lastSavePath" value=""/>
   <property name="lastOpenPath" value="/home/matteo/documents/tudelft/solid-state/presentation1/references"/>
-  <property name="lastImagePath" value="/home/matteo/downloads"/>
+  <property name="lastImagePath" value="/home/matteo/documents/tudelft/thesis/resources"/>
+  <property name="edgePanSpeed" value="20.00000000"/>
+  <property name="edgePanMaxMult" value="5.00000000"/>
   <property name="zoomStep" value="10.00000000"/>
   <property name="zoomStepScroll" value="2.00000000"/>
   <property name="displayDpi" value="72"/>
@@ -196,7 +198,7 @@
   </data>
   <data name="lastUsedPageBgColor"/>
   <data name="tools">
-    <attribute name="current" type="string" value="pen"/>
+    <attribute name="current" type="string" value="selectRect"/>
     <data name="drawArrow">
       <attribute name="drawingType" type="string" value="default"/>
     </data>
@@ -231,7 +233,7 @@
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="pen">
-      <attribute name="color" type="hex" value="ff000000"/>
+      <attribute name="color" type="hex" value="000000"/>
       <attribute name="drawingType" type="string" value="strokeRecognizer"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="141"/>
@@ -254,7 +256,7 @@
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="text">
-      <attribute name="color" type="hex" value="3333cc"/>
+      <attribute name="color" type="hex" value="000000"/>
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="verticalSpace">

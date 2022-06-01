@@ -9,11 +9,14 @@ import readline
 import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
-from uncertainties import ufloat, unumpy as unp
-from pint import UnitRegistry
+from uncertainties import ufloat
+from uncertainties import unumpy as unp
+import pint
 
-ur = UnitRegistry()
+ur = pint.UnitRegistry()
 ur.setup_matplotlib()
+Q = ur.Quantity
+ur.default_format = "~P"
 
 max_size_bytes = 1000000
 max_size_lines = 10000

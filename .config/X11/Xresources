@@ -28,25 +28,25 @@ Xft.hintstyle: hintfull
 Xft.lcdfilter: lcdfilter
 
 ! Start flavours
-! Base16 Solarized Light
-! Scheme: Ethan Schoonover (modified by aramisgithub)
+! Base16 Horizon Dark
+! Scheme: Michaël Ball (http://github.com/michael-ball/)
 
-#define base00 #fdf6e3
-#define base01 #eee8d5
-#define base02 #93a1a1
-#define base03 #839496
-#define base04 #657b83
-#define base05 #586e75
-#define base06 #073642
-#define base07 #002b36
-#define base08 #dc322f
-#define base09 #cb4b16
-#define base0A #b58900
-#define base0B #859900
-#define base0C #2aa198
-#define base0D #268bd2
-#define base0E #6c71c4
-#define base0F #d33682
+#define base00 #1C1E26
+#define base01 #232530
+#define base02 #2E303E
+#define base03 #6F6F70
+#define base04 #9DA0A2
+#define base05 #CBCED0
+#define base06 #DCDFE4
+#define base07 #E3E6EE
+#define base08 #E93C58
+#define base09 #E58D7D
+#define base0A #EFB993
+#define base0B #EFAF8E
+#define base0C #24A8B4
+#define base0D #DF5273
+#define base0E #B072D1
+#define base0F #E4A382
 
 *foreground:   base05
 #ifdef background_opacity
@@ -84,3 +84,11 @@ Xft.lcdfilter: lcdfilter
 *color20:      base04
 *color21:      base06
 ! End flavours
+
+! nsxiv settings
+Nsxiv.window.background: base00
+Nsxiv.window.foreground: base05
+Nsxiv.mark.foreground: base0C
+Nsxiv.bar.background: base02
+Nsxiv.bar.foreground: base05
+Nsxiv.bar.font: monospace

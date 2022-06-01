@@ -6,7 +6,7 @@ set selection-clipboard clipboard
 # show scrollbar
 set guioptions 'sv'
 # recolor options
-set recolor true
+set recolor false
 set recolor-keephue true
 set recolor-reverse-video false
 # adust on width
@@ -15,47 +15,47 @@ set adjust-open width
 
 # theme {{{
 # Start flavours
-# Base16 Solarized Light
-# Author: Ethan Schoonover (modified by aramisgithub)
+# Base16 Horizon Dark
+# Author: Michaël Ball (http://github.com/michael-ball/)
 
-set default-bg                  "#fdf6e3"
-set default-fg                  "#586e75"
+set default-bg                  "#1C1E26"
+set default-fg                  "#CBCED0"
 
-set statusbar-bg                "#93a1a1"
-set statusbar-fg                "#586e75"
+set statusbar-bg                "#2E303E"
+set statusbar-fg                "#CBCED0"
 
-set inputbar-bg                 "#fdf6e3"
-set inputbar-fg                 "#002b36"
+set inputbar-bg                 "#1C1E26"
+set inputbar-fg                 "#E3E6EE"
 
-set notification-bg             "#fdf6e3"
-set notification-fg             "#002b36"
+set notification-bg             "#1C1E26"
+set notification-fg             "#E3E6EE"
 
-set notification-error-bg       "#fdf6e3"
-set notification-error-fg       "#dc322f"
+set notification-error-bg       "#1C1E26"
+set notification-error-fg       "#E93C58"
 
-set notification-warning-bg     "#fdf6e3"
-set notification-warning-fg     "#dc322f"
+set notification-warning-bg     "#1C1E26"
+set notification-warning-fg     "#E93C58"
 
-set highlight-color             "#2aa198"
-set highlight-active-color      "#859900"
+set highlight-color             "#24A8B4"
+set highlight-active-color      "#EFAF8E"
 
-set completion-bg               "#eee8d5"
-set completion-fg               "#2aa198"
+set completion-bg               "#232530"
+set completion-fg               "#24A8B4"
 
-set completion-highlight-fg     "#fdf6e3"
-set completion-highlight-bg     "#2aa198"
+set completion-highlight-fg     "#1C1E26"
+set completion-highlight-bg     "#24A8B4"
 
-set recolor-lightcolor          "#fdf6e3"
-set recolor-darkcolor           "#586e75"
+set recolor-lightcolor          "#1C1E26"
+set recolor-darkcolor           "#CBCED0"
 
-set recolor-loading-bg          "#fdf6e3"
-set recolor-loading-fg          "#586e75"
+set render-loading-bg          "#1C1E26"
+set render-loading-fg          "#CBCED0"
 
-set index-bg                    "#93a1a1"
-set index-fg                    "#586e75"
+set index-bg                    "#2E303E"
+set index-fg                    "#CBCED0"
 
-set index-active-bg             "#2aa198"
-set index-active-fg             "#fdf6e3"
+set index-active-bg             "#24A8B4"
+set index-active-fg             "#1C1E26"
 # End flavours
 # }}}
 

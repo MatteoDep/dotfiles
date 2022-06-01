@@ -97,8 +97,8 @@ mark D ~/documents/
 mark u ~/documents/tudelft/
 mark p ~/documents/personal/
 mark l ~/.local/share/
-mark m /mnt/share
-mark M ~/media/
+mark M ~/mnt/
+mark m ~/media/
 mark s ~/media/screenshots/
 mark t ~/.local/share/trash/
 mark c ~/.config/
@@ -245,11 +245,11 @@ filextype {*.odt,*.doc,*.docx,*.xls,*.xlsx,*.odp,*.pptx,*.ppt},
 	\<application/vnd.openxmlformats-officedocument.*,
 	\application/msword,
 	\application/vnd.ms-excel>
-	\ libreoffice %f &
+	\ libreoffice %f 2>/dev/null &
 
 " Images
 filextype {*.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm},<image/*>
-	\ sxiv %f &,
+	\ nsxiv %f &,
 filextype *.svg
     \ gimp %f &,
     \ inkscape & %f,

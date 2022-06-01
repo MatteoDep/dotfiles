@@ -1,15 +1,15 @@
 /**
- * Base16 Solarized Light ROFI Color theme
+ * Base16 Horizon Dark ROFI Color theme
  *
  * Authors
- *  Scheme: Ethan Schoonover (modified by aramisgithub)
+ *  Scheme: Michaël Ball (http://github.com/michael-ball/)
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
-    bg: #fdf6e3;
-    fg: #586e75;
-    fade: #93a1a1;
-    urgent: #dc322f;
-    hl: #2aa198;
+    bg: #1C1E26;
+    fg: #CBCED0;
+    fade: #2E303E;
+    urgent: #E93C58;
+    hl: #24A8B4;
 }

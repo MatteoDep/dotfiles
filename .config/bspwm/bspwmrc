@@ -66,6 +66,7 @@ bspc rule -a 'Brave-browser' desktop='1'
 bspc rule -a 'Thunderbird' desktop='9'
 bspc rule -a 'Signal' desktop='8'
 bspc rule -a 'Ferdi' desktop='8'
+bspc rule -a 'nuclear' desktop='7'
 
 killall trayer
 setsid -f trayer --edge top --align right --expand true --widthtype request --height 20 --margin 6 --iconspacing 6 --monitor primary --transparent true --alpha 0 --tint "0x${background#\#}"

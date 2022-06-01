@@ -59,28 +59,27 @@ XF86MonBrightness{Down,Up}
 # programs
 super + w
 	$BROWSER
-super + Return
+super + shift + Return
 	$TERMINAL
-super + e
-	$TERMINAL -e vifmrun
-super + shift + w
-	$TERMINAL --class floatterm -e nmtui; \
-	pkill -RTMIN+4 statusblocks
+super + shift + e
+	pcmanfm
 super + n
+	tdrop -Aam -n 'sp-news' -x 5% -y 20 -w 90% -h 80% \
 	$TERMINAL --class floatterm -e newsboat; \
 	pkill -RTMIN+6 statusblocks
-super + c
+super + shift + c
+	tdrop -Aam -n 'sp-cal' -x 5% -y 20 -w 90% -h 80% \
 	$TERMINAL --class floatterm -e calcurse
 
 # scratchpads
-super + shift + Return
-	tdrop -Aam -n spterm -x 5% -y 20 -w 90% -h 80% \
+super + Return
+	tdrop -Aam -n 'sp-term' -x 5% -y 20 -w 90% -h 80% \
 	"$TERMINAL" --class floatterm -t spterm
-super + shift + e
-	tdrop -Aam -n spfm -x 5% -y 20 -w 90% -h 80% \
+super + e
+	tdrop -Aam -n 'sp-fm' -x 5% -y 20 -w 90% -h 80% \
 	"$TERMINAL" --class floatterm -t spfm -e vifmrun
-super + shift + c
-	tdrop -Aam -n spcalc -x 5% -y 20 -w 90% -h 80% \
+super + c
+	tdrop -Aam -n 'sp-py' -x 5% -y 20 -w 90% -h 80% \
 	"$TERMINAL" --class floatterm -t spcalc -e python
 
 # menus

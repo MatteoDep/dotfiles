@@ -1,7 +1,7 @@
 # define blocks
 "%{l}"
 0 1 sb-bspwm
-0 1 sb-wtitle
+2 1 sb-wtitle
 "%{c}"
 2 2 sb-clock
 "%{r}"
@@ -11,7 +11,7 @@
 " "
 # 600 13 sb-crypto
 # " "
-0 10 sb-volume
+2 10 sb-volume
 " "
 2 3 sb-battery
 " "
