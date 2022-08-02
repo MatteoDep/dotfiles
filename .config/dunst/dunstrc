@@ -274,23 +274,23 @@
 
 # Start flavours
 [global]
-frame_color = "#CBCED0"
-separator_color = "#CBCED0"
+frame_color = "#e9e9f4"
+separator_color = "#e9e9f4"
 
 [base16_low]
     msg_urgency = low
-    background = "#232530"
-    foreground = "#6F6F70"
+    background = "#3a3c4e"
+    foreground = "#626483"
 
 [base16_normal]
     msg_urgency = normal
-    background = "#2E303E"
-    foreground = "#CBCED0"
+    background = "#4d4f68"
+    foreground = "#e9e9f4"
 
 [base16_critical]
     msg_urgency = critical
-    background = "#E93C58"
-    foreground = "#DCDFE4"
+    background = "#ea51b2"
+    foreground = "#f1f2f8"
 # End flavours
 
 # Experimental features that may or may not work correctly. Do not expect them

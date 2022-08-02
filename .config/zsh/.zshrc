@@ -67,6 +67,7 @@ read pcomm < /proc/$PPID/comm
 ###########
 
 alias cp='cp -r'
+alias t='trash-put'
 alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
@@ -79,7 +80,6 @@ alias ll='exa -alhg --git --group-directories-first --icons'
 alias lt='exa -alhg --tree --level=3 --git --group-directories-first --icons'
 alias p='sudo pacman'
 alias cat='bat'
-alias vifm='vifmrun'
 alias d='devour'
 alias monerod='monerod --data-dir "$XDG_DATA_HOME"/bitmonero'
 alias monero-cli='monero-wallet-cli --wallet-file "$XDG_DATA_HOME"/bitmonero/wallet0 --log-file "$XDG_DATA_HOME"/bitmonero/monero-wallet-cli.log'
@@ -140,7 +140,7 @@ proxy_off(){
 
 
 # KEY BINDINGS
-bindkey -s '^[e' 'vifm\n'
+bindkey -s '^[e' 'ranger\n'
 bindkey '^[i' fzf-locate-widget
 bindkey -s '^[d' 'fzf-cd\n'
 bindkey -s '^[f' 'fzf-open\n'

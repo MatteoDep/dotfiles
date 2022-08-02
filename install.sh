@@ -30,7 +30,7 @@ recurse "$PWD" "$HOME" 0
 
 gpghome="$HOME/.config/gnupg"
 if [ -d "$gpghome" ]; then
-    sudo chown matteo "$gpghome"
-    sudo chmod 600 "$gpghome"/*
-    sudo chmod 700 "$gpghome"
+    sudo chown "$(whoami)" "$gpghome"
+    find "$gpghome" -type f -exec chmod 600 {} \;
+    find "$gpghome" -type d -exec chmod 700 {} \;
 fi

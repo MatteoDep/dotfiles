@@ -63,13 +63,6 @@ super + shift + Return
 	$TERMINAL
 super + shift + e
 	pcmanfm
-super + n
-	tdrop -Aam -n 'sp-news' -x 5% -y 20 -w 90% -h 80% \
-	$TERMINAL --class floatterm -e newsboat; \
-	pkill -RTMIN+6 statusblocks
-super + shift + c
-	tdrop -Aam -n 'sp-cal' -x 5% -y 20 -w 90% -h 80% \
-	$TERMINAL --class floatterm -e calcurse
 
 # scratchpads
 super + Return
@@ -77,10 +70,20 @@ super + Return
 	"$TERMINAL" --class floatterm -t spterm
 super + e
 	tdrop -Aam -n 'sp-fm' -x 5% -y 20 -w 90% -h 80% \
-	"$TERMINAL" --class floatterm -t spfm -e vifmrun
+	"$TERMINAL" --class floatterm -t spfm -e ranger
 super + c
 	tdrop -Aam -n 'sp-py' -x 5% -y 20 -w 90% -h 80% \
 	"$TERMINAL" --class floatterm -t spcalc -e python
+super + n
+	tdrop -Aam -n 'sp-news' -x 5% -y 20 -w 90% -h 80% \
+	$TERMINAL --class floatterm -t spnews -e newsboat; \
+	pkill -RTMIN+6 statusblocks
+super + shift + c
+	tdrop -Aam -n 'sp-cal' -x 5% -y 20 -w 90% -h 80% \
+	$TERMINAL --class floatterm -t spcal -e calcurse
+super + t
+	tdrop -Aam -n 'sp-top' -x 5% -y 20 -w 90% -h 80% \
+	"$TERMINAL" --class floatterm -t spcalc -e btop
 
 # menus
 super + r
@@ -95,7 +98,7 @@ super + y
 super + u
 	iconmenu
 super + b
-	btmenu
+	blueman-manager
 super + shift + c
     bcmenu
 super + shift + m

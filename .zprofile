@@ -5,7 +5,7 @@ export MONITOR=":0"
 export EDITOR="nvim"
 export TERMINAL="alacritty"
 export BROWSER="brave"
-export EXPLORER="vifmrun"
+export EXPLORER="ranger"
 export READER="zathura"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export STATUSBAR="statusblocks"
@@ -60,3 +60,6 @@ export BAT_THEME="ansi"
 
 # qt theme
 export QT_QPA_PLATFORMTHEME="qt5ct"
+
+# ranger
+RANGER_LOAD_DEFAULT_RC="FALSE"

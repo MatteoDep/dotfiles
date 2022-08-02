@@ -1,15 +1,15 @@
 /**
- * Base16 Horizon Dark ROFI Color theme
+ * Base16 Dracula ROFI Color theme
  *
  * Authors
- *  Scheme: Michaël Ball (http://github.com/michael-ball/)
+ *  Scheme: Mike Barkmin (http://github.com/mikebarkmin) based on Dracula Theme (http://github.com/dracula)
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
-    bg: #1C1E26;
-    fg: #CBCED0;
-    fade: #2E303E;
-    urgent: #E93C58;
-    hl: #24A8B4;
+    bg: #282936;
+    fg: #e9e9f4;
+    fade: #4d4f68;
+    urgent: #ea51b2;
+    hl: #a1efe4;
 }

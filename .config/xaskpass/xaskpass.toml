@@ -1,5 +1,5 @@
-# Base16 Horizon Dark - xaskpass color config
-# Michaël Ball (http://github.com/michael-ball/)
+# Base16 Dracula - xaskpass color config
+# Mike Barkmin (http://github.com/mikebarkmin) based on Dracula Theme (http://github.com/dracula)
 
 # Default configuration imitating the look of gtk Arc theme.
 # By default sizes are pixels when screen height <= 1080. Otherwise they are 1/1080 of the
@@ -14,9 +14,9 @@ resizable = false
 depth = 32
 
 [dialog]
-foreground = '#CBCED0'
-background = '#1C1E26'
-indicator_label_foreground = '#CBCED0'
+foreground = '#e9e9f4'
+background = '#282936'
+indicator_label_foreground = '#e9e9f4'
 # set to 'none' to use pango default font and size. Use mono to keep ssh
 # fingerprint formatting.
 font = 'mono 11'
@@ -47,13 +47,13 @@ vertical_spacing = 'none'
 text_width = 'none'
 
 [dialog.ok_button]
-foreground = '#CBCED0'
-border_color = '#232530'
-border_color_pressed = '#232530'
-background = '#2E303E'
+foreground = '#e9e9f4'
+border_color = '#3a3c4e'
+border_color_pressed = '#3a3c4e'
+background = '#4d4f68'
 # set to a color for a linear gradient
-background_pressed = '#6F6F70'
-background_hover = '#6F6F70'
+background_pressed = '#626483'
+background_hover = '#626483'
 label = 'OK'
 horizontal_spacing = 'none'
 vertical_spacing = 'none'
@@ -69,12 +69,12 @@ background_pressed_stop = 'none'
 background_hover_stop = 'none'
 
 [dialog.cancel_button]
-foreground = '#CBCED0'
-border_color = '#232530'
-border_color_pressed = '#232530'
-background = '#2E303E'
-background_pressed = '#6F6F70'
-background_hover = '#6F6F70'
+foreground = '#e9e9f4'
+border_color = '#3a3c4e'
+border_color_pressed = '#3a3c4e'
+background = '#4d4f68'
+background_pressed = '#626483'
+background_hover = '#626483'
 label = 'Cancel'
 horizontal_spacing = 'none'
 vertical_spacing = 'none'
@@ -90,12 +90,12 @@ background_pressed_stop = 'none'
 background_hover_stop = 'none'
 
 [dialog.clipboard_button]
-foreground = '#CBCED0'
-border_color = '#232530'
-border_color_pressed = '#232530'
-background = '#2E303E'
-background_pressed = '#6F6F70'
-background_hover = '#6F6F70'
+foreground = '#e9e9f4'
+border_color = '#3a3c4e'
+border_color_pressed = '#3a3c4e'
+background = '#4d4f68'
+background_pressed = '#626483'
+background_hover = '#626483'
 horizontal_spacing = 'none'
 vertical_spacing = 'none'
 border_width = 1.0
@@ -125,11 +125,11 @@ background_pressed_stop = 'none'
 background_hover_stop = 'none'
 
 [dialog.indicator]
-foreground = '#CBCED0'
-background = '#6F6F70'
-border_color = '#232530'
-border_color_focused = '#24A8B4'
-indicator_color = '#6F6F70'
+foreground = '#e9e9f4'
+background = '#626483'
+border_color = '#3a3c4e'
+border_color_focused = '#a1efe4'
+indicator_color = '#626483'
 border_width = 1.0
 background_stop = 'none'
 indicator_color_stop = 'none'
@@ -150,7 +150,7 @@ element_height = 'none'
 element_width = 'none'
 
 [dialog.indicator.circle]
-lock_color = '#6F6F70'
+lock_color = '#626483'
 # 'none' to derive from text width
 diameter = 'none'
 light_up = true

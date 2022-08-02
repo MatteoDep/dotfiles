@@ -81,24 +81,24 @@ c.colors.webpage.preferred_color_scheme = "dark"
 # Start flavours
 # base16-qutebrowser (https://github.com/theova/base16-qutebrowser)
 # Base16 qutebrowser template by theova and Daniel Mulford
-# Horizon Dark scheme by Michaël Ball (http://github.com/michael-ball/)
+# Dracula scheme by Mike Barkmin (http://github.com/mikebarkmin) based on Dracula Theme (http://github.com/dracula)
 
-base00 = "#1C1E26"
-base01 = "#232530"
-base02 = "#2E303E"
-base03 = "#6F6F70"
-base04 = "#9DA0A2"
-base05 = "#CBCED0"
-base06 = "#DCDFE4"
-base07 = "#E3E6EE"
-base08 = "#E93C58"
-base09 = "#E58D7D"
-base0A = "#EFB993"
-base0B = "#EFAF8E"
-base0C = "#24A8B4"
-base0D = "#DF5273"
-base0E = "#B072D1"
-base0F = "#E4A382"
+base00 = "#282936"
+base01 = "#3a3c4e"
+base02 = "#4d4f68"
+base03 = "#626483"
+base04 = "#62d6e8"
+base05 = "#e9e9f4"
+base06 = "#f1f2f8"
+base07 = "#f7f7fb"
+base08 = "#ea51b2"
+base09 = "#b45bcf"
+base0A = "#00f769"
+base0B = "#ebff87"
+base0C = "#a1efe4"
+base0D = "#62d6e8"
+base0E = "#b45bcf"
+base0F = "#00f769"
 
 # set qutebrowser colors
 
