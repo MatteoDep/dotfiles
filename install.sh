@@ -3,33 +3,32 @@
 sudocmd=
 
 recurse(){
-    for f in $(ls -a "$1"); do
-        if [ "$f" != "." ] && [ "$f" != ".." ]; then
-            n=0
-            while [ "$n" -lt "$3" ]; do
-                printf "  "
-                n="$(( n + 1 ))"
-            done
-            if [ -d "$1/$f" ]; then
-                confirm "mkdir -p $2/$f"
-                mkdir -p "$2/$f"
-                recurse "$1/$f" "$2/$f" "$(( $3 + 1 ))"
-            else
-                echo "linking $2/$f"
-                ln -srf "$1/$f" "$2/$f"
-            fi
+    for f in $(ls -A "$1"); do
+		n=0
+		indent=
+		while [ "$n" -lt "$3" ]; do
+			indent="$indent  "
+			n="$(( n + 1 ))"
+		done
+		if [ -d "$1/$f" ]; then
+			confirm "mkdir -p $1/$f"
+			recurse "$1/$f" "$2/$f" "$(( $3 + 1 ))"
+		else
+			confirm "ln -srf $1/$f $2/$f"
 		fi
     done
 }
 
 confirm(){
-	while printf "Run %s%s? [Y/n] " "$sudocmd " "$1"; do
+	cmd="$1"
+	[ "$sudocmd" ] && cmd="$sudocmd $cmd"
+	while printf "%s? [Y/n] " "$indent$1"; do
 		read -r ans
 		if echo "$ans" | grep -iq '^no\?$'; then
-			exit 1
+			break
 		elif echo "$ans" | grep -iq '^y\?e\?s\?$'; then
-			$sudocmd sh -c "$1"
-			exit 0
+			$cmd
+			break
 		else
 			printf "\nCouldn't parse %s.\n" "$ans"
 		fi
