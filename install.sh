@@ -1,32 +1,45 @@
 #!/bin/sh
 
-recurse() {
+sudocmd=
+
+recurse(){
     for f in $(ls -a "$1"); do
-        [ "$3" -eq 0 ] &&
-            case "$f" in
-                "LICENSE") continue;;
-                "README.md") continue;;
-                "install.sh") continue;;
-            esac
-        [ "$f" != "." ] && [ "$f" != ".." ] && [ "$f" != ".git" ] && {
+        if [ "$f" != "." ] && [ "$f" != ".." ]; then
             n=0
             while [ "$n" -lt "$3" ]; do
                 printf "  "
-                n="$(( $n + 1 ))"
+                n="$(( n + 1 ))"
             done
             if [ -d "$1/$f" ]; then
-                echo "making $2/$f"
+                confirm "mkdir -p $2/$f"
                 mkdir -p "$2/$f"
                 recurse "$1/$f" "$2/$f" "$(( $3 + 1 ))"
             else
                 echo "linking $2/$f"
                 ln -srf "$1/$f" "$2/$f"
             fi
-        }
+		fi
     done
 }
 
-recurse "$PWD" "$HOME" 0
+confirm(){
+	while printf "Run %s%s? [Y/n] " "$sudocmd " "$1"; do
+		read -r ans
+		if echo "$ans" | grep -iq '^no\?$'; then
+			exit 1
+		elif echo "$ans" | grep -iq '^y\?e\?s\?$'; then
+			$sudocmd sh -c "$1"
+			exit 0
+		else
+			printf "\nCouldn't parse %s.\n" "$ans"
+		fi
+	done
+}
+
+recurse "$PWD/home" "$HOME" 0
+
+sudocmd=sudo
+recurse "$PWD/root" "/" 0
 
 gpghome="$HOME/.config/gnupg"
 if [ -d "$gpghome" ]; then

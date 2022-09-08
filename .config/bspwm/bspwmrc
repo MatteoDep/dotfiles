@@ -19,7 +19,7 @@ wallmenu --restore
 # launch statusbar and make sure it launches after reboot
 xrdb ~/.config/X11/Xresources
 background=$(xrdb -query | awk '/.*background:/ {print $2}')
-highlight=$(xrdb -query | awk '/.*color6:/ {print $2}')
+highlight=$(xrdb -query | awk '/.*color4:/ {print $2}')
 killall launchbar > /dev/null || sleep 3
 monitors=$(xrandr --listactivemonitors | awk '/^\s*[0-9]+:/ {print $4}')
 primary=$(xrandr -q | awk '/primary/ {print $1}')

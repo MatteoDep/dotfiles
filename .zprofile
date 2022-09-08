@@ -4,6 +4,8 @@
 export MONITOR=":0"
 export EDITOR="nvim"
 export TERMINAL="alacritty"
+export TERMCMD="alacritty"
+export TERM="alacritty"
 export BROWSER="brave"
 export EXPLORER="ranger"
 export READER="zathura"
@@ -49,7 +51,7 @@ export CM_MAX_CLIPS=10
 
 # fzf configs
 export FZF_DEFAULT_COMMAND="fd -HL"
-export FZF_DEFAULT_OPTS="--color=16"
+export FZF_DEFAULT_OPTS="--color=16,border:-1 --layout=reverse --border --height=30 --bind=alt-enter:select,tab:down,btab:up"
 
 # dictd
 export D_XTERM_CLASS="st256-color"

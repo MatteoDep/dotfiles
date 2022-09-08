@@ -1,4 +1,4 @@
 [Desktop Entry]
 Type=Application
-Name=Vifm
+Name=Ranger Fi
 Exec=alacritty -e vifmrun %u

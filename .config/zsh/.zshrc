@@ -31,10 +31,14 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Autocompletion
 autoload -Uz compinit
-zstyle ':completion:*' menu select  # enable menu selction
-zstyle ':completion:*' rehash true  # automatically update for new executables in $PATH
 zmodload zsh/complist
 compinit
+source /usr/share/fzf-tab-completion/zsh/fzf-zsh-completion.sh
+bindkey '^I' fzf_completion
+zstyle ':completion:*' rehash true  # automatically update for new executables in $PATH
+zstyle ':completion:*' fzf-completion-opts --preview='eval preview {1}'
+zstyle ':completion::*:(-command-|-parameter-|-brace-parameter-|export|unset|expand):*' fzf-completion-opts --preview='eval eval echo {1}'
+zstyle ':completion:*' fzf-search-display true
 _comp_options+=(globdots)		# Include hidden files.
 
 # history search matching what you have already written
@@ -85,6 +89,7 @@ alias monerod='monerod --data-dir "$XDG_DATA_HOME"/bitmonero'
 alias monero-cli='monero-wallet-cli --wallet-file "$XDG_DATA_HOME"/bitmonero/wallet0 --log-file "$XDG_DATA_HOME"/bitmonero/monero-wallet-cli.log'
 alias yt='ytfzf -tfl'
 alias ytm='ytfzf -tml'
+alias gg='lazygit'
 
 #############
 # functions #
@@ -98,7 +103,7 @@ fzf-cd(){
 }
 
 # cd recursively, press Esc when you are done
-fzf-goto(){
+fzf-jumpto(){
     choice=$(locate / | fzf --preview "preview {}")
     cd "$([ -d "$choice" ] && echo "$choice" || echo "${choice%/*}")"
 }
@@ -106,13 +111,13 @@ fzf-goto(){
 # select multiple files to edit
 fzf-open(){
     choices=$(fd -HL -t f | fzf -m --prompt "choose files: " --preview "preview {}") &&
-        echo $choices | xargs ${EDITOR:-vim}
+        echo $choices | xargs rifle
 }
 
 # Paste the selected entry from history output into the command line
 fzf-history-widget() {
   local choice
-  choice=$(history count "$HISTSIZE" | sed -r 's/^.*  (.*)/\1/' | awk '!a[$0]++' | fzf --tac --prompt "choose command: ") &&
+  choice=$(history 0 | sed -r 's/^.*  (.*)/\1/' | awk '!a[$0]++' | fzf --tac --prompt "choose command: ") &&
     LBUFFER="$LBUFFER$choice"
   zle redisplay
 }
@@ -144,6 +149,8 @@ bindkey -s '^[e' 'ranger\n'
 bindkey '^[i' fzf-locate-widget
 bindkey -s '^[d' 'fzf-cd\n'
 bindkey -s '^[f' 'fzf-open\n'
-bindkey -s '^[g' 'fzf-goto\n'
-bindkey -s '^[p' 'ipython\n'
+bindkey -s '^[j' 'fzf-jumpto\n'
+bindkey -s '^[g' 'lazygit\n'
+bindkey -s '^[m' 'bashmount\n'
+bindkey -s '^[o' 'python\n'
 bindkey '^[h' fzf-history-widget

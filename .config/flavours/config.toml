@@ -39,6 +39,7 @@ rewrite = true
 file = "~/.config/nvim/colors/custom.vim"
 template = "vim"
 rewrite = true
+hook = "pkill -USR1 nvim"
 
 [[items]]
 file = "~/.config/nvim/autoload/airline/themes/custom.vim"

@@ -18,4 +18,5 @@ clipmenud &
 calcurse --daemon &
 
 # lock daemon
-xss-lock lock &
+xset s 180 60
+xss-lock -n dimscreen -- lock -n &
