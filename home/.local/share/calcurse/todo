@@ -2,11 +2,9 @@
 [1] fix naming old chips
 [0] change accent color in flavoursmenu
 [0] create system install script
-[0] improve dotadd also from root
+[0] how to close notification from script
 [0] look at dzen2
-[0] look for fzf completion on zsh
 [0] set up mpd
 [0] set up neomutt
-[0] setup searx
 [0] statusblocks writing to a fifo?
-[0] ytfzf on fzfmenu
+[0] update gtkreate documentation

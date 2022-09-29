@@ -63,6 +63,8 @@ super + shift + Return
 	$TERMINAL
 super + shift + e
 	pcmanfm
+super + v
+	vim-everywhere
 
 # scratchpads
 super + Return

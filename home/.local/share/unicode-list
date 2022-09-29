@@ -7069,6 +7069,10 @@
  nf-weather-wind_west
  nf-weather-windy
 
+α \alpha
+β \beta
+γ \gamma
+δ \delta
 ε \epsilon
 ζ \zeta
 η \eta
@@ -7089,6 +7093,10 @@
 χ \chi
 ψ \psi
 ω \omega
+Α \Alpha
+Β \Beta
+Γ \Gamma
+Δ \Delta
 Ε \Epsilon
 Ζ \Zeta
 Η \Eta
@@ -7109,3 +7117,4 @@
 Χ \Chi
 Ψ \Psi
 Ω \Omega
+∝ \propto

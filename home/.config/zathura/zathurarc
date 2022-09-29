@@ -15,47 +15,47 @@ set adjust-open width
 
 # theme {{{
 # Start flavours
-# Base16 Dracula
-# Author: Mike Barkmin (http://github.com/mikebarkmin) based on Dracula Theme (http://github.com/dracula)
+# Base16 Solar Flare
+# Author: Chuck Harmston (https://chuck.harmston.ch)
 
-set default-bg                  "#282936"
-set default-fg                  "#e9e9f4"
+set default-bg                  "#222E38"
+set default-fg                  "#A6AFB8"
 
-set statusbar-bg                "#4d4f68"
-set statusbar-fg                "#e9e9f4"
+set statusbar-bg                "#586875"
+set statusbar-fg                "#A6AFB8"
 
-set inputbar-bg                 "#282936"
-set inputbar-fg                 "#f7f7fb"
+set inputbar-bg                 "#18262F"
+set inputbar-fg                 "#F5F7FA"
 
-set notification-bg             "#282936"
-set notification-fg             "#f7f7fb"
+set notification-bg             "#18262F"
+set notification-fg             "#F5F7FA"
 
-set notification-error-bg       "#282936"
-set notification-error-fg       "#ea51b2"
+set notification-error-bg       "#18262F"
+set notification-error-fg       "#EF5253"
 
-set notification-warning-bg     "#282936"
-set notification-warning-fg     "#ea51b2"
+set notification-warning-bg     "#18262F"
+set notification-warning-fg     "#EF5253"
 
-set highlight-color             "#a1efe4"
-set highlight-active-color      "#ebff87"
+set highlight-color             "#52CBB0"
+set highlight-active-color      "#7CC844"
 
-set completion-bg               "#3a3c4e"
-set completion-fg               "#a1efe4"
+set completion-bg               "#222E38"
+set completion-fg               "#52CBB0"
 
-set completion-highlight-fg     "#282936"
-set completion-highlight-bg     "#a1efe4"
+set completion-highlight-fg     "#18262F"
+set completion-highlight-bg     "#52CBB0"
 
-set recolor-lightcolor          "#282936"
-set recolor-darkcolor           "#e9e9f4"
+set recolor-lightcolor          "#18262F"
+set recolor-darkcolor           "#A6AFB8"
 
-set render-loading-bg          "#282936"
-set render-loading-fg          "#e9e9f4"
+set render-loading-bg          "#18262F"
+set render-loading-fg          "#A6AFB8"
 
-set index-bg                    "#4d4f68"
-set index-fg                    "#e9e9f4"
+set index-bg                    "#222E38"
+set index-fg                    "#A6AFB8"
 
-set index-active-bg             "#a1efe4"
-set index-active-fg             "#282936"
+set index-active-bg             "#33B5E1"
+set index-active-fg             "#18262F"
 # End flavours
 # }}}
 

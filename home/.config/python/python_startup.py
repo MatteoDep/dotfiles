@@ -6,6 +6,7 @@ import os
 import atexit
 import rlcompleter
 import readline
+from jedi.utils import setup_readline
 import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
@@ -79,7 +80,8 @@ else:
 size = safe_getsize(hist_file)
 
 print("Current history file (%s) size: %s bytes, %s lines.\n" % (hist_file, size, readline.get_current_history_length(),))
-
 readline.parse_and_bind("tab: complete")
+
+setup_readline()
 
 atexit.register(readline.write_history_file, hist_file)

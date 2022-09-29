@@ -12,6 +12,11 @@ mkdir -p ~/.cache/zsh
 HISTFILE=~/.cache/zsh/histfile
 HISTSIZE=100000
 SAVEHIST=100000
+setopt histexpiredupsfirst
+setopt histignoredups
+setopt histignorespace
+setopt incappendhistory
+setopt sharehistory
 setopt extendedglob
 setopt nomatch
 setopt notify
@@ -33,10 +38,10 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 autoload -Uz compinit
 zmodload zsh/complist
 compinit
-source /usr/share/fzf-tab-completion/zsh/fzf-zsh-completion.sh
+source "$XDG_CONFIG_HOME/zsh/fzf-zsh-completion.sh"
 bindkey '^I' fzf_completion
 zstyle ':completion:*' rehash true  # automatically update for new executables in $PATH
-zstyle ':completion:*' fzf-completion-opts --preview='eval preview {1}'
+zstyle ':completion::*:(cd|ls|cat|bat|nvim):*' fzf-completion-opts --preview='eval preview {1}'
 zstyle ':completion::*:(-command-|-parameter-|-brace-parameter-|export|unset|expand):*' fzf-completion-opts --preview='eval eval echo {1}'
 zstyle ':completion:*' fzf-search-display true
 _comp_options+=(globdots)		# Include hidden files.
@@ -57,13 +62,16 @@ setopt prompt_subst
 autoload -Uz vcs_info
 precmd() { vcs_info }
 
+# check if tty or gui
 read pcomm < /proc/$PPID/comm
 [ "$pcomm" = "login" ]  && {
-    zstyle ':vcs_info:git:*' formats '%F{white}(%b)%f'
-    PS1="%(?..%F{#ff0000}!%? )%F{cyan}%1~%f%b \$vcs_info_msg_0_ %F{red}%(!.#.>)%f "
+	sep='>'
+	zstyle ':vcs_info:git:*' formats '%F{yellow}(%b)%f'
+	PS1="%(?..%F{#ff0000}!%? )%F{blue}%1~%f%b \$vcs_info_msg_0_ %F{red}%(!.#.$sep)%f "
 } || {
-    zstyle ':vcs_info:git:*' formats ' %F{white} %b%f'
-    PS1="%(?..%F{#ff0000}%? )%F{cyan}%1~%f%b\$vcs_info_msg_0_ %F{red}%(!.#.)%f "
+	sep=''
+	zstyle ':vcs_info:git:*' formats ' %F{yellow} %b%f'
+	PS1="%(?..%F{#ff0000}%? )%F{blue}%1~%f%b\$vcs_info_msg_0_ %F{red}%(!.#.$sep)%f "
 }
 
 ###########
@@ -76,8 +84,6 @@ alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
 alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
 alias ls='exa --group-directories-first --icons'
 alias la='exa -a --group-directories-first --icons'
 alias ll='exa -alhg --git --group-directories-first --icons'
@@ -97,50 +103,50 @@ alias gg='lazygit'
 
 # cd recursively, press Esc when you are done
 fzf-cd(){
-    while choice=$({echo '..'; fd -HI -t d -d=1} | fzf --preview "preview {}"); do
-        cd "$choice"
-    done
+	while choice=$({echo '..'; fd -HI -t d -d=1} | fzf --preview "preview {}"); do
+		cd "$choice"
+	done
 }
 
 # cd recursively, press Esc when you are done
 fzf-jumpto(){
-    choice=$(locate / | fzf --preview "preview {}")
-    cd "$([ -d "$choice" ] && echo "$choice" || echo "${choice%/*}")"
+	choice=$(locate / | fzf --preview "preview {}")
+	cd "$([ -d "$choice" ] && echo "$choice" || echo "${choice%/*}")"
 }
 
 # select multiple files to edit
 fzf-open(){
-    choices=$(fd -HL -t f | fzf -m --prompt "choose files: " --preview "preview {}") &&
-        echo $choices | xargs rifle
+	choices=$(fd -HL -t f | fzf -m --prompt "choose files: " --preview "preview {}") &&
+		echo $choices | xargs rifle
 }
 
 # Paste the selected entry from history output into the command line
 fzf-history-widget() {
-  local choice
-  choice=$(history 0 | sed -r 's/^.*  (.*)/\1/' | awk '!a[$0]++' | fzf --tac --prompt "choose command: ") &&
-    LBUFFER="$LBUFFER$choice"
-  zle redisplay
+	local choice
+	choice=$(history 0 | sed -r 's/^[0-9\*]*\s*(.*)/\1/' | grep "^$LBUFFER" | fzf --tac --prompt "history> " --height 9) &&
+		LBUFFER="$choice"
+	zle redisplay
 }
 zle -N fzf-history-widget
 
 # Paste the selected entry from locate output into the command line
 fzf-locate-widget() {
-  local choice
-  if choice=$(locate / | fzf --prompt "choose path: "); then
-    LBUFFER="$LBUFFER$choice"
-  fi
-  zle redisplay
+	local choice
+	if choice=$(locate / | fzf --prompt "choose path: "); then
+		LBUFFER="$LBUFFER$choice"
+	fi
+	zle redisplay
 }
 zle -N fzf-locate-widget
 
 # proxy on/off
 proxy_on(){
-    source "$ZDOTDIR/proxy_conf.zsh"
+	source "$ZDOTDIR/proxy_conf.zsh"
 }
 proxy_off(){
-    for var in $(env | grep -i 'proxy' | cut -d '=' -f 1); do
-        unset $var
-    done
+	for var in $(env | grep -i 'proxy' | cut -d '=' -f 1); do
+		unset $var
+	done
 }
 
 

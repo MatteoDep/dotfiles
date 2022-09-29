@@ -1,15 +1,15 @@
 /**
- * Base16 Dracula ROFI Color theme
+ * Base16 Solar Flare ROFI Color theme
  *
  * Authors
- *  Scheme: Mike Barkmin (http://github.com/mikebarkmin) based on Dracula Theme (http://github.com/dracula)
+ *  Scheme: Chuck Harmston (https://chuck.harmston.ch)
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
-    bg: #282936;
-    fg: #e9e9f4;
-    fade: #4d4f68;
-    urgent: #ea51b2;
-    hl: #a1efe4;
+    bg: #18262F;
+    fg: #A6AFB8;
+    fade: #586875;
+    urgent: #EF5253;
+    hl: #33B5E1;
 }

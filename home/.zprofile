@@ -38,7 +38,6 @@ export SSB_HOME="$XDG_DATA_HOME"/zoom
 
 # personal paths
 export MYVIMRC="$XDG_CONFIG_HOME/nvim/init.vim"
-export MYVIFMMRC="$XDG_CONFIG_HOME/vifm/vifmrc"
 export DOTFILES_DIR="$HOME/.dotfiles"
 
 # askpass program
@@ -51,11 +50,7 @@ export CM_MAX_CLIPS=10
 
 # fzf configs
 export FZF_DEFAULT_COMMAND="fd -HL"
-export FZF_DEFAULT_OPTS="--color=16,border:-1 --layout=reverse --border --height=30 --bind=alt-enter:select,tab:down,btab:up"
-
-# dictd
-export D_XTERM_CLASS="st256-color"
-export D_XTERM_PROG="st -e"
+export FZF_DEFAULT_OPTS="--color=16,border:-1 --layout=reverse --cycle --border --bind=alt-enter:select,tab:down,btab:up"
 
 # bat
 export BAT_THEME="ansi"
@@ -64,4 +59,4 @@ export BAT_THEME="ansi"
 export QT_QPA_PLATFORMTHEME="qt5ct"
 
 # ranger
-RANGER_LOAD_DEFAULT_RC="FALSE"
+export RANGER_LOAD_DEFAULT_RC="FALSE"

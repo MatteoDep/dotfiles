@@ -3,7 +3,8 @@
 sudocmd=
 
 recurse(){
-    for f in $(ls -A "$1"); do
+	# shellcheck disable=SC2045
+	for f in $(ls -A "$1"); do
 		n=0
 		indent=
 		while [ "$n" -lt "$3" ]; do
@@ -16,7 +17,7 @@ recurse(){
 		else
 			confirm "ln -srf $1/$f $2/$f"
 		fi
-    done
+	done
 }
 
 confirm(){
@@ -42,7 +43,7 @@ recurse "$PWD/root" "/" 0
 
 gpghome="$HOME/.config/gnupg"
 if [ -d "$gpghome" ]; then
-    sudo chown "$(whoami)" "$gpghome"
-    find "$gpghome" -type f -exec chmod 600 {} \;
-    find "$gpghome" -type d -exec chmod 700 {} \;
+	sudo chown "$(whoami)" "$gpghome"
+	find "$gpghome" -type f -exec chmod 600 {} \;
+	find "$gpghome" -type d -exec chmod 700 {} \;
 fi
