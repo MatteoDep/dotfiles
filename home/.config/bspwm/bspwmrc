@@ -16,23 +16,12 @@ xrandrmenu --restore
 # reset wallpaper
 wallmenu --restore
 
-# launch statusbar and make sure it launches after reboot
+# configure desktops
+bspwm-tool auto-set-desktops
+
 xrdb ~/.config/X11/Xresources
 background=$(xrdb -query | awk '/.*background:/ {print $2}')
 highlight=$(xrdb -query | awk '/.*color4:/ {print $2}')
-killall launchbar > /dev/null || sleep 3
-monitors=$(xrandr --listactivemonitors | awk '/^\s*[0-9]+:/ {print $4}')
-primary=$(xrandr -q | awk '/primary/ {print $1}')
-for m in $monitors; do
-    if [ "$m" = "$primary" ]; then
-        setsid -f launchbar "bar1,$m"
-    else
-        setsid -f launchbar "bar2,$m"
-    fi
-done
-
-# configure desktops
-bspwm-tool auto-set-desktops
 
 # configs
 # for some reason all the 3 below are needed
@@ -58,15 +47,31 @@ bspc pointer_action3 resize_corner
 bspc desktop '1' -l monocle
 bspc desktop '8' -l monocle
 
-bspc rule -a 'Gimp' state=floating follow=on
 bspc rule -a '*:floatterm' state=floating
 bspc rule -a 'Matplotlib' state=floating
 bspc rule -a 'qutebrowser' desktop='1'
 bspc rule -a 'Brave-browser' desktop='1'
-bspc rule -a 'Thunderbird' desktop='9'
+bspc rule -a 'thunderbird' desktop='9'
 bspc rule -a 'Signal' desktop='8'
 bspc rule -a 'Ferdi' desktop='8'
 bspc rule -a 'nuclear' desktop='7'
 
+# launch statusbar and make sure it launches after reboot
+killall launchbar > /dev/null || sleep 3
+monitors=$(xrandr --listactivemonitors | awk '/^\s*[0-9]+:/ {print $4}')
+primary=$(xrandr -q | awk '/primary/ {print $1}')
+for m in $monitors; do
+    if [ "$m" = "$primary" ]; then
+        setsid -f launchbar "bar1,$m"
+    else
+        setsid -f launchbar "bar2,$m"
+    fi
+done
+
 killall trayer
 setsid -f trayer --edge top --align right --expand true --widthtype request --height 20 --margin 6 --iconspacing 6 --monitor primary --transparent true --alpha 0 --tint "0x${background#\#}"
+
+rootid="$(xdo id -N Bspwm -n root | sort | head -n 1)"
+for wid in $(xdo id -m -N trayer; xdo id -m -N Bar); do
+	xdo above -t "$rootid" "$wid"
+done
