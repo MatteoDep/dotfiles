@@ -6,11 +6,12 @@ set selection-clipboard clipboard
 # show scrollbar
 set guioptions 'sv'
 # recolor options
-set recolor false
 set recolor-keephue true
 set recolor-reverse-video false
 # adust on width
 set adjust-open width
+# disable sandbox causing link issues
+set sandbox none
 # }}}
 
 # theme {{{

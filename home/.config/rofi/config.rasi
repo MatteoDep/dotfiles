@@ -80,9 +80,9 @@ configuration {
 	kb-remove-to-eol: "Control+p";
 /*	kb-remove-to-sol: "Control+u";*/
 	kb-accept-entry: "Control+m,Return,KP_Enter";
-	kb-accept-custom: "Alt+Return";
+	kb-accept-custom: "Shift+Return";
 	kb-accept-custom-alt: "Alt+Shift+Return";
-	kb-accept-alt: "Shift+Return";
+	kb-accept-alt: "Alt+Return";
 /*	kb-delete-entry: "Shift+Delete";*/
 /*	kb-mode-next: "Shift+Right,Control+Tab";*/
 /*	kb-mode-previous: "Shift+Left,Control+ISO_Left_Tab";*/

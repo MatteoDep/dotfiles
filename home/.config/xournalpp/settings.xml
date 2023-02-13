@@ -6,7 +6,7 @@
   <property name="pressureMultiplier" value="1.00000000"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="custom Copy"/>
-  <property name="lastSavePath" value=""/>
+  <property name="lastSavePath" value="/home/matteo/documents/tudelft/scientific-computing"/>
   <property name="lastOpenPath" value="/home/matteo/documents/tudelft/solid-state/presentation1/references"/>
   <property name="lastImagePath" value="/home/matteo/documents/tudelft/thesis/resources"/>
   <property name="edgePanSpeed" value="20.00000000"/>
@@ -65,6 +65,7 @@
   <property name="snapGridTolerance" value="0.10000000"/>
   <property name="snapGridSize" value="14.17000000"/>
   <property name="touchDrawing" value="false"/>
+  <property name="gtkTouchInertialScrolling" value="true"/>
   <property name="pressureGuessing" value="false"/>
   <property name="selectionBorderColor" value="4294901760"/>
   <property name="backgroundColor" value="4281218112"/>

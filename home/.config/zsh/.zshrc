@@ -160,3 +160,6 @@ bindkey -s '^[g' 'lazygit\n'
 bindkey -s '^[m' 'bashmount\n'
 bindkey -s '^[o' 'python\n'
 bindkey '^[h' fzf-history-widget
+
+# conda
+[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh

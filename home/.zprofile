@@ -43,6 +43,7 @@ export DOTFILES_DIR="$HOME/.dotfiles"
 # askpass program
 export SSH_ASKPASS="/usr/bin/xaskpass"
 export SUDO_ASKPASS="/usr/bin/xaskpass"
+eval $(ssh-agent)
 
 # clipmenu
 export CM_SELECTIONS="clipboard"
@@ -50,7 +51,7 @@ export CM_MAX_CLIPS=10
 
 # fzf configs
 export FZF_DEFAULT_COMMAND="fd -HL"
-export FZF_DEFAULT_OPTS="--color=16,border:-1 --layout=reverse --cycle --border --bind=alt-enter:select,tab:down,btab:up"
+export FZF_DEFAULT_OPTS="--color=16,border:-1 --layout=reverse --cycle --border --bind=alt-enter:toggle+down,tab:down,btab:up"
 
 # bat
 export BAT_THEME="ansi"

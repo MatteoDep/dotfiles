@@ -7,8 +7,8 @@
 "%{r}"
 # 600 7 sb-weather
 # " "
-600 6 sb-news
-" "
+# 600 6 sb-news
+# " "
 # 600 13 sb-crypto
 # " "
 2 10 sb-volume

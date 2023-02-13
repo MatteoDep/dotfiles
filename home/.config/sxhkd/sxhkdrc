@@ -1,7 +1,7 @@
 # bspwm
 # quit/restart bspwm
 super + shift + {q,r}
-	pkill -x panel; bspc {quit,wm -r}
+	bspc {quit,wm -r}
 # close and kill
 super + {_,ctrl + }q
 	bspc node -{c,k}
@@ -15,6 +15,9 @@ super + shift + equal
 # set the window state
 super + {f,space}
 	bspwm-tool toggle-{fullscreen,floating}
+# hidden/show
+super + {_,shift + }i
+	bspwm-tool {hide,unhide}
 # focus the next/previous window in the current desktop
 super + {j,k}
 	bspc node -f {next,prev}.local.!hidden.window
@@ -65,6 +68,8 @@ super + shift + e
 	pcmanfm
 super + v
 	vim-everywhere
+super + shift + t
+	thunderbird
 
 # scratchpads
 super + Return
@@ -102,9 +107,9 @@ super + u
 super + b
 	blueman-manager
 super + shift + c
-    bcmenu
+	bcmenu
 super + shift + m
-    mountmenu
+	mountmenu
 super + shift + x
 	xrandrmenu
 super + x
