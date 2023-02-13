@@ -43,7 +43,7 @@ export DOTFILES_DIR="$HOME/.dotfiles"
 # askpass program
 export SSH_ASKPASS="/usr/bin/xaskpass"
 export SUDO_ASKPASS="/usr/bin/xaskpass"
-eval $(ssh-agent)
+eval $(ssh-agent) # start ssh agent
 
 # clipmenu
 export CM_SELECTIONS="clipboard"
