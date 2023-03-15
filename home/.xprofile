@@ -1,24 +1,33 @@
 # start x session
-lxsession &
+if [ "$XDG_CURRENT_DESKTOP" != "KDE" ]; then
+	lxsession &
 
-# read Xresources
-xrdb ~/.config/X11/Xresources &
+	# read Xresources
+	xrdb ~/.config/X11/Xresources &
+
+	# compositor
+	picom &
+
+	# clipboard menu
+	clipmenud &
+
+	# calendar
+	calcurse --daemon &
+
+	# lock daemon
+	xset s on
+	xset s 180 60
+	xset dpms 600 600 600
+	xss-lock -n dimscreen -- lock -s &
+
+	# keyboard deamon
+	ln ~/.config/sxhkd/bspwm-sxhkdrc ~/.config/sxhkd/sxhkdrc
+else
+	ln ~/.config/sxhkd/common-sxhkdrc ~/.config/sxhkd/sxhkdrc
+	sxhkd &
+fi
 
 # X11 settings
 setxkbmap -option compose:ralt us &
 xsetroot -cursor_name left_ptr &
 
-# compositor
-picom &
-
-# clipboard menu
-clipmenud &
-
-# calendar
-calcurse --daemon &
-
-# lock daemon
-xset s on
-xset s 180 60
-xset dpms 600 600 600
-xss-lock -n dimscreen -- lock -s &

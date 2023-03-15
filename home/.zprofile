@@ -57,7 +57,12 @@ export FZF_DEFAULT_OPTS="--color=16,border:-1 --layout=reverse --cycle --border 
 export BAT_THEME="ansi"
 
 # qt theme
-export QT_QPA_PLATFORMTHEME="qt5ct"
+if [ "$XDG_CURRENT_DESKTOP" != "KDE" ]; then
+	export QT_QPA_PLATFORMTHEME="qt5ct"
+fi
 
 # ranger
 export RANGER_LOAD_DEFAULT_RC="FALSE"
+
+# howdy
+export OPENCV_LOG_LEVEL=ERROR
