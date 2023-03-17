@@ -1,5 +1,5 @@
-# Base16 Solar Flare - xaskpass color config
-# Chuck Harmston (https://chuck.harmston.ch)
+# Base16 OneDark - xaskpass color config
+# Lalit Magant (http://github.com/tilal6991)
 
 # Default configuration imitating the look of gtk Arc theme.
 # By default sizes are pixels when screen height <= 1080. Otherwise they are 1/1080 of the
@@ -14,9 +14,9 @@ resizable = false
 depth = 32
 
 [dialog]
-foreground = '#A6AFB8'
-background = '#18262F'
-indicator_label_foreground = '#A6AFB8'
+foreground = '#abb2bf'
+background = '#282c34'
+indicator_label_foreground = '#abb2bf'
 # set to 'none' to use pango default font and size. Use mono to keep ssh
 # fingerprint formatting.
 font = 'mono 11'
@@ -47,13 +47,13 @@ vertical_spacing = 'none'
 text_width = 'none'
 
 [dialog.ok_button]
-foreground = '#A6AFB8'
-border_color = '#222E38'
-border_color_pressed = '#222E38'
-background = '#586875'
+foreground = '#abb2bf'
+border_color = '#353b45'
+border_color_pressed = '#353b45'
+background = '#3e4451'
 # set to a color for a linear gradient
-background_pressed = '#667581'
-background_hover = '#667581'
+background_pressed = '#545862'
+background_hover = '#545862'
 label = 'OK'
 horizontal_spacing = 'none'
 vertical_spacing = 'none'
@@ -69,12 +69,12 @@ background_pressed_stop = 'none'
 background_hover_stop = 'none'
 
 [dialog.cancel_button]
-foreground = '#A6AFB8'
-border_color = '#222E38'
-border_color_pressed = '#222E38'
-background = '#586875'
-background_pressed = '#667581'
-background_hover = '#667581'
+foreground = '#abb2bf'
+border_color = '#353b45'
+border_color_pressed = '#353b45'
+background = '#3e4451'
+background_pressed = '#545862'
+background_hover = '#545862'
 label = 'Cancel'
 horizontal_spacing = 'none'
 vertical_spacing = 'none'
@@ -90,12 +90,12 @@ background_pressed_stop = 'none'
 background_hover_stop = 'none'
 
 [dialog.clipboard_button]
-foreground = '#A6AFB8'
-border_color = '#222E38'
-border_color_pressed = '#222E38'
-background = '#586875'
-background_pressed = '#667581'
-background_hover = '#667581'
+foreground = '#abb2bf'
+border_color = '#353b45'
+border_color_pressed = '#353b45'
+background = '#3e4451'
+background_pressed = '#545862'
+background_hover = '#545862'
 horizontal_spacing = 'none'
 vertical_spacing = 'none'
 border_width = 1.0
@@ -125,11 +125,11 @@ background_pressed_stop = 'none'
 background_hover_stop = 'none'
 
 [dialog.indicator]
-foreground = '#A6AFB8'
-background = '#667581'
-border_color = '#222E38'
-border_color_focused = '#52CBB0'
-indicator_color = '#667581'
+foreground = '#abb2bf'
+background = '#545862'
+border_color = '#353b45'
+border_color_focused = '#56b6c2'
+indicator_color = '#545862'
 border_width = 1.0
 background_stop = 'none'
 indicator_color_stop = 'none'
@@ -150,7 +150,7 @@ element_height = 'none'
 element_width = 'none'
 
 [dialog.indicator.circle]
-lock_color = '#667581'
+lock_color = '#545862'
 # 'none' to derive from text width
 diameter = 'none'
 light_up = true

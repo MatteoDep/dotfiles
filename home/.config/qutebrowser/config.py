@@ -81,24 +81,24 @@ c.colors.webpage.preferred_color_scheme = "dark"
 # Start flavours
 # base16-qutebrowser (https://github.com/theova/base16-qutebrowser)
 # Base16 qutebrowser template by theova and Daniel Mulford
-# Solar Flare scheme by Chuck Harmston (https://chuck.harmston.ch)
+# OneDark scheme by Lalit Magant (http://github.com/tilal6991)
 
-base00 = "#18262F"
-base01 = "#222E38"
-base02 = "#586875"
-base03 = "#667581"
-base04 = "#85939E"
-base05 = "#A6AFB8"
-base06 = "#E8E9ED"
-base07 = "#F5F7FA"
-base08 = "#EF5253"
-base09 = "#E66B2B"
-base0A = "#E4B51C"
-base0B = "#7CC844"
-base0C = "#52CBB0"
-base0D = "#33B5E1"
-base0E = "#A363D5"
-base0F = "#D73C9A"
+base00 = "#282c34"
+base01 = "#353b45"
+base02 = "#3e4451"
+base03 = "#545862"
+base04 = "#565c64"
+base05 = "#abb2bf"
+base06 = "#b6bdca"
+base07 = "#c8ccd4"
+base08 = "#e06c75"
+base09 = "#d19a66"
+base0A = "#e5c07b"
+base0B = "#98c379"
+base0C = "#56b6c2"
+base0D = "#61afef"
+base0E = "#c678dd"
+base0F = "#be5046"
 
 # set qutebrowser colors
 

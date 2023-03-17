@@ -35,39 +35,39 @@ template = "alacritty"
 subtemplate = "default-256"
 rewrite = true
 
-[[items]]
-file = "~/.config/nvim/colors/custom.vim"
-template = "vim"
-rewrite = true
-hook = "pkill -USR1 nvim"
+# [[items]]
+# file = "~/.config/nvim/colors/custom.vim"
+# template = "vim"
+# rewrite = true
+# hook = "pkill -USR1 nvim"
 
-[[items]]
-file = "~/.config/nvim/autoload/airline/themes/custom.vim"
-template = "vim-airline-themes"
-subtemplate = "custom"
-rewrite = true
+# [[items]]
+# file = "~/.config/nvim/autoload/airline/themes/custom.vim"
+# template = "vim-airline-themes"
+# subtemplate = "custom"
+# rewrite = true
 
-[[items]]
-file = "~/.config/qutebrowser/config.py"
-template = "qutebrowser"
-subtemplate = "custom"
-hook = "pgrep qutebrowser && qutebrowser :config-source"
+# [[items]]
+# file = "~/.config/qutebrowser/config.py"
+# template = "qutebrowser"
+# subtemplate = "custom"
+# hook = "pgrep qutebrowser && qutebrowser :config-source"
 
-[[items]]
-file = "~/.config/gtkreate/gtkreaterc"
-template = "gtkreate"
-subtemplate = "custom"
-hook = "gtkreate"
+# [[items]]
+# file = "~/.config/gtkreate/gtkreaterc"
+# template = "gtkreate"
+# subtemplate = "custom"
+# hook = "gtkreate"
 
 [[items]]
 file = "~/.config/dunst/dunstrc"
 template = "dunst"
 hook = "killall dunst"
 
-[[items]]
-file = "~/.config/xaskpass/xaskpass.toml"
-template = "xaskpass"
-rewrite = true
+# [[items]]
+# file = "~/.config/xaskpass/xaskpass.toml"
+# template = "xaskpass"
+# rewrite = true
 
 [[items]]
 file = "~/.config/rofi/colors.rasi"

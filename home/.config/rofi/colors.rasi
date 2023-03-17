@@ -1,15 +1,15 @@
 /**
- * Base16 Solar Flare ROFI Color theme
+ * Base16 OneDark ROFI Color theme
  *
  * Authors
- *  Scheme: Chuck Harmston (https://chuck.harmston.ch)
+ *  Scheme: Lalit Magant (http://github.com/tilal6991)
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
-    bg: #18262F;
-    fg: #A6AFB8;
-    fade: #586875;
-    urgent: #EF5253;
-    hl: #33B5E1;
+    bg: #282c34;
+    fg: #abb2bf;
+    fade: #3e4451;
+    urgent: #e06c75;
+    hl: #61afef;
 }

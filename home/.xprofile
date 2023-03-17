@@ -19,13 +19,9 @@ if [ "$XDG_CURRENT_DESKTOP" != "KDE" ]; then
 	xset s 180 60
 	xset dpms 600 600 600
 	xss-lock -n dimscreen -- lock -s &
-
-	# keyboard deamon
-	ln ~/.config/sxhkd/bspwm-sxhkdrc ~/.config/sxhkd/sxhkdrc
-else
-	ln ~/.config/sxhkd/common-sxhkdrc ~/.config/sxhkd/sxhkdrc
-	sxhkd &
 fi
+
+sxhkd &
 
 # X11 settings
 setxkbmap -option compose:ralt us &

@@ -16,47 +16,47 @@ set sandbox none
 
 # theme {{{
 # Start flavours
-# Base16 Solar Flare
-# Author: Chuck Harmston (https://chuck.harmston.ch)
+# Base16 OneDark
+# Author: Lalit Magant (http://github.com/tilal6991)
 
-set default-bg                  "#222E38"
-set default-fg                  "#A6AFB8"
+set default-bg                  "#353b45"
+set default-fg                  "#abb2bf"
 
-set statusbar-bg                "#586875"
-set statusbar-fg                "#A6AFB8"
+set statusbar-bg                "#3e4451"
+set statusbar-fg                "#abb2bf"
 
-set inputbar-bg                 "#18262F"
-set inputbar-fg                 "#F5F7FA"
+set inputbar-bg                 "#282c34"
+set inputbar-fg                 "#c8ccd4"
 
-set notification-bg             "#18262F"
-set notification-fg             "#F5F7FA"
+set notification-bg             "#282c34"
+set notification-fg             "#c8ccd4"
 
-set notification-error-bg       "#18262F"
-set notification-error-fg       "#EF5253"
+set notification-error-bg       "#282c34"
+set notification-error-fg       "#e06c75"
 
-set notification-warning-bg     "#18262F"
-set notification-warning-fg     "#EF5253"
+set notification-warning-bg     "#282c34"
+set notification-warning-fg     "#e06c75"
 
-set highlight-color             "#52CBB0"
-set highlight-active-color      "#7CC844"
+set highlight-color             "#56b6c2"
+set highlight-active-color      "#98c379"
 
-set completion-bg               "#222E38"
-set completion-fg               "#52CBB0"
+set completion-bg               "#353b45"
+set completion-fg               "#56b6c2"
 
-set completion-highlight-fg     "#18262F"
-set completion-highlight-bg     "#52CBB0"
+set completion-highlight-fg     "#282c34"
+set completion-highlight-bg     "#56b6c2"
 
-set recolor-lightcolor          "#18262F"
-set recolor-darkcolor           "#A6AFB8"
+set recolor-lightcolor          "#282c34"
+set recolor-darkcolor           "#abb2bf"
 
-set render-loading-bg          "#18262F"
-set render-loading-fg          "#A6AFB8"
+set render-loading-bg          "#282c34"
+set render-loading-fg          "#abb2bf"
 
-set index-bg                    "#222E38"
-set index-fg                    "#A6AFB8"
+set index-bg                    "#353b45"
+set index-fg                    "#abb2bf"
 
-set index-active-bg             "#33B5E1"
-set index-active-fg             "#18262F"
+set index-active-bg             "#61afef"
+set index-active-fg             "#282c34"
 # End flavours
 # }}}
 

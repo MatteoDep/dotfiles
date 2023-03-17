@@ -1,42 +1,42 @@
-# Base16 Solar Flare 256 - alacritty color config
-# Chuck Harmston (https://chuck.harmston.ch)
+# Base16 OneDark 256 - alacritty color config
+# Lalit Magant (http://github.com/tilal6991)
 colors:
   # Default colors
   primary:
-    background: '0x18262F'
-    foreground: '0xA6AFB8'
+    background: '0x282c34'
+    foreground: '0xabb2bf'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: '0x18262F'
-    cursor: '0xA6AFB8'
+    text: '0x282c34'
+    cursor: '0xabb2bf'
 
   # Normal colors
   normal:
-    black:   '0x18262F'
-    red:     '0xEF5253'
-    green:   '0x7CC844'
-    yellow:  '0xE4B51C'
-    blue:    '0x33B5E1'
-    magenta: '0xA363D5'
-    cyan:    '0x52CBB0'
-    white:   '0xA6AFB8'
+    black:   '0x282c34'
+    red:     '0xe06c75'
+    green:   '0x98c379'
+    yellow:  '0xe5c07b'
+    blue:    '0x61afef'
+    magenta: '0xc678dd'
+    cyan:    '0x56b6c2'
+    white:   '0xabb2bf'
 
   # Bright colors
   bright:
-    black:   '0x667581'
-    red:     '0xEF5253'
-    green:   '0x7CC844'
-    yellow:  '0xE4B51C'
-    blue:    '0x33B5E1'
-    magenta: '0xA363D5'
-    cyan:    '0x52CBB0'
-    white:   '0xF5F7FA'
+    black:   '0x545862'
+    red:     '0xe06c75'
+    green:   '0x98c379'
+    yellow:  '0xe5c07b'
+    blue:    '0x61afef'
+    magenta: '0xc678dd'
+    cyan:    '0x56b6c2'
+    white:   '0xc8ccd4'
 
   indexed_colors:
-    - { index: 16, color: '0xE66B2B' }
-    - { index: 17, color: '0xD73C9A' }
-    - { index: 18, color: '0x222E38' }
-    - { index: 19, color: '0x586875' }
-    - { index: 20, color: '0x85939E' }
-    - { index: 21, color: '0xE8E9ED' }
+    - { index: 16, color: '0xd19a66' }
+    - { index: 17, color: '0xbe5046' }
+    - { index: 18, color: '0x353b45' }
+    - { index: 19, color: '0x3e4451' }
+    - { index: 20, color: '0x565c64' }
+    - { index: 21, color: '0xb6bdca' }
