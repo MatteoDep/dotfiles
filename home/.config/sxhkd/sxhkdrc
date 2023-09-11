@@ -16,14 +16,17 @@ super + shift + t
 
 # scratchpads
 super + Return
-	tdrop -Aam -n 'sp-term' -x 5% -w 90% -h 80% \
-	"$TERMINAL" --class floatterm -t spterm
+	tdrop -Aam -n 'sp-term' -x 5% -y 0 -w 90% -h 80% \
+	alacritty --class floatterm -t spterm -o window.decorations=none
 super + e
-	tdrop -Aam -n 'sp-fm' -x 5% -w 90% -h 80% \
-	"$TERMINAL" --class floatterm -t spfm -e ranger
+	tdrop -Aam -n 'sp-fm' -x 5% -y 0 -w 90% -h 80% \
+	alacritty --class floatterm -t spfm -o window.decorations=none -e ranger
 super + o
-	tdrop -Aam -n 'sp-py' -x 5% -w 90% -h 80% \
-	"$TERMINAL" --class floatterm -t sppy -e python
+	tdrop -Aam -n 'sp-py' -x 5% -y 0 -w 90% -h 80% \
+	alacritty --class floatterm -t sppy -o window.decorations=none -e python
+super + c
+	tdrop -Aam -n 'sp-py' -x 5% -y 0 -w 90% -h 80% \
+	alacritty --class floatterm -t sppy -o window.decorations=none -e chat
 
 # menus
 super + u
