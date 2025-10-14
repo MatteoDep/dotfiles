@@ -1,8 +1,0 @@
-#!/bin/sh
-
-[ -f ~/.xprofile ] && . ~/.xprofile
-
-exec bspwm
-
-# kill pulseaudio (prevents loading it 2 times)
-pulseaudio --kill
