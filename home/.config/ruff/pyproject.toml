@@ -1,0 +1,149 @@
+[tool.ruff]
+show-fixes = true
+exclude = [
+    "venv",
+    ".venv",
+    ".tox",
+    ".swagger-codegen",
+    ".pytest_cache",
+    ".mypy_cache",
+    "swagger_server.egg-info",
+]
+line-length = 120
+
+[tool.ruff.lint]
+# see https://docs.astral.sh/ruff/rules/ for more info
+select = [
+    "F", # Pyflakes
+    "E", # pycodestyle errors
+    "W", # pycodestyle warnings
+    "C90", # mccabe
+    "I", # isort
+    "N", # pep8-naming
+    "S", # flake8-bandit
+    "B", # flake8-bugbear
+    # "D",   # pydocstyle
+    "UP", # pyupgrade
+    "YTT", # flake8-2020
+    # "ANN", # flake8-annotations
+    # "BLE", # flake8-blind-except
+    # "FBT", # flake8-boolean-trap
+    "A", # flake8-builtins
+    "COM", # flake8-commas
+    "C4", # flake8-comprehensions
+    "T10", # flake8-debugger
+    "EXE", # flake8-executable
+    # "DTZ", # flake8-datetimez
+    "DJ", # flake8-django
+    "EM", # flake8-errmsg
+    "ISC", # flake8-implicit-str-concat
+    "ICN", # flake8-import-conventions
+    "G", # flake8-logging-format
+    # "INP", # flake8-no-pep420
+    "PIE", # flake8-pie
+    "T20", # flake8-print
+    "PYI", # flake8-pyi
+    "PT", # flake8-pytest-style
+    "Q", # flake8-quotes
+    "RSE", # flake8-raise
+    "RET", # flake8-return
+    "SLF", # flake8-self
+    "SIM", # flake8-simplify
+    "TID", # flake8-tidy-imports
+    "TCH", # flake8-type-checking
+    "INT", # flake8-gettext
+    "ARG", # flake8-unused-arguments
+    # "PTH", # flake8-use-pathlib
+    "ERA", # eradicate
+    "PD", # pandas-vet
+    # "PGH", # pygrep-hooks
+    "PL", # Pylint
+    "TRY", # tryceratops
+    "NPY", # NumPy-specific rules
+    "RUF", # Ruff-specific rules
+]
+ignore = [
+    "B008",
+    "N801",
+    "N806",
+    "PD003",
+    "PD011",
+    "Q000",
+    "S101",
+]
+extend-ignore = [
+    "S113",
+    "S501",
+    "RUF012",
+]
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "double"
+
+[tool.ruff.lint.mccabe]
+max-complexity = 12
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+
+[tool.ruff.lint.pylint]
+max-args = 8
+
+[tool.black]
+line-length = 120
+
+
+[tool.mypy]
+no_implicit_optional = true
+check_untyped_defs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+pretty = true
+ignore_missing_imports = true
+exclude = [
+    "venv",
+    ".venv",
+    ".tox",
+    ".swagger-codegen",
+    ".pytest_cache",
+    ".mypy_cache",
+    "swagger_server.egg-info",
+]
+
+[tool.poetry]
+name = "configuration_api"
+version = "1.0.0-alpha11+bookmarks"
+description = "Configuration API"
+authors = ["id3 software Ltd <contact@id3.ai>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+toml = "^0.10.2"
+fastapi = "^0.110.0"
+psycopg2-binary = "^2.9.9"
+requests = "^2.31.0"
+sqlalchemy = "^2.0.27"
+uvicorn = "^0.27.1"
+pydantic-settings = "^2.2.1"
+pandas = "^2.2.1"
+redis = "^5.0.2"
+pyaml = "^23.12.0"
+kwantis-logging-utils = { version = "^1.2.1", source = "kwantis-pypi-repo" }
+pydantic = "^2.6.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "kwantis-pypi-repo"
+url = "https://kwantis-pypi-857010180973.d.codeartifact.eu-central-1.amazonaws.com/pypi/kwantis-pypi-repository/simple/"
+priority = "supplemental"
+
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
