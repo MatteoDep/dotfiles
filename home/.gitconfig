@@ -1,0 +1,37 @@
+[pull]
+	rebase = false
+[user]
+	email = matteo.depellegrin@kwantis.com
+	name = Matteo De Pellegrin
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[interactive]
+	diffFilter = diff-so-fancy --patch
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red
+	oldHighlight = red 52
+	newNormal = green
+	newHighlight = green 22
+[color "diff"]
+	meta = 11
+	frag = magenta
+	func = 146
+	commit = yellow
+	old = red
+	new = green
+	whitespace = red reverse
+[includeIf "gitdir:~/projects/"]
+	path = .gitconfig-personal
+[includeIf "gitdir:~/.config/nvim/"]
+	path = .gitconfig-personal
+[maintenance]
+	repo = /home/matteo/repos/configuration-api
+[diff]
+	colormoved = default
+    tool = nvimdiff
+[difftool]
+    prompt = true
+[difftool "nvimdiff"]
+    cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""tool = nvimdiff
