@@ -1,7 +1,7 @@
 # variables
 export RIPGREP_CONFIG_PATH=~/.config/ripgreprc
 export EDITOR=nvim
-export WH=/mnt/c/Users/matte
+export WH=/mnt/c/Users/MatteoDePellegrin
 export WS="${WH}/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup"
 export FZF_DEFAULT_COMMAND='fd -HL'
 export FZF_DEFAULT_OPTS='--color=16,border:-1 --layout=reverse --cycle --border'
@@ -38,7 +38,7 @@ __parse_python_venv(){
         venv="($(basename "${VIRTUAL_ENV}")) "
     fi
     if [ ${VIRTUAL_ENV_PROMPT} ]; then
-        venv="${VIRTUAL_ENV_PROMPT}"
+        venv="(${VIRTUAL_ENV_PROMPT}) "
     fi
     if [ ${CONDA_PROMPT_MODIFIER} ]; then
         venv="${CONDA_PROMPT_MODIFIER}"
@@ -78,8 +78,8 @@ alias v='nvim-start'
 alias pydbg='python -m debugpy --listen localhost:5678 --wait-for-client'
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # pnpm
 export PNPM_HOME="/home/matteo/.local/share/pnpm"
@@ -91,10 +91,7 @@ esac
 
 export PATH=/home/matteo/.oracle/bin:$PATH
 
-[[ -e "/home/matteo/.oracle/lib/lib/python3.10/site-packages/oci_cli/bin/oci_autocomplete.sh" ]] && source "/home/matteo/.oracle/lib/lib/python3.10/site-packages/oci_cli/bin/oci_autocomplete.sh"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-. "$HOME/.cargo/env"
 
-source '/home/matteo/.bash_completions/id3-dbdu.sh'
-
-
+if [ -e "/home/matteo/.oracle/lib/lib/python3.10/site-packages/oci_cli/bin/oci_autocomplete.sh" ]; then source "/home/matteo/.oracle/lib/lib/python3.10/site-packages/oci_cli/bin/oci_autocomplete.sh"; fi
+if [ -e "$HOME/.cargo/env" ]; then source "$HOME/.cargo/env"; fi
