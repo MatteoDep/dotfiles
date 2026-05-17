@@ -1,6 +1,7 @@
 # variables
 export RIPGREP_CONFIG_PATH=~/.config/ripgreprc
 export EDITOR=nvim
+export BROWSER=wslview
 export WH=/mnt/c/Users/MatteoDePellegrin
 export WS="${WH}/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup"
 export FZF_DEFAULT_COMMAND='fd -HL'
