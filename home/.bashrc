@@ -63,6 +63,12 @@ __prompt_command(){
     PS1+="$(__parse_python_venv)${blu}\w${reset_col}$(__parse_git_branch) ${red}\$${reset_col} "
 }
 
+update_aws_token(){
+    export UV_INDEX="kwantis-pypi-repo=https://kwantis-pypi-857010180973.d.codeartifact.eu-central-1.amazonaws.com/pypi/kwantis-pypi-repository/simple/"
+    export UV_INDEX_KWANTIS_PYPI_REPO_USERNAME=aws
+    export UV_INDEX_KWANTIS_PYPI_REPO_PASSWORD="$(get-aws-codeartifact-token)"
+}
+
 # bindings
 bind -x '"\C-l": clear'
 bind '"\eg":"lazygit\n"'
