@@ -72,6 +72,7 @@ update_aws_token(){
 # bindings
 bind -x '"\C-l": clear'
 bind '"\eg":"lazygit\n"'
+bind '"\ec":"claude --continue\n"'
 
 # aliases
 alias grep='grep --color=auto'
