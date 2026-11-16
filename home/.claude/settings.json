@@ -10,9 +10,18 @@
     "allow": [
       "Bash"
     ],
+    "deny": [
+      "Read(~/.pgpass)",
+      "Read(~/.config/dadbod/**)",
+      "Read(~/.local/state/nvim/undo/**)",
+      "Read(~/.local/state/nvim/swap/**)",
+      "Read(~/.local/state/nvim/shada/**)",
+      "Edit(~/.pg_service.conf)"
+    ],
     "defaultMode": "auto"
   },
-  "model": "opus[1m]",
+  "model": "opus",
+  "cleanupPeriodDays": 365,
   "hooks": {
     "SessionStart": [
       {
@@ -20,6 +29,67 @@
           {
             "type": "command",
             "command": "bash /home/matteo/.claude/hooks/check-earlyoom.sh",
+            "timeout": 10
+          },
+          {
+            "type": "command",
+            "command": "nvim --clean -l /home/matteo/.config/nvim/scripts/dadbod_sync.lua >/dev/null 2>&1 || echo 'dadbod connection sync reported problems: tell the user to run :DBSyncPgpass in nvim'; exit 0",
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash /home/matteo/.claude/hooks/db-guard.sh",
+            "timeout": 10
+          }
+        ]
+      },
+      {
+        "matcher": "AskUserQuestion",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash /home/matteo/.claude/hooks/loop-no-cloud.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 /home/matteo/.claude/telegram/ping.py notification",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 /home/matteo/.claude/telegram/ping.py stop",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Artifact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 /home/matteo/.claude/telegram/ping.py publish",
             "timeout": 10
           }
         ]
@@ -35,13 +105,27 @@
     "telegram@claude-plugins-official": true,
     "skill-creator@claude-plugins-official": true,
     "code-simplifier@claude-plugins-official": true,
-    "superpowers@claude-plugins-official": true
+    "superpowers@claude-plugins-official": true,
+    "humanizer@humanizer": true,
+    "leftovers@local-mods": true
   },
   "extraKnownMarketplaces": {
     "caveman": {
       "source": {
         "source": "github",
         "repo": "JuliusBrussee/caveman"
+      }
+    },
+    "humanizer": {
+      "source": {
+        "source": "github",
+        "repo": "blader/humanizer"
+      }
+    },
+    "local-mods": {
+      "source": {
+        "source": "directory",
+        "path": "/home/matteo/.claude/mods"
       }
     }
   },
@@ -62,7 +146,9 @@
   "skipWorkflowUsageWarning": true,
   "theme": "dark-ansi",
   "editorMode": "vim",
+  "preferredNotifChannel": "auto",
   "autoCompactEnabled": true,
+  "switchModelsOnFlag": false,
   "remoteControlAtStartup": true,
   "voiceEnabled": true
 }
