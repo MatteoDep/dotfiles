@@ -10,6 +10,26 @@
     "allow": [
       "Bash"
     ],
+    "ask": [
+      "mcp__atlassian-mcp-v2__executeWrite",
+      "mcp__atlassian-mcp-v2__executeDestructive",
+      "mcp__atlassian-mcp-v2__createJiraIssue",
+      "mcp__atlassian-mcp-v2__editJiraIssue",
+      "mcp__atlassian-mcp-v2__transitionJiraIssue",
+      "mcp__atlassian-mcp-v2__addOrEditJiraIssueComment",
+      "mcp__atlassian-mcp-v2__createConfluenceContent",
+      "mcp__atlassian-mcp-v2__updateConfluenceContent",
+      "mcp__atlassian-mcp-v2__addGraphContext",
+      "Bash(atlassian api * -X*)",
+      "Bash(atlassian api * --request*)",
+      "Bash(atlassian api * -d*)",
+      "Bash(atlassian api * --data *)",
+      "Bash(atlassian api * --data-raw*)",
+      "Bash(atlassian api * --data-binary*)",
+      "Bash(atlassian api * --json*)",
+      "Bash(atlassian api * -F*)",
+      "Bash(atlassian api * --form*)"
+    ],
     "deny": [
       "Read(~/.pgpass)",
       "Read(~/.config/dadbod/**)",
