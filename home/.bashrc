@@ -72,7 +72,8 @@ update_aws_token(){
 # bindings
 bind -x '"\C-l": clear'
 bind '"\eg":"lazygit\n"'
-bind '"\ec":"claude --continue\n"'
+bind '"\ec":"claude\n"'
+bind '"\eC":"claude --continue\n"'
 
 # aliases
 alias grep='grep --color=auto'
@@ -103,3 +104,6 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 if [ -e "/home/matteo/.oracle/lib/lib/python3.10/site-packages/oci_cli/bin/oci_autocomplete.sh" ]; then source "/home/matteo/.oracle/lib/lib/python3.10/site-packages/oci_cli/bin/oci_autocomplete.sh"; fi
 if [ -e "$HOME/.cargo/env" ]; then source "$HOME/.cargo/env"; fi
+
+# Bitbucket API token for the leftovers plugin (file not tracked by git)
+[ -f ~/.config/bitbucket.env ] && set -a && . ~/.config/bitbucket.env && set +a
