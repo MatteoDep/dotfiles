@@ -1,4 +1,5 @@
 {
+  "cleanupPeriodDays": 365,
   "env": {
     "CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY": "1"
   },
@@ -41,7 +42,6 @@
     "defaultMode": "auto"
   },
   "model": "opus",
-  "cleanupPeriodDays": 365,
   "hooks": {
     "SessionStart": [
       {
@@ -127,7 +127,8 @@
     "code-simplifier@claude-plugins-official": true,
     "superpowers@claude-plugins-official": true,
     "humanizer@humanizer": true,
-    "leftovers@local-mods": true
+    "worklog@local-mods": true,
+    "leftovers@leftovers": true
   },
   "extraKnownMarketplaces": {
     "caveman": {
@@ -146,6 +147,12 @@
       "source": {
         "source": "directory",
         "path": "/home/matteo/.claude/mods"
+      }
+    },
+    "leftovers": {
+      "source": {
+        "source": "directory",
+        "path": "/home/matteo/projects/leftovers"
       }
     }
   },
