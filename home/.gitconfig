@@ -22,6 +22,7 @@
 	new = green
 	whitespace = red reverse
 # work identity and settings, kept out of this repo (personal overrides it below)
+# register maintenance there too: git maintenance register --config-file ~/.gitconfig-work
 [include]
 	path = .gitconfig-work
 [includeIf "gitdir:~/projects/"]

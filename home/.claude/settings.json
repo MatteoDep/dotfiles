@@ -163,7 +163,6 @@
     },
     "filesystem": {
       "allowWrite": [
-        "/home/matteo/repos/db-schema",
         "/home/matteo/.cache/uv"
       ]
     }
