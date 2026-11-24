@@ -63,11 +63,8 @@ __prompt_command(){
     PS1+="$(__parse_python_venv)${blu}\w${reset_col}$(__parse_git_branch) ${red}\$${reset_col} "
 }
 
-update_aws_token(){
-    export UV_INDEX="mycompany-pypi-repo=https://pypi.example.com/simple/"
-    export UV_INDEX_MYCOMPANY_PYPI_REPO_USERNAME=aws
-    export UV_INDEX_MYCOMPANY_PYPI_REPO_PASSWORD="$(get-aws-codeartifact-token)"
-}
+# machine or work-specific extras, kept out of this repo
+for f in ~/.bashrc.d/*.sh; do [ -r "$f" ] && . "$f"; done; unset f
 
 # bindings
 bind -x '"\C-l": clear'

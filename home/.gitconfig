@@ -1,7 +1,6 @@
 [pull]
 	rebase = false
 [user]
-	email = matteo.depellegrin@mycompany.com
 	name = Matteo De Pellegrin
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
@@ -22,12 +21,13 @@
 	old = red
 	new = green
 	whitespace = red reverse
+# work identity and settings, kept out of this repo (personal overrides it below)
+[include]
+	path = .gitconfig-work
 [includeIf "gitdir:~/projects/"]
 	path = .gitconfig-personal
 [includeIf "gitdir:~/.config/nvim/"]
 	path = .gitconfig-personal
-[maintenance]
-	repo = /home/matteo/repos/configuration-api
 [diff]
 	colormoved = default
     tool = nvimdiff
@@ -35,5 +35,3 @@
     prompt = true
 [difftool "nvimdiff"]
     cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""tool = nvimdiff
-[url "git@ssh.bitbucket.org:"]
-	insteadOf = git@bitbucket.org:
